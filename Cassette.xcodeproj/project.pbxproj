@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA7B93D19B373E8679D66742 /* libPods-Cassette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */; };
+		DC0615271CC97FA300FF9D0B /* NSObject+DavidJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0615261CC97FA300FF9D0B /* NSObject+DavidJSON.m */; };
 		DC147E9E1CC97E3900AE1CFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147E9D1CC97E3900AE1CFE /* AppDelegate.m */; };
 		DC147EA11CC97E3900AE1CFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA01CC97E3900AE1CFE /* main.m */; };
 		DC147EA41CC97E3900AE1CFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA31CC97E3900AE1CFE /* ViewController.m */; };
@@ -15,6 +17,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7CC9916039D46A7BDCA303BF /* Pods-Cassette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cassette.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cassette/Pods-Cassette.debug.xcconfig"; sourceTree = "<group>"; };
+		B9388F6F32EEDC0C8199B1B3 /* Pods-Cassette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cassette.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cassette/Pods-Cassette.release.xcconfig"; sourceTree = "<group>"; };
+		DC0615251CC97FA300FF9D0B /* NSObject+DavidJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+DavidJSON.h"; path = "Libs/DavidJSON/NSObject+DavidJSON.h"; sourceTree = "<group>"; };
+		DC0615261CC97FA300FF9D0B /* NSObject+DavidJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+DavidJSON.m"; path = "Libs/DavidJSON/NSObject+DavidJSON.m"; sourceTree = "<group>"; };
 		DC147E991CC97E3900AE1CFE /* Cassette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cassette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC147E9C1CC97E3900AE1CFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DC147E9D1CC97E3900AE1CFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -24,6 +30,7 @@
 		DC147EA51CC97E3900AE1CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC147EA81CC97E3900AE1CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC147EAA1CC97E3900AE1CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cassette.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +38,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA7B93D19B373E8679D66742 /* libPods-Cassette.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E47156530D2D225C2C758AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CC9916039D46A7BDCA303BF /* Pods-Cassette.debug.xcconfig */,
+				B9388F6F32EEDC0C8199B1B3 /* Pods-Cassette.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC06151F1CC97F8100FF9D0B /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				DC0615221CC97F9100FF9D0B /* DavidJSON */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		DC0615221CC97F9100FF9D0B /* DavidJSON */ = {
+			isa = PBXGroup;
+			children = (
+				DC0615251CC97FA300FF9D0B /* NSObject+DavidJSON.h */,
+				DC0615261CC97FA300FF9D0B /* NSObject+DavidJSON.m */,
+			);
+			name = DavidJSON;
+			sourceTree = "<group>";
+		};
 		DC147E901CC97E3900AE1CFE = {
 			isa = PBXGroup;
 			children = (
 				DC147E9B1CC97E3900AE1CFE /* Cassette */,
 				DC147E9A1CC97E3900AE1CFE /* Products */,
+				5E47156530D2D225C2C758AC /* Pods */,
+				E20E66496E40BAA04CF01588 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +96,7 @@
 				DC147E9D1CC97E3900AE1CFE /* AppDelegate.m */,
 				DC147EA21CC97E3900AE1CFE /* ViewController.h */,
 				DC147EA31CC97E3900AE1CFE /* ViewController.m */,
+				DC06151F1CC97F8100FF9D0B /* Libs */,
 				DC147EA51CC97E3900AE1CFE /* Assets.xcassets */,
 				DC147EA71CC97E3900AE1CFE /* Main.storyboard */,
 				DC147EAA1CC97E3900AE1CFE /* Info.plist */,
@@ -76,6 +113,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E20E66496E40BAA04CF01588 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +128,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC147EAD1CC97E3900AE1CFE /* Build configuration list for PBXNativeTarget "Cassette" */;
 			buildPhases = (
+				C1D54A027A102AC58BC7B5FA /* Check Pods Manifest.lock */,
 				DC147E951CC97E3900AE1CFE /* Sources */,
 				DC147E961CC97E3900AE1CFE /* Frameworks */,
 				DC147E971CC97E3900AE1CFE /* Resources */,
+				A0F3AB503A710B595B8F6175 /* Embed Pods Frameworks */,
+				5AB76E752F0C5C9782CA56EA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,11 +188,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5AB76E752F0C5C9782CA56EA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cassette/Pods-Cassette-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A0F3AB503A710B595B8F6175 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cassette/Pods-Cassette-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1D54A027A102AC58BC7B5FA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC147E951CC97E3900AE1CFE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC0615271CC97FA300FF9D0B /* NSObject+DavidJSON.m in Sources */,
 				DC147EA41CC97E3900AE1CFE /* ViewController.m in Sources */,
 				DC147EA11CC97E3900AE1CFE /* main.m in Sources */,
 				DC147E9E1CC97E3900AE1CFE /* AppDelegate.m in Sources */,
@@ -246,6 +343,7 @@
 		};
 		DC147EAE1CC97E3900AE1CFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC9916039D46A7BDCA303BF /* Pods-Cassette.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -258,6 +356,7 @@
 		};
 		DC147EAF1CC97E3900AE1CFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9388F6F32EEDC0C8199B1B3 /* Pods-Cassette.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -287,6 +386,7 @@
 				DC147EAF1CC97E3900AE1CFE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
