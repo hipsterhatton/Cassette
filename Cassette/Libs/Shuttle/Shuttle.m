@@ -10,4 +10,82 @@
 
 @implementation Shuttle
 
+- (instancetype)initWithDefaults:(NSDictionary *)defaults
+{
+    self = [[Shuttle alloc] init];
+    _manager = [AFHTTPSessionManager new];
+    
+    for (NSString *key in defaults) {
+        [[_manager requestSerializer] setValue:defaults[key] forHTTPHeaderField:key];
+    }
+    
+    [_manager setRequestSerializer:[AFJSONRequestSerializer new]];
+    
+    _HTTPResponse = [AFHTTPResponseSerializer new];
+    _JSONResponse = [AFJSONResponseSerializer new];
+    
+    [_manager setResponseSerializer:_HTTPResponse];
+    
+    return self;
+}
+
+- (void)updateDefaults:(NSDictionary *)defaults
+{
+    for (NSString *key in defaults) {
+        [[_manager requestSerializer] setValue:defaults[key] forKey:key];
+    }
+}
+
+
+
+- (RXPromise *)launch:(ShuttleModes)mode :(ShuttleResponses)response :(NSString *)url :(NSDictionary *)params
+{
+    RXPromise *promise = [RXPromise new];
+    
+    
+    if (response == JSON) {
+        [_manager setResponseSerializer:_JSONResponse];
+    } else {
+        [_manager setResponseSerializer:_HTTPResponse];
+    }
+    
+    
+    if (mode == GET) {
+        
+        [_manager GET:url parameters:params progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+            [self url_success:promise :responseObject :url];
+        } failure:^(NSURLSessionTask *operation, NSError *error) {
+            [self url_failure:promise :error :url];
+        }];
+        
+    } else if (mode == POST) {
+        
+        [_manager POST:url parameters:params progress:nil success:^(NSURLSessionTask *task, id responseObject) {
+            [self url_success:promise :responseObject :url];
+        } failure:^(NSURLSessionTask *operation, NSError *error) {
+            [self url_failure:promise :error :url];
+        }];
+        
+    }
+    
+    
+    return promise;
+}
+
+- (void)url_success:(RXPromise *)promise :(NSObject *)data :(NSString *)url
+{
+    NSLog(@"Success: %@", url);
+    
+    NSLog(@"Data: %@", data);
+    
+    [promise fulfillWithValue:data];
+}
+
+- (void)url_failure:(RXPromise *)promise :(NSError *)error :(NSString *)url
+{
+    NSLog(@"Error: %@", error);
+    
+    [promise rejectWithReason:error];
+}
+
 @end
