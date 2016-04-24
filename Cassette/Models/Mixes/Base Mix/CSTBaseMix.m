@@ -21,6 +21,7 @@
                                           @"certification"      : @"certification",
                                           @"coverImageURL"      : @"cover_urls/sq500",
                                           @"duration"           : @"duration",
+                                          @"artistsInMix"       : @"artist_list"
                                           
                                           }];
     

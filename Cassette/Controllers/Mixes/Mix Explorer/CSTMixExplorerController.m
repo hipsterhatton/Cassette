@@ -23,6 +23,8 @@
     
     .then(^id (NSDictionary *rawJSON) {
         
+        NSLog(@"Raw JSON: %@", rawJSON);
+        
         if (!_homepageMixes) {
             _homepageMixes = [[NSMutableArray alloc] init];
         }

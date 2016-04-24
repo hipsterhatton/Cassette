@@ -19,6 +19,7 @@
 @property (nonatomic) int duration;
 @property (nonatomic) BOOL nsfw;
 @property (nonatomic) BOOL likedByUser;
+@property (nonatomic, retain) NSString *artistsInMix;
 
 + (NSDictionary *)getJSONStructure;
 
