@@ -23,6 +23,7 @@
 		DCBAA4B11CCD0605008B1550 /* CSTFullMix.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4B01CCD0605008B1550 /* CSTFullMix.m */; };
 		DCBAA4B81CCD081B008B1550 /* CSTMixPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4B71CCD081B008B1550 /* CSTMixPlayer.m */; };
 		DCBAA4BA1CCD0CFB008B1550 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */; };
+		DCBAA4BE1CCD1527008B1550 /* CSTTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4BD1CCD1527008B1550 /* CSTTrack.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,8 @@
 		DCBAA4B61CCD081B008B1550 /* CSTMixPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTMixPlayer.h; path = "Controllers/Mix Player/CSTMixPlayer.h"; sourceTree = "<group>"; };
 		DCBAA4B71CCD081B008B1550 /* CSTMixPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTMixPlayer.m; path = "Controllers/Mix Player/CSTMixPlayer.m"; sourceTree = "<group>"; };
 		DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DCBAA4BC1CCD1527008B1550 /* CSTTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTTrack.h; path = Models/Tracks/CSTTrack.h; sourceTree = "<group>"; };
+		DCBAA4BD1CCD1527008B1550 /* CSTTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTTrack.m; path = Models/Tracks/CSTTrack.m; sourceTree = "<group>"; };
 		FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cassette.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -156,6 +159,7 @@
 		DCBAA48B1CCCE7B5008B1550 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DCBAA4BB1CCD1517008B1550 /* Tracks */,
 				DCBAA48C1CCCE7E5008B1550 /* Mixes */,
 			);
 			name = Models;
@@ -242,6 +246,15 @@
 				DCBAA4B71CCD081B008B1550 /* CSTMixPlayer.m */,
 			);
 			name = "Mix Player";
+			sourceTree = "<group>";
+		};
+		DCBAA4BB1CCD1517008B1550 /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				DCBAA4BC1CCD1527008B1550 /* CSTTrack.h */,
+				DCBAA4BD1CCD1527008B1550 /* CSTTrack.m */,
+			);
+			name = Tracks;
 			sourceTree = "<group>";
 		};
 		E20E66496E40BAA04CF01588 /* Frameworks */ = {
@@ -379,6 +392,7 @@
 				DC147EA41CC97E3900AE1CFE /* ViewController.m in Sources */,
 				DC147EA11CC97E3900AE1CFE /* main.m in Sources */,
 				DCBAA4A81CCCF607008B1550 /* CSTMixExplorerController.m in Sources */,
+				DCBAA4BE1CCD1527008B1550 /* CSTTrack.m in Sources */,
 				DCBAA4B81CCD081B008B1550 /* CSTMixPlayer.m in Sources */,
 				DC147E9E1CC97E3900AE1CFE /* AppDelegate.m in Sources */,
 				DCBAA4931CCCE8B0008B1550 /* CSTBaseMix.m in Sources */,

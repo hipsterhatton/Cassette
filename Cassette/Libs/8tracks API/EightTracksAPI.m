@@ -84,6 +84,23 @@
     return [self _replace:url :placeholders :values];
 }
 
+- (NSString *)nextTrackInMix:(NSString *)mixID
+{
+    NSString *url =         @"http://8tracks.com/sets/#{PlayToken}/next.json?mix_id=#{MixID}";
+    NSArray *placeholders = @[ @"#{PlayToken}", @"#{MixID}" ];
+    NSArray *values =       @[ stringify(_playToken), stringify(mixID) ];
+    return [self _replace:url :placeholders :values];
+}
+
+- (NSString *)reportTrack:(NSString *)trackID :(NSString *)mixID
+{
+    NSString *url =         @"http://8tracks.com/sets/#{PlayToken}/report.json?track_id=#{TrackID}&mix_id=#{MixID}";
+    NSArray *placeholders = @[ @"#{PlayToken}", @"#{TrackID}", @"#{MixID}" ];
+    NSArray *values =       @[ stringify(_playToken), stringify(trackID), stringify(mixID) ];
+    return [self _replace:url :placeholders :values];
+}
+
+
 
 - (NSString *)_replace:(NSString *)string :(NSArray *)placeholders :(NSArray *)values
 {

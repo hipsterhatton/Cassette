@@ -12,14 +12,20 @@ PODS:
   - AFNetworking/Reachability (3.1.0)
   - AFNetworking/Security (3.1.0)
   - AFNetworking/Serialization (3.1.0)
+  - FreeStreamer (3.5.5):
+    - Reachability (~> 3.0)
+  - Reachability (3.2)
   - RXPromise (1.0.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - FreeStreamer
   - RXPromise
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FreeStreamer: c1ffd513b7445cfee20c0e87f9881c99a644a863
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   RXPromise: 148cdd81911db57b794435998f16a9c5dab6d8b3
 
 COCOAPODS: 0.39.0

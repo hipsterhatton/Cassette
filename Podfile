@@ -5,6 +5,7 @@
 
 target 'Cassette' do
   pod 'AFNetworking', '~> 3.0'
+  pod 'FreeStreamer'
   pod 'RXPromise'
 end
 

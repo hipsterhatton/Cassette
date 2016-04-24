@@ -23,5 +23,8 @@
 - (NSString *)getListOfTracksPlayed:(NSString *)playToken :(NSString *)mixID;
 
 - (NSString *)playMix:(NSString *)mixID;
+- (NSString *)nextTrackInMix:(NSString *)mixID;
+
+- (NSString *)reportTrack:(NSString *)trackID :(NSString *)mixID;
 
 @end
