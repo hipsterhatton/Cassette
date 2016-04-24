@@ -6,9 +6,9 @@
 //  Copyright © 2016 Stephen Hatton. All rights reserved.
 //
 
-#import "CSTParentController.h"
+#import "CSTMixController.h"
 
-@interface CSTMixExplorerController : CSTParentController
+@interface CSTMixExplorerController : CSTMixController
 
 @property (nonatomic, retain) NSMutableArray *homepageMixes;
 

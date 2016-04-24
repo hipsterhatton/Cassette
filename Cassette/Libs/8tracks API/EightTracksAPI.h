@@ -16,5 +16,8 @@
 - (NSString *)getAPIkey;
 
 - (NSString *)getHomepageMixes;
+- (NSString *)getMixDetails:(NSString *)mixID;
+- (NSString *)getSimilarMix:(NSString *)playToken :(NSString *)mixID;
+- (NSString *)getListOfTracksPlayed:(NSString *)playToken :(NSString *)mixID;
 
 @end

@@ -47,6 +47,32 @@
     return @"http://8tracks.com/mix_sets/all.json?include=mixes+pagination&page=1&per_page=12";
 }
 
+- (NSString *)getMixDetails:(NSString *)mixID
+{
+    NSString *url =         @"http://8tracks.com/mixes/#{MixID}.json";
+    NSArray *placeholders = @[ @"#{MixID}" ];
+    NSArray *values =       @[ mixID ];
+    return [self _replace:url :placeholders :values];
+}
+
+- (NSString *)getSimilarMix:(NSString *)playToken :(NSString *)mixID
+{
+    
+    NSString *url =         @"http://8tracks.com/sets/#{PlayToken}/next_mix.json?mix_id=#{MixID}";
+    NSArray *placeholders = @[ @"#{PlayToken}", @"#{MixID}" ];
+    NSArray *values =       @[ playToken, mixID ];
+    return [self _replace:url :placeholders :values];
+}
+
+- (NSString *)getListOfTracksPlayed:(NSString *)playToken :(NSString *)mixID
+{
+    
+    NSString *url =         @"http://8tracks.com/sets/#{PlayToken}/tracks_played.json?mix_id=#{MixID}";
+    NSArray *placeholders = @[ @"#{PlayToken}", @"#{MixID}" ];
+    NSArray *values =       @[ playToken, mixID ];
+    return [self _replace:url :placeholders :values];
+}
+
 
 
 - (NSString *)_replace:(NSString *)string :(NSArray *)placeholders :(NSArray *)values

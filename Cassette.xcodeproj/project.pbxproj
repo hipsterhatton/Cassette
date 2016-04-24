@@ -19,6 +19,7 @@
 		DCBAA4981CCCE9D4008B1550 /* EightTracksAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4971CCCE9D4008B1550 /* EightTracksAPI.m */; };
 		DCBAA4A21CCCF4A0008B1550 /* CSTParentController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A11CCCF4A0008B1550 /* CSTParentController.m */; };
 		DCBAA4A81CCCF607008B1550 /* CSTMixExplorerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A71CCCF607008B1550 /* CSTMixExplorerController.m */; };
+		DCBAA4AD1CCD0316008B1550 /* CSTMixController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4AC1CCD0316008B1550 /* CSTMixController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,8 @@
 		DCBAA4A11CCCF4A0008B1550 /* CSTParentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTParentController.m; path = "Controllers/Parent Controller/CSTParentController.m"; sourceTree = "<group>"; };
 		DCBAA4A61CCCF607008B1550 /* CSTMixExplorerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTMixExplorerController.h; path = "Controllers/Mixes/Mix Explorer/CSTMixExplorerController.h"; sourceTree = "<group>"; };
 		DCBAA4A71CCCF607008B1550 /* CSTMixExplorerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTMixExplorerController.m; path = "Controllers/Mixes/Mix Explorer/CSTMixExplorerController.m"; sourceTree = "<group>"; };
+		DCBAA4AB1CCD0316008B1550 /* CSTMixController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTMixController.h; path = Controllers/Mixes/CSTMixController.h; sourceTree = "<group>"; };
+		DCBAA4AC1CCD0316008B1550 /* CSTMixController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTMixController.m; path = Controllers/Mixes/CSTMixController.m; sourceTree = "<group>"; };
 		FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cassette.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,6 +190,8 @@
 		DCBAA4991CCCEA96008B1550 /* Mixes */ = {
 			isa = PBXGroup;
 			children = (
+				DCBAA4AB1CCD0316008B1550 /* CSTMixController.h */,
+				DCBAA4AC1CCD0316008B1550 /* CSTMixController.m */,
 				DCBAA49B1CCCEAA8008B1550 /* Mix Explorer */,
 			);
 			name = Mixes;
@@ -347,6 +352,7 @@
 				DC147E9E1CC97E3900AE1CFE /* AppDelegate.m in Sources */,
 				DCBAA4931CCCE8B0008B1550 /* CSTBaseMix.m in Sources */,
 				DC06152B1CC9801400FF9D0B /* Shuttle.m in Sources */,
+				DCBAA4AD1CCD0316008B1550 /* CSTMixController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
