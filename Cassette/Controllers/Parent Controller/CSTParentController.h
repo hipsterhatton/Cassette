@@ -1,20 +1,19 @@
 //
-//  ViewController.h
+//  CSTParentController.h
 //  Cassette
 //
-//  Created by Stephen Hatton on 21/04/2016.
+//  Created by Stephen Hatton on 24/04/2016.
 //  Copyright © 2016 Stephen Hatton. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 #import "EightTracksAPI.h"
 #import "Shuttle.h"
 
-@interface ViewController : NSViewController
+@interface CSTParentController : NSObject
 
 @property (nonatomic, retain) EightTracksAPI *api;
 @property (nonatomic, retain) Shuttle *shuttle;
 
 @end
-

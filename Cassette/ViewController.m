@@ -9,23 +9,35 @@
 #import "ViewController.h"
 #import "Shuttle.h"
 
+#import "CSTMixExplorerController.h"
+
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-
-    // Do any additional setup after loading the view.
-    
-    Shuttle *s = [[Shuttle alloc] initWithDefaults:@{}];
-    
-    [s launch:GET :JSON :@"http://api.geonames.org/citiesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&lang=de&username=demo" :@{}];
-//    [s launch:POST :JSON :@"http://requestb.in/roupj6ro" :@{ @"testing" : @"something_goes_here" }];
+    [self setup];
 }
 
-- (void)setRepresentedObject:(id)representedObject {
+- (void)setRepresentedObject:(id)representedObject
+{
     [super setRepresentedObject:representedObject];
 
     // Update the view, if already loaded.
+}
+
+- (void)setup
+{
+    _api = [EightTracksAPI sharedManager];
+    
+    _shuttle = [Shuttle sharedManagerWithDefaults:@{
+                                                    @"X-Api-Key"      : [_api getAPIkey],
+                                                    @"X-Api-Version"  : [_api getAPIversion]
+                                                    }];
+    
+    CSTMixExplorerController *explorer = [[CSTMixExplorerController alloc] init];
+    
+    [explorer getHomepageMixes];
 }
 
 @end

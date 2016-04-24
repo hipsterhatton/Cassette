@@ -15,6 +15,10 @@
 		DC147EA41CC97E3900AE1CFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA31CC97E3900AE1CFE /* ViewController.m */; };
 		DC147EA61CC97E3900AE1CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC147EA51CC97E3900AE1CFE /* Assets.xcassets */; };
 		DC147EA91CC97E3900AE1CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC147EA71CC97E3900AE1CFE /* Main.storyboard */; };
+		DCBAA4931CCCE8B0008B1550 /* CSTBaseMix.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4921CCCE8B0008B1550 /* CSTBaseMix.m */; };
+		DCBAA4981CCCE9D4008B1550 /* EightTracksAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4971CCCE9D4008B1550 /* EightTracksAPI.m */; };
+		DCBAA4A21CCCF4A0008B1550 /* CSTParentController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A11CCCF4A0008B1550 /* CSTParentController.m */; };
+		DCBAA4A81CCCF607008B1550 /* CSTMixExplorerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A71CCCF607008B1550 /* CSTMixExplorerController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,14 @@
 		DC147EA51CC97E3900AE1CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC147EA81CC97E3900AE1CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC147EAA1CC97E3900AE1CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCBAA4911CCCE8B0008B1550 /* CSTBaseMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBaseMix.h; path = "Models/Mixes/Base Mix/CSTBaseMix.h"; sourceTree = "<group>"; };
+		DCBAA4921CCCE8B0008B1550 /* CSTBaseMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBaseMix.m; path = "Models/Mixes/Base Mix/CSTBaseMix.m"; sourceTree = "<group>"; };
+		DCBAA4961CCCE9D4008B1550 /* EightTracksAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EightTracksAPI.h; path = "Libs/8tracks API/EightTracksAPI.h"; sourceTree = "<group>"; };
+		DCBAA4971CCCE9D4008B1550 /* EightTracksAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EightTracksAPI.m; path = "Libs/8tracks API/EightTracksAPI.m"; sourceTree = "<group>"; };
+		DCBAA4A01CCCF4A0008B1550 /* CSTParentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTParentController.h; path = "Controllers/Parent Controller/CSTParentController.h"; sourceTree = "<group>"; };
+		DCBAA4A11CCCF4A0008B1550 /* CSTParentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTParentController.m; path = "Controllers/Parent Controller/CSTParentController.m"; sourceTree = "<group>"; };
+		DCBAA4A61CCCF607008B1550 /* CSTMixExplorerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTMixExplorerController.h; path = "Controllers/Mixes/Mix Explorer/CSTMixExplorerController.h"; sourceTree = "<group>"; };
+		DCBAA4A71CCCF607008B1550 /* CSTMixExplorerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTMixExplorerController.m; path = "Controllers/Mixes/Mix Explorer/CSTMixExplorerController.m"; sourceTree = "<group>"; };
 		FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cassette.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -60,6 +72,7 @@
 		DC06151F1CC97F8100FF9D0B /* Libs */ = {
 			isa = PBXGroup;
 			children = (
+				DCBAA4951CCCE989008B1550 /* 8tracks API */,
 				DC0615281CC97FF300FF9D0B /* Shuttle */,
 				DC0615221CC97F9100FF9D0B /* DavidJSON */,
 			);
@@ -109,6 +122,8 @@
 				DC147E9D1CC97E3900AE1CFE /* AppDelegate.m */,
 				DC147EA21CC97E3900AE1CFE /* ViewController.h */,
 				DC147EA31CC97E3900AE1CFE /* ViewController.m */,
+				DCBAA4941CCCE90A008B1550 /* Controllers */,
+				DCBAA48B1CCCE7B5008B1550 /* Models */,
 				DC06151F1CC97F8100FF9D0B /* Libs */,
 				DC147EA51CC97E3900AE1CFE /* Assets.xcassets */,
 				DC147EA71CC97E3900AE1CFE /* Main.storyboard */,
@@ -124,6 +139,75 @@
 				DC147EA01CC97E3900AE1CFE /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCBAA48B1CCCE7B5008B1550 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCBAA48C1CCCE7E5008B1550 /* Mixes */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		DCBAA48C1CCCE7E5008B1550 /* Mixes */ = {
+			isa = PBXGroup;
+			children = (
+				DCBAA4901CCCE88B008B1550 /* Base Mix */,
+			);
+			name = Mixes;
+			sourceTree = "<group>";
+		};
+		DCBAA4901CCCE88B008B1550 /* Base Mix */ = {
+			isa = PBXGroup;
+			children = (
+				DCBAA4911CCCE8B0008B1550 /* CSTBaseMix.h */,
+				DCBAA4921CCCE8B0008B1550 /* CSTBaseMix.m */,
+			);
+			name = "Base Mix";
+			sourceTree = "<group>";
+		};
+		DCBAA4941CCCE90A008B1550 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DCBAA49F1CCCF475008B1550 /* Parent Controller */,
+				DCBAA4991CCCEA96008B1550 /* Mixes */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DCBAA4951CCCE989008B1550 /* 8tracks API */ = {
+			isa = PBXGroup;
+			children = (
+				DCBAA4961CCCE9D4008B1550 /* EightTracksAPI.h */,
+				DCBAA4971CCCE9D4008B1550 /* EightTracksAPI.m */,
+			);
+			name = "8tracks API";
+			sourceTree = "<group>";
+		};
+		DCBAA4991CCCEA96008B1550 /* Mixes */ = {
+			isa = PBXGroup;
+			children = (
+				DCBAA49B1CCCEAA8008B1550 /* Mix Explorer */,
+			);
+			name = Mixes;
+			sourceTree = "<group>";
+		};
+		DCBAA49B1CCCEAA8008B1550 /* Mix Explorer */ = {
+			isa = PBXGroup;
+			children = (
+				DCBAA4A61CCCF607008B1550 /* CSTMixExplorerController.h */,
+				DCBAA4A71CCCF607008B1550 /* CSTMixExplorerController.m */,
+			);
+			name = "Mix Explorer";
+			sourceTree = "<group>";
+		};
+		DCBAA49F1CCCF475008B1550 /* Parent Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DCBAA4A01CCCF4A0008B1550 /* CSTParentController.h */,
+				DCBAA4A11CCCF4A0008B1550 /* CSTParentController.m */,
+			);
+			name = "Parent Controller";
 			sourceTree = "<group>";
 		};
 		E20E66496E40BAA04CF01588 /* Frameworks */ = {
@@ -254,10 +338,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCBAA4A21CCCF4A0008B1550 /* CSTParentController.m in Sources */,
+				DCBAA4981CCCE9D4008B1550 /* EightTracksAPI.m in Sources */,
 				DC0615271CC97FA300FF9D0B /* NSObject+DavidJSON.m in Sources */,
 				DC147EA41CC97E3900AE1CFE /* ViewController.m in Sources */,
 				DC147EA11CC97E3900AE1CFE /* main.m in Sources */,
+				DCBAA4A81CCCF607008B1550 /* CSTMixExplorerController.m in Sources */,
 				DC147E9E1CC97E3900AE1CFE /* AppDelegate.m in Sources */,
+				DCBAA4931CCCE8B0008B1550 /* CSTBaseMix.m in Sources */,
 				DC06152B1CC9801400FF9D0B /* Shuttle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
