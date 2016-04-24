@@ -23,6 +23,7 @@
     
     dispatch_once(&onceToken, ^{
         sharedMyManager = [[self alloc] init];
+        [sharedMyManager setPlayToken:@"http://8tracks.com/sets/new.json"];
     });
     
     return sharedMyManager;
@@ -73,6 +74,15 @@
     return [self _replace:url :placeholders :values];
 }
 
+
+- (NSString *)playMix:(NSString *)mixID
+{
+    NSString *url =         @"http://8tracks.com/sets/#{PlayToken}/play.json?mix_id=#{MixID}";
+    
+    NSArray *placeholders = @[ @"#{PlayToken}", @"#{MixID}" ];
+    NSArray *values =       @[ stringify(_playToken), stringify(mixID) ];
+    return [self _replace:url :placeholders :values];
+}
 
 
 - (NSString *)_replace:(NSString *)string :(NSArray *)placeholders :(NSArray *)values

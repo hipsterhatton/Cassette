@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <AVFoundation/AVFoundation.h>
 
 #import "EightTracksAPI.h"
 #import "Shuttle.h"
@@ -15,6 +16,8 @@
 
 @property (nonatomic, retain) EightTracksAPI *api;
 @property (nonatomic, retain) Shuttle *shuttle;
+
+@property (nonatomic, retain) AVPlayer *player;
 
 @end
 

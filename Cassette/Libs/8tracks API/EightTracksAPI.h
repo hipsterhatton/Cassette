@@ -10,6 +10,8 @@
 
 @interface EightTracksAPI : NSObject
 
+@property (nonatomic, retain) NSString *playToken;
+
 + (id)sharedManager;
 
 - (NSString *)getAPIversion;
@@ -19,5 +21,7 @@
 - (NSString *)getMixDetails:(NSString *)mixID;
 - (NSString *)getSimilarMix:(NSString *)playToken :(NSString *)mixID;
 - (NSString *)getListOfTracksPlayed:(NSString *)playToken :(NSString *)mixID;
+
+- (NSString *)playMix:(NSString *)mixID;
 
 @end
