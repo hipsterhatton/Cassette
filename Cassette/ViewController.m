@@ -61,7 +61,7 @@
 - (IBAction)button_playMix:(id)sender
 {
     CSTMixPlayer *player = [[CSTMixPlayer alloc] init];
-    [player playMix: [_explorer homepageMixes][11] ];
+    [player playMix: [_explorer homepageMixes][6] ];
 }
 
 @end
