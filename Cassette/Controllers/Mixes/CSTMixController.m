@@ -60,7 +60,11 @@
 
 - (void)getTracksAlreadyPlayed:(CSTBaseMix *)mix
 {
-    NSLog(@"%@", [self.api getListOfTracksPlayed:[mix _id]]);
+    if ([mix tracksPlayed]) {
+        if ([[mix tracksPlayed] count] > 0) {
+            return;
+        }
+    }
     
     [self.shuttle launch:GET :JSON :[self.api getListOfTracksPlayed:[mix _id]] :nil]
     
