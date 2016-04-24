@@ -30,9 +30,8 @@ typedef enum {
 @property (nonatomic, retain) AFJSONResponseSerializer *JSONResponse;
 
 
-
-- (instancetype)initWithDefaults:(NSDictionary *)defaults;
-- (void)updateDefaults:(NSDictionary *)defaults;
++ (id)sharedManagerWithDefaults:(NSDictionary *)defaults;
++ (id)sharedManager;
 
 - (RXPromise *)launch:(ShuttleModes)mode :(ShuttleResponses)response :(NSString *)url :(NSDictionary *)params;
 

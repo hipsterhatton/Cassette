@@ -10,6 +10,23 @@
 
 @implementation Shuttle
 
++ (id)sharedManagerWithDefaults:(NSDictionary *)defaults
+{
+    static Shuttle *sharedMyManager = nil;
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        sharedMyManager = [[self alloc] initWithDefaults:defaults];
+    });
+    
+    return sharedMyManager;
+}
+
++ (id)sharedManager
+{
+    return self;
+}
+
 - (instancetype)initWithDefaults:(NSDictionary *)defaults
 {
     self = [[Shuttle alloc] init];
@@ -18,8 +35,6 @@
     for (NSString *key in defaults) {
         [[_manager requestSerializer] setValue:defaults[key] forHTTPHeaderField:key];
     }
-    
-    [_manager setRequestSerializer:[AFJSONRequestSerializer new]];
     
     _HTTPResponse = [AFHTTPResponseSerializer new];
     _JSONResponse = [AFJSONResponseSerializer new];
@@ -74,17 +89,11 @@
 
 - (void)url_success:(RXPromise *)promise :(NSObject *)data :(NSString *)url
 {
-    NSLog(@"Success: %@", url);
-    
-    NSLog(@"Data: %@", data);
-    
     [promise fulfillWithValue:data];
 }
 
 - (void)url_failure:(RXPromise *)promise :(NSError *)error :(NSString *)url
 {
-    NSLog(@"Error: %@", error);
-    
     [promise rejectWithReason:error];
 }
 
