@@ -8,8 +8,13 @@
 
 #import "CSTParentController.h"
 
+#import "CSTBaseMix.h"
+#import "CSTTrack.h"
+
 @interface CSTMixController : CSTParentController
 
 - (void)getMixDetails:(NSString *)mixID;
+- (void)getSimilarMixes:(CSTBaseMix *)mix;
+- (void)getTracksAlreadyPlayed:(CSTBaseMix *)mix;
 
 @end

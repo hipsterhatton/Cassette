@@ -31,12 +31,24 @@
     });
 }
 
-- (void)getSimilarMixes:(NSString *)mixID
+- (void)getSimilarMixes:(CSTBaseMix *)mix
 {
-    [self.shuttle launch:GET :JSON :[self.api getSimilarMix:mixID] :nil]
+    if ([mix similarMixes]) {
+        if ([[mix similarMixes] count] > 0) {
+            return;
+        }
+    }
+    
+    [self.shuttle launch:GET :JSON :[self.api getSimilarMix:[mix _id]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
-        NSLog(@"Raw JSON: %@", rawJSON);
+        
+        if (![mix similarMixes]) {
+            [mix setSimilarMixes:[[NSMutableArray alloc] init]];
+        }
+        
+        [[mix similarMixes] addObject: [CSTBaseMix createViaJSON:rawJSON :[CSTBaseMix getSimilarMixJSONStructure]] ];
+        
         return @"OK";
     }, nil)
     
@@ -46,12 +58,25 @@
     });
 }
 
-- (void)setTracksAlreadyPlayed:(NSString *)mixID
+- (void)getTracksAlreadyPlayed:(CSTBaseMix *)mix
 {
-    [self.shuttle launch:GET :JSON :[self.api getListOfTracksPlayed:mixID] :nil]
+    NSLog(@"%@", [self.api getListOfTracksPlayed:[mix _id]]);
+    
+    [self.shuttle launch:GET :JSON :[self.api getListOfTracksPlayed:[mix _id]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
-        NSLog(@"Raw JSON: %@", rawJSON);
+        
+        if (![mix tracksPlayed]) {
+            [mix setTracksPlayed:[[NSMutableArray alloc] init]];
+        }
+        
+        [[mix tracksPlayed] addObjectsFromArray:[CSTTrack createArrayObjectsViaJSON
+                                                 :rawJSON
+                                                 :@"tracks"
+                                                 :[CSTTrack getAltJSONStructure]
+                                                 :[CSTTrack class]]
+         ];
+        
         return @"OK";
     }, nil)
     

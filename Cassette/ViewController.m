@@ -66,7 +66,8 @@
 
 - (IBAction)button_loadNextPage:(id)sender
 {
-    [_explorer homepageMixesNextPage];
+    CSTBaseMix *mix = [[_explorer homepageMixes] firstObject];
+    [_explorer getSimilarMixes:mix];
 }
 
 

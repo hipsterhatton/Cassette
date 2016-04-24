@@ -23,6 +23,9 @@
 @property (nonatomic, getter=atTheEnd) BOOL atEnd;
 @property (nonatomic, getter=isSkipAllowed) BOOL skipAllowed;
 
+
+
 + (NSDictionary *)getJSONStructure;
++ (NSDictionary *)getAltJSONStructure;
 
 @end

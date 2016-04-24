@@ -30,4 +30,20 @@
     return dictionary;
 }
 
++ (NSDictionary *)getAltJSONStructure
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary
+                                       :@{
+                                          
+                                          @"_id"                : @"id",
+                                          @"name"               : @"name",
+                                          @"performer"          : @"performer",
+                                          @"trackURL"           : @"track_file_stream_url",
+                                          @"likedByUser"        : @"faved_by_current_user",
+                                          
+                                          }];
+    
+    return dictionary;
+}
+
 @end
