@@ -21,7 +21,6 @@
 		DCBAA4A21CCCF4A0008B1550 /* CSTParentController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A11CCCF4A0008B1550 /* CSTParentController.m */; };
 		DCBAA4A81CCCF607008B1550 /* CSTMixExplorerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A71CCCF607008B1550 /* CSTMixExplorerController.m */; };
 		DCBAA4AD1CCD0316008B1550 /* CSTMixController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4AC1CCD0316008B1550 /* CSTMixController.m */; };
-		DCBAA4B11CCD0605008B1550 /* CSTFullMix.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4B01CCD0605008B1550 /* CSTFullMix.m */; };
 		DCBAA4B81CCD081B008B1550 /* CSTMixPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4B71CCD081B008B1550 /* CSTMixPlayer.m */; };
 		DCBAA4BA1CCD0CFB008B1550 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */; };
 		DCBAA4BE1CCD1527008B1550 /* CSTTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4BD1CCD1527008B1550 /* CSTTrack.m */; };
@@ -55,8 +54,6 @@
 		DCBAA4A71CCCF607008B1550 /* CSTMixExplorerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTMixExplorerController.m; path = "Controllers/Mixes/Mix Explorer/CSTMixExplorerController.m"; sourceTree = "<group>"; };
 		DCBAA4AB1CCD0316008B1550 /* CSTMixController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTMixController.h; path = Controllers/Mixes/CSTMixController.h; sourceTree = "<group>"; };
 		DCBAA4AC1CCD0316008B1550 /* CSTMixController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTMixController.m; path = Controllers/Mixes/CSTMixController.m; sourceTree = "<group>"; };
-		DCBAA4AF1CCD0605008B1550 /* CSTFullMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTFullMix.h; path = "Models/Mixes/Full Mix/CSTFullMix.h"; sourceTree = "<group>"; };
-		DCBAA4B01CCD0605008B1550 /* CSTFullMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTFullMix.m; path = "Models/Mixes/Full Mix/CSTFullMix.m"; sourceTree = "<group>"; };
 		DCBAA4B61CCD081B008B1550 /* CSTMixPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTMixPlayer.h; path = "Controllers/Mix Player/CSTMixPlayer.h"; sourceTree = "<group>"; };
 		DCBAA4B71CCD081B008B1550 /* CSTMixPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTMixPlayer.m; path = "Controllers/Mix Player/CSTMixPlayer.m"; sourceTree = "<group>"; };
 		DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -181,19 +178,10 @@
 		DCBAA48C1CCCE7E5008B1550 /* Mixes */ = {
 			isa = PBXGroup;
 			children = (
-				DCBAA4AE1CCD05EB008B1550 /* Full Mix */,
-				DCBAA4901CCCE88B008B1550 /* Base Mix */,
-			);
-			name = Mixes;
-			sourceTree = "<group>";
-		};
-		DCBAA4901CCCE88B008B1550 /* Base Mix */ = {
-			isa = PBXGroup;
-			children = (
 				DCBAA4911CCCE8B0008B1550 /* CSTBaseMix.h */,
 				DCBAA4921CCCE8B0008B1550 /* CSTBaseMix.m */,
 			);
-			name = "Base Mix";
+			name = Mixes;
 			sourceTree = "<group>";
 		};
 		DCBAA4941CCCE90A008B1550 /* Controllers */ = {
@@ -241,15 +229,6 @@
 				DCBAA4A11CCCF4A0008B1550 /* CSTParentController.m */,
 			);
 			name = "Parent Controller";
-			sourceTree = "<group>";
-		};
-		DCBAA4AE1CCD05EB008B1550 /* Full Mix */ = {
-			isa = PBXGroup;
-			children = (
-				DCBAA4AF1CCD0605008B1550 /* CSTFullMix.h */,
-				DCBAA4B01CCD0605008B1550 /* CSTFullMix.m */,
-			);
-			name = "Full Mix";
 			sourceTree = "<group>";
 		};
 		DCBAA4B21CCD07C9008B1550 /* Mix Player */ = {
@@ -412,7 +391,6 @@
 				DCBAA4931CCCE8B0008B1550 /* CSTBaseMix.m in Sources */,
 				DC06152B1CC9801400FF9D0B /* Shuttle.m in Sources */,
 				DCBAA4AD1CCD0316008B1550 /* CSTMixController.m in Sources */,
-				DCBAA4B11CCD0605008B1550 /* CSTFullMix.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

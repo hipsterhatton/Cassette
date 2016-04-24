@@ -26,7 +26,7 @@
 
 
 
-- (void)playMix:(CSTFullMix *)mix
+- (void)playMix:(CSTBaseMix *)mix
 {
     _currentlyPlayingMix = mix;
 

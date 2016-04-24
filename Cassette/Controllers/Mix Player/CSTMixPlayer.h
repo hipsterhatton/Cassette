@@ -11,7 +11,7 @@
 
 #import "CSTParentController.h"
 
-#import "CSTFullMix.h"
+#import "CSTBaseMix.h"
 #import "CSTTrack.h"
 
 @interface CSTMixPlayer : CSTParentController
@@ -19,7 +19,7 @@
 @property (nonatomic, retain) FSAudioStream *player;
 
 @property (nonatomic, retain) CSTTrack *currentlyPlayingTrack;
-@property (nonatomic, retain) CSTFullMix *currentlyPlayingMix;
+@property (nonatomic, retain) CSTBaseMix *currentlyPlayingMix;
 
 @property (nonatomic, retain) NSTimer *reportingTimer;
 @property (nonatomic) int reportingTimerCounter;
