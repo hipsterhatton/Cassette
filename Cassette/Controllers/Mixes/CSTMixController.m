@@ -33,12 +33,32 @@
 
 - (void)getSimilarMixes:(NSString *)mixID
 {
+    [self.shuttle launch:GET :JSON :[self.api getSimilarMix:mixID] :nil]
     
+    .then(^id (NSDictionary *rawJSON) {
+        NSLog(@"Raw JSON: %@", rawJSON);
+        return @"OK";
+    }, nil)
+    
+    .then(nil, ^id(NSError* error) {
+        NSLog(@"Error: %@", [error localizedDescription]);
+        return nil;
+    });
 }
 
 - (void)setTracksAlreadyPlayed:(NSString *)mixID
 {
+    [self.shuttle launch:GET :JSON :[self.api getListOfTracksPlayed:mixID] :nil]
     
+    .then(^id (NSDictionary *rawJSON) {
+        NSLog(@"Raw JSON: %@", rawJSON);
+        return @"OK";
+    }, nil)
+    
+    .then(nil, ^id(NSError* error) {
+        NSLog(@"Error: %@", [error localizedDescription]);
+        return nil;
+    });
 }
 
 @end

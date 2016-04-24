@@ -56,23 +56,24 @@
     return [self _replace:url :placeholders :values];
 }
 
-- (NSString *)getSimilarMix:(NSString *)playToken :(NSString *)mixID
+- (NSString *)getSimilarMix:(NSString *)mixID
 {
     
     NSString *url =         @"http://8tracks.com/sets/#{PlayToken}/next_mix.json?mix_id=#{MixID}";
     NSArray *placeholders = @[ @"#{PlayToken}", @"#{MixID}" ];
-    NSArray *values =       @[ playToken, mixID ];
+    NSArray *values =       @[ stringify(_playToken), mixID ];
     return [self _replace:url :placeholders :values];
 }
 
-- (NSString *)getListOfTracksPlayed:(NSString *)playToken :(NSString *)mixID
+- (NSString *)getListOfTracksPlayed:(NSString *)mixID
 {
     
     NSString *url =         @"http://8tracks.com/sets/#{PlayToken}/tracks_played.json?mix_id=#{MixID}";
     NSArray *placeholders = @[ @"#{PlayToken}", @"#{MixID}" ];
-    NSArray *values =       @[ playToken, mixID ];
+    NSArray *values =       @[ stringify(_playToken), mixID ];
     return [self _replace:url :placeholders :values];
 }
+
 
 
 - (NSString *)playMix:(NSString *)mixID

@@ -51,8 +51,12 @@
     
     
     .thenOnMain(^id (id object) {
-        [_player playFromURL:[NSURL URLWithString:[_currentlyPlayingTrack trackURL]]];
-        [self _startReportTimer];
+        if ([_currentlyPlayingTrack atTheEnd]) {
+            [self nextTrack];
+        } else {
+            [_player playFromURL:[NSURL URLWithString:[_currentlyPlayingTrack trackURL]]];
+            [self _startReportTimer];
+        }
         return @"OK";
     }, nil)
     
@@ -67,15 +71,17 @@
 {
     NSLog(@"Loading the next track...");
     
+    if ([_currentlyPlayingTrack atTheLastTrack]) {
+        NSLog(@"Reached end of mix...");
+        return;
+    }
+    
     [self.shuttle launch:GET :JSON :[self.api nextTrackInMix:[_currentlyPlayingMix _id]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
+        NSLog(@"Raw JSON: %@", rawJSON);
+        
         [_currentlyPlayingTrack updateViaJSON:rawJSON :[CSTTrack getJSONStructure]];
-        
-        NSLog(@"At End: %d", [_currentlyPlayingTrack atTheEnd]);
-        NSLog(@"At Last Track: %d", [_currentlyPlayingTrack atTheLastTrack]);
-        NSLog(@"Can Skip: %d", [_currentlyPlayingTrack isSkipAllowed]);
-        
         return @"OK";
     }, nil)
     

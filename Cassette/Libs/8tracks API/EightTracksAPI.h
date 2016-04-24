@@ -19,8 +19,8 @@
 
 - (NSString *)getHomepageMixes;
 - (NSString *)getMixDetails:(NSString *)mixID;
-- (NSString *)getSimilarMix:(NSString *)playToken :(NSString *)mixID;
-- (NSString *)getListOfTracksPlayed:(NSString *)playToken :(NSString *)mixID;
+- (NSString *)getSimilarMix:(NSString *)mixID;
+- (NSString *)getListOfTracksPlayed:(NSString *)mixID;
 
 - (NSString *)playMix:(NSString *)mixID;
 - (NSString *)nextTrackInMix:(NSString *)mixID;
