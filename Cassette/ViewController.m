@@ -64,4 +64,10 @@
     [player playMix: [_explorer homepageMixes][6] ];
 }
 
+- (IBAction)button_loadNextPage:(id)sender
+{
+    [_explorer homepageMixesNextPage];
+}
+
+
 @end

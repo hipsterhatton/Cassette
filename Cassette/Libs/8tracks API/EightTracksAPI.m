@@ -43,9 +43,12 @@
 
 
 
-- (NSString *)getHomepageMixes
+- (NSString *)getHomepageMixes:(NSString *)sort :(int)pageNumber :(int)numberPerPage
 {
-    return @"http://8tracks.com/mix_sets/all.json?include=mixes+pagination&page=1&per_page=12";
+    NSString *url = @"http://8tracks.com/mix_sets/all:#{Sort}.json?include=mixes+pagination&page=#{PageNumber}&per_page=#{PerPage}";
+    NSArray *placeholders = @[ @"#{Sort}", @"#{PageNumber}", @"#{PerPage}" ];
+    NSArray *values =       @[ sort, i_to_s(pageNumber), i_to_s(numberPerPage) ];
+    return [self _replace:url :placeholders :values];
 }
 
 - (NSString *)getMixDetails:(NSString *)mixID

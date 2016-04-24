@@ -14,12 +14,16 @@
 - (instancetype)init
 {
     self = [super init];
+    _searchSetup = [[CSTSearchSetup alloc] init];
     return self;
 }
 
 - (void)getHomepageMixes
 {
-    [self.shuttle launch:GET :JSON :[self.api getHomepageMixes] :nil]
+    [self.shuttle launch:GET :JSON :[self.api getHomepageMixes:[_searchSetup sort]
+                                                              :[_searchSetup pageNumber]
+                                                              :[_searchSetup resultsPerPage]
+                                     ] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
@@ -31,6 +35,8 @@
          [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"mix_set/mixes" :[CSTBaseMix getJSONStructure] :[CSTBaseMix class]]
          ];
         
+        [_searchSetup updateViaJSON:rawJSON :[CSTSearchSetup getJSONStructure]];
+        
         return @"OK";
     }, nil)
     
@@ -40,6 +46,11 @@
     });
 }
 
-// this needs updating to use some sort of search setup object :: that allows for pagination, etc.
+- (void)homepageMixesNextPage
+{
+    if ([_searchSetup nextPage]) {
+        [self getHomepageMixes];
+    }
+}
 
 @end

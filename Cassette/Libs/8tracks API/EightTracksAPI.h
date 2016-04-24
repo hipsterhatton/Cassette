@@ -17,7 +17,8 @@
 - (NSString *)getAPIversion;
 - (NSString *)getAPIkey;
 
-- (NSString *)getHomepageMixes;
+- (NSString *)getHomepageMixes:(NSString *)sort :(int)pageNumber :(int)numberPerPage;
+
 - (NSString *)getMixDetails:(NSString *)mixID;
 - (NSString *)getSimilarMix:(NSString *)mixID;
 - (NSString *)getListOfTracksPlayed:(NSString *)mixID;

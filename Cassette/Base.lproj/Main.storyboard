@@ -683,6 +683,16 @@
                                     <action selector="button_playMix:" target="XfG-lQ-9wD" id="Zap-ZY-1VO"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q2y-8V-HDi">
+                                <rect key="frame" x="233" y="154" width="102" height="32"/>
+                                <buttonCell key="cell" type="push" title="Next Page" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OSU-8N-5zo">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="button_loadNextPage:" target="XfG-lQ-9wD" id="MGD-0O-FAO"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                 </viewController>
