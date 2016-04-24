@@ -1,5 +1,5 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/RXPromise"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/RXPromise"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"RXPromise" -l"c++" -framework "CoreServices" -framework "Security" -framework "SystemConfiguration" -weak_framework "CoreData"
+HEADER_SEARCH_PATHS = $(SDKROOT)/usr/include/libxml2 $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/FreeStreamer" "${PODS_ROOT}/Headers/Public/RXPromise" "${PODS_ROOT}/Headers/Public/Reachability"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/FreeStreamer" -isystem "${PODS_ROOT}/Headers/Public/RXPromise" -isystem "${PODS_ROOT}/Headers/Public/Reachability"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"AFNetworking" -l"FreeStreamer" -l"RXPromise" -l"Reachability" -l"c++" -l"stdc++" -l"xml2" -framework "AVFoundation" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreServices" -framework "Security" -framework "SystemConfiguration" -weak_framework "CoreData"
 PODS_ROOT = ${SRCROOT}/Pods
