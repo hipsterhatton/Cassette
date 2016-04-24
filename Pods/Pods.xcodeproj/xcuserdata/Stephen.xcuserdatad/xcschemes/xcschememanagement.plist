@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FreeStreamer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Cassette.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -19,15 +24,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>2F2004F6750B429D1E64A639FE2D31B8</key>
+		<key>29C94C91E923484A640E94C6CA306116</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>92C476EA258C189AC308CEB5C2D8E0D1</key>
+		<key>553C5A3458A775427A23AE5190962017</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>758AE612E3C2ADB6EFD4A996690220A9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B243B79CAFDD35B645BF9980B28185C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
