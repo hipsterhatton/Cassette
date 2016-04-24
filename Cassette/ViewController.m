@@ -54,38 +54,14 @@
 
 - (void)loadMixExplorer
 {
-    CSTMixExplorerController *explorer = [[CSTMixExplorerController alloc] init];
-    
-    [explorer getHomepageMixes];
+    _explorer = [[CSTMixExplorerController alloc] init];
+    [_explorer getHomepageMixes];
 }
 
 - (IBAction)button_playMix:(id)sender
 {
-    NSString *trackURL = @"http://cft.8tracks.com/tf/000/000/025/hgQEis.48k.v3.m4a";
-    
-//    NSURL *url = [[NSURL alloc] initWithString:trackURL];
-//    
-//    url = [NSURL URLWithString:trackURL];
-//    
-//    NSData *data = [NSData dataWithContentsOfURL:url];
-//    
-//    AVAudioPlayer *audioPlayer = [[AVAudioPlayer alloc] initWithData:data error:nil];
-//    
-//    [audioPlayer play];
-
-    
-    NSURL *url = [NSURL URLWithString:trackURL];
-
-    AVPlayerItem *playerItem = [AVPlayerItem playerItemWithURL:url];
-                  
-    _player = [AVPlayer playerWithPlayerItem:playerItem];
-    
-    
-//    NSLog(@"Something!");
-//    
-//    CSTMixPlayer *player = [[CSTMixPlayer alloc] init];
-//    
-//    [player playMix:@"14"];
+    CSTMixPlayer *player = [[CSTMixPlayer alloc] init];
+    [player playMix: [_explorer homepageMixes][11] ];
 }
 
 @end

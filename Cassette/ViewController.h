@@ -7,17 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <AVFoundation/AVFoundation.h>
 
 #import "EightTracksAPI.h"
 #import "Shuttle.h"
+
+#import "CSTMixExplorerController.h"
 
 @interface ViewController : NSViewController
 
 @property (nonatomic, retain) EightTracksAPI *api;
 @property (nonatomic, retain) Shuttle *shuttle;
-
-@property (nonatomic, retain) AVPlayer *player;
+@property (nonatomic, retain) CSTMixExplorerController *explorer;
 
 @end
 
