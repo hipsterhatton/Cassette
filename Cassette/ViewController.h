@@ -12,12 +12,17 @@
 #import "Shuttle.h"
 
 #import "CSTMixExplorerController.h"
+#import "CSTTagsExplorerController.h"
+
+#import "CSTTag.h"
 
 @interface ViewController : NSViewController
 
 @property (nonatomic, retain) EightTracksAPI *api;
 @property (nonatomic, retain) Shuttle *shuttle;
+
 @property (nonatomic, retain) CSTMixExplorerController *explorer;
+@property (nonatomic, retain) CSTTagsExplorerController *tagexplorer;
 
 @end
 

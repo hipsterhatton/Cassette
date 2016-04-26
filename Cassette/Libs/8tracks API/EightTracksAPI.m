@@ -43,6 +43,7 @@
 
 
 
+
 - (NSString *)getHomepageMixes:(NSString *)sort :(int)pageNumber :(int)numberPerPage
 {
     NSString *url = @"http://8tracks.com/mix_sets/all:#{Sort}.json?include=mixes+pagination&page=#{PageNumber}&per_page=#{PerPage}";
@@ -79,6 +80,7 @@
 
 
 
+
 - (NSString *)playMix:(NSString *)mixID
 {
     NSString *url =         @"http://8tracks.com/sets/#{PlayToken}/play.json?mix_id=#{MixID}";
@@ -103,6 +105,31 @@
     NSArray *values =       @[ stringify(_playToken), stringify(trackID), stringify(mixID) ];
     return [self _replace:url :placeholders :values];
 }
+
+
+
+
+- (NSString *)getTopTags:(int)pageNumber
+{
+    NSString *url =         @"http://8tracks.com/tags.json?include=pagination&page=#{PageNumber}";
+    NSArray *placeholders = @[ @"#{PageNumber}" ];
+    NSArray *values =       @[ i_to_s(pageNumber) ];
+    return [self _replace:url :placeholders :values];
+}
+
+- (NSString *)autocompleteTags
+{
+    return @"http://8tracks.com/tags.json?q=#{Tag}";
+}
+
+- (NSString *)getTagsAndMixes:(NSString *)tagList :(int)pageNumber
+{
+    NSString *url =         @"http://8tracks.com/explore/#{TagList}.json?include=details,mixes,pagination,explore_filters&page=#{PageNumber}&format=jsonh";
+    NSArray *placeholders = @[ @"#{TagList}", @"#{PageNumber}" ];
+    NSArray *values =       @[ tagList, i_to_s(pageNumber) ];
+    return [self _replace:url :placeholders :values];
+}
+
 
 
 

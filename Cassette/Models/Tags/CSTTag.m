@@ -10,4 +10,16 @@
 
 @implementation CSTTag
 
++ (NSDictionary *)getJSONStructure
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary
+                                       :@{
+                                          
+                                          @"name"                : @"name"
+                                          
+                                          }];
+    
+    return dictionary;
+}
+
 @end

@@ -24,6 +24,8 @@
 		DCBAA4B81CCD081B008B1550 /* CSTMixPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4B71CCD081B008B1550 /* CSTMixPlayer.m */; };
 		DCBAA4BA1CCD0CFB008B1550 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */; };
 		DCBAA4BE1CCD1527008B1550 /* CSTTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4BD1CCD1527008B1550 /* CSTTrack.m */; };
+		DCD8AB1F1CCEBCFB000B0A40 /* CSTTagsExplorerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8AB1E1CCEBCFB000B0A40 /* CSTTagsExplorerController.m */; };
+		DCD8AB231CCEBEC3000B0A40 /* CSTTag.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8AB221CCEBEC3000B0A40 /* CSTTag.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +61,10 @@
 		DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DCBAA4BC1CCD1527008B1550 /* CSTTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTTrack.h; path = Models/Tracks/CSTTrack.h; sourceTree = "<group>"; };
 		DCBAA4BD1CCD1527008B1550 /* CSTTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTTrack.m; path = Models/Tracks/CSTTrack.m; sourceTree = "<group>"; };
+		DCD8AB1D1CCEBCFB000B0A40 /* CSTTagsExplorerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTTagsExplorerController.h; path = "Controllers/Mixes/Tag Explorer/CSTTagsExplorerController.h"; sourceTree = "<group>"; };
+		DCD8AB1E1CCEBCFB000B0A40 /* CSTTagsExplorerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTTagsExplorerController.m; path = "Controllers/Mixes/Tag Explorer/CSTTagsExplorerController.m"; sourceTree = "<group>"; };
+		DCD8AB211CCEBEC3000B0A40 /* CSTTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTTag.h; path = Models/Tags/CSTTag.h; sourceTree = "<group>"; };
+		DCD8AB221CCEBEC3000B0A40 /* CSTTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTTag.m; path = Models/Tags/CSTTag.m; sourceTree = "<group>"; };
 		FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cassette.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -165,9 +171,19 @@
 			name = Searching;
 			sourceTree = "<group>";
 		};
+		DC57A2401CCD46520012718A /* Tags Explorer */ = {
+			isa = PBXGroup;
+			children = (
+				DCD8AB1D1CCEBCFB000B0A40 /* CSTTagsExplorerController.h */,
+				DCD8AB1E1CCEBCFB000B0A40 /* CSTTagsExplorerController.m */,
+			);
+			name = "Tags Explorer";
+			sourceTree = "<group>";
+		};
 		DCBAA48B1CCCE7B5008B1550 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DCD8AB201CCEBEAA000B0A40 /* Tags */,
 				DC57A23C1CCD32410012718A /* Searching */,
 				DCBAA4BB1CCD1517008B1550 /* Tracks */,
 				DCBAA48C1CCCE7E5008B1550 /* Mixes */,
@@ -208,6 +224,7 @@
 			children = (
 				DCBAA4AB1CCD0316008B1550 /* CSTMixController.h */,
 				DCBAA4AC1CCD0316008B1550 /* CSTMixController.m */,
+				DC57A2401CCD46520012718A /* Tags Explorer */,
 				DCBAA49B1CCCEAA8008B1550 /* Mix Explorer */,
 			);
 			name = Mixes;
@@ -247,6 +264,15 @@
 				DCBAA4BD1CCD1527008B1550 /* CSTTrack.m */,
 			);
 			name = Tracks;
+			sourceTree = "<group>";
+		};
+		DCD8AB201CCEBEAA000B0A40 /* Tags */ = {
+			isa = PBXGroup;
+			children = (
+				DCD8AB211CCEBEC3000B0A40 /* CSTTag.h */,
+				DCD8AB221CCEBEC3000B0A40 /* CSTTag.m */,
+			);
+			name = Tags;
 			sourceTree = "<group>";
 		};
 		E20E66496E40BAA04CF01588 /* Frameworks */ = {
@@ -378,7 +404,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD8AB1F1CCEBCFB000B0A40 /* CSTTagsExplorerController.m in Sources */,
 				DCBAA4A21CCCF4A0008B1550 /* CSTParentController.m in Sources */,
+				DCD8AB231CCEBEC3000B0A40 /* CSTTag.m in Sources */,
 				DCBAA4981CCCE9D4008B1550 /* EightTracksAPI.m in Sources */,
 				DC0615271CC97FA300FF9D0B /* NSObject+DavidJSON.m in Sources */,
 				DC147EA41CC97E3900AE1CFE /* ViewController.m in Sources */,

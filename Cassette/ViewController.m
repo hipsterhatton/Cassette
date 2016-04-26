@@ -9,9 +9,6 @@
 #import "ViewController.h"
 #import "Shuttle.h"
 
-#import "CSTMixExplorerController.h"
-#import "CSTMixPlayer.h"
-
 @implementation ViewController
 
 - (void)viewDidLoad
@@ -40,7 +37,6 @@
     
     .then(^id (NSDictionary *rawJSON) {
         [_api setPlayToken:rawJSON[@"play_token"]];
-        NSLog(@"Set Play Token!");
         return @"OK";
     }, nil)
     
@@ -54,21 +50,22 @@
 
 - (void)loadMixExplorer
 {
-    _explorer = [[CSTMixExplorerController alloc] init];
-    [_explorer getHomepageMixes];
+//    _explorer = [[CSTMixExplorerController alloc] init];
+//    [_explorer getHomepageMixes];
+    
+    
+    _tagexplorer = [[CSTTagsExplorerController alloc] init];
+    [_tagexplorer getTopTags];
 }
 
 - (IBAction)button_playMix:(id)sender
 {
-    CSTMixPlayer *player = [[CSTMixPlayer alloc] init];
-    [player playMix: [_explorer homepageMixes][6] ];
+    [_tagexplorer addSelectedTag:[[_tagexplorer tags] firstObject]];
 }
 
 - (IBAction)button_loadNextPage:(id)sender
 {
-    CSTBaseMix *mix = [[_explorer homepageMixes] firstObject];
-    [_explorer getSimilarMixes:mix];
+    [_tagexplorer tagMixesNextPage];
 }
-
 
 @end

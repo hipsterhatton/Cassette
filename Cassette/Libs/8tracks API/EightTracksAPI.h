@@ -26,6 +26,9 @@
 - (NSString *)playMix:(NSString *)mixID;
 - (NSString *)nextTrackInMix:(NSString *)mixID;
 
+- (NSString *)getTopTags:(int)pageNumber;
+- (NSString *)getTagsAndMixes:(NSString *)tagList :(int)pageNumber;
+
 - (NSString *)reportTrack:(NSString *)trackID :(NSString *)mixID;
 
 @end

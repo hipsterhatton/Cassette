@@ -10,4 +10,10 @@
 
 @interface CSTTag : NSObject
 
+@property (nonatomic, retain) NSString *name;
+
+
+
++ (NSDictionary *)getJSONStructure;
+
 @end

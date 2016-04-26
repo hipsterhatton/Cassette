@@ -14,6 +14,8 @@
 @property (nonatomic, retain) CSTSearchSetup *searchSetup;
 @property (nonatomic, retain) NSMutableArray *homepageMixes;
 
+
+
 - (void)getHomepageMixes;
 - (void)homepageMixesNextPage;
 
