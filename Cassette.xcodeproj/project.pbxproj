@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BA7B93D19B373E8679D66742 /* libPods-Cassette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */; };
+		DC0564981CD0156700C19BFF /* CSTUsersController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0564971CD0156700C19BFF /* CSTUsersController.m */; };
+		DC05649C1CD018B000C19BFF /* CSTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC05649B1CD018B000C19BFF /* CSTUser.m */; };
 		DC0615271CC97FA300FF9D0B /* NSObject+DavidJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0615261CC97FA300FF9D0B /* NSObject+DavidJSON.m */; };
 		DC06152B1CC9801400FF9D0B /* Shuttle.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06152A1CC9801400FF9D0B /* Shuttle.m */; };
 		DC147E9E1CC97E3900AE1CFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147E9D1CC97E3900AE1CFE /* AppDelegate.m */; };
@@ -31,6 +33,10 @@
 /* Begin PBXFileReference section */
 		7CC9916039D46A7BDCA303BF /* Pods-Cassette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cassette.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cassette/Pods-Cassette.debug.xcconfig"; sourceTree = "<group>"; };
 		B9388F6F32EEDC0C8199B1B3 /* Pods-Cassette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cassette.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cassette/Pods-Cassette.release.xcconfig"; sourceTree = "<group>"; };
+		DC0564961CD0156700C19BFF /* CSTUsersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTUsersController.h; path = Controllers/Users/CSTUsersController.h; sourceTree = "<group>"; };
+		DC0564971CD0156700C19BFF /* CSTUsersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTUsersController.m; path = Controllers/Users/CSTUsersController.m; sourceTree = "<group>"; };
+		DC05649A1CD018B000C19BFF /* CSTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTUser.h; path = Models/Users/CSTUser.h; sourceTree = "<group>"; };
+		DC05649B1CD018B000C19BFF /* CSTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTUser.m; path = Models/Users/CSTUser.m; sourceTree = "<group>"; };
 		DC0615251CC97FA300FF9D0B /* NSObject+DavidJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+DavidJSON.h"; path = "Libs/DavidJSON/NSObject+DavidJSON.h"; sourceTree = "<group>"; };
 		DC0615261CC97FA300FF9D0B /* NSObject+DavidJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+DavidJSON.m"; path = "Libs/DavidJSON/NSObject+DavidJSON.m"; sourceTree = "<group>"; };
 		DC0615291CC9801400FF9D0B /* Shuttle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shuttle.h; path = Libs/Shuttle/Shuttle.h; sourceTree = "<group>"; };
@@ -88,6 +94,24 @@
 				B9388F6F32EEDC0C8199B1B3 /* Pods-Cassette.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DC0564921CD000B000C19BFF /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				DC0564961CD0156700C19BFF /* CSTUsersController.h */,
+				DC0564971CD0156700C19BFF /* CSTUsersController.m */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
+		DC0564991CD0189E00C19BFF /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				DC05649A1CD018B000C19BFF /* CSTUser.h */,
+				DC05649B1CD018B000C19BFF /* CSTUser.m */,
+			);
+			name = Users;
 			sourceTree = "<group>";
 		};
 		DC06151F1CC97F8100FF9D0B /* Libs */ = {
@@ -183,6 +207,7 @@
 		DCBAA48B1CCCE7B5008B1550 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DC0564991CD0189E00C19BFF /* Users */,
 				DCD8AB201CCEBEAA000B0A40 /* Tags */,
 				DC57A23C1CCD32410012718A /* Searching */,
 				DCBAA4BB1CCD1517008B1550 /* Tracks */,
@@ -204,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				DCBAA49F1CCCF475008B1550 /* Parent Controller */,
+				DC0564921CD000B000C19BFF /* Users */,
 				DCBAA4B21CCD07C9008B1550 /* Mix Player */,
 				DCBAA4991CCCEA96008B1550 /* Mixes */,
 			);
@@ -404,6 +430,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC05649C1CD018B000C19BFF /* CSTUser.m in Sources */,
 				DCD8AB1F1CCEBCFB000B0A40 /* CSTTagsExplorerController.m in Sources */,
 				DCBAA4A21CCCF4A0008B1550 /* CSTParentController.m in Sources */,
 				DCD8AB231CCEBEC3000B0A40 /* CSTTag.m in Sources */,
@@ -419,6 +446,7 @@
 				DCBAA4931CCCE8B0008B1550 /* CSTBaseMix.m in Sources */,
 				DC06152B1CC9801400FF9D0B /* Shuttle.m in Sources */,
 				DCBAA4AD1CCD0316008B1550 /* CSTMixController.m in Sources */,
+				DC0564981CD0156700C19BFF /* CSTUsersController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

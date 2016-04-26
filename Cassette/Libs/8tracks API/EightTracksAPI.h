@@ -30,6 +30,12 @@
 - (NSString *)autocompleteTags:(NSString *)string;
 - (NSString *)getTagsAndMixes:(NSString *)tagList :(int)pageNumber;
 
+- (NSString *)getUserDetails:(NSString *)userID;
+- (NSString *)getUserMixes:(NSString *)userID :(int)pageNumber;
+- (NSString *)getFavouriteTracks:(NSString *)userID :(int)pageNumber;
+- (NSString *)getFollowing:(NSString *)userID :(int)pageNumber;
+- (NSString *)getFollowers:(NSString *)userID :(int)pageNumber;
+
 - (NSString *)reportTrack:(NSString *)trackID :(NSString *)mixID;
 
 @end

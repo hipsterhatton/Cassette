@@ -10,4 +10,32 @@
 
 @implementation CSTUser
 
++ (NSDictionary *)getUserJSONStructure
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary
+                                       :@{
+                                          
+                                          @"_id"                : @"user/id",
+                                          @"name"               : @"user/login",
+                                          @"avatar"             : @"user/avatar_urls/max200"
+                                          
+                                          }];
+    
+    return dictionary;
+}
+
++ (NSDictionary *)getFollowingOrFollowersUserJSONStructure
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary
+                                       :@{
+                                          
+                                          @"_id"                : @"id",
+                                          @"name"               : @"login",
+                                          @"avatar"             : @"avatar_urls/max200"
+                                          
+                                          }];
+    
+    return dictionary;
+}
+
 @end

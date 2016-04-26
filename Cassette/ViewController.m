@@ -50,8 +50,9 @@
 
 - (void)loadMixExplorer
 {
-//    _explorer = [[CSTMixExplorerController alloc] init];
-//    [_explorer getHomepageMixes];
+    _users = [[CSTUsersController alloc] init];
+    
+    [_users getUserDetails:@"1"];
 }
 
 - (IBAction)button_playMix:(id)sender

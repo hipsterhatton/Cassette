@@ -7,7 +7,14 @@
 //
 
 #import "CSTParentController.h"
+#import "CSTUser.h"
 
 @interface CSTUsersController : CSTParentController
+
+@property (nonatomic, retain) CSTUser *user;
+
+
+
+- (void)getUserDetails:(NSString *)userID;
 
 @end
