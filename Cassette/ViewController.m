@@ -52,20 +52,16 @@
 {
 //    _explorer = [[CSTMixExplorerController alloc] init];
 //    [_explorer getHomepageMixes];
-    
-    
-    _tagexplorer = [[CSTTagsExplorerController alloc] init];
-    [_tagexplorer getTopTags];
 }
 
 - (IBAction)button_playMix:(id)sender
 {
-    [_tagexplorer addSelectedTag:[[_tagexplorer tags] firstObject]];
+    
 }
 
 - (IBAction)button_loadNextPage:(id)sender
 {
-    [_tagexplorer tagMixesNextPage];
+    
 }
 
 @end

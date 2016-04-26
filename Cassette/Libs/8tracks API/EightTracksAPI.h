@@ -27,6 +27,7 @@
 - (NSString *)nextTrackInMix:(NSString *)mixID;
 
 - (NSString *)getTopTags:(int)pageNumber;
+- (NSString *)autocompleteTags:(NSString *)string;
 - (NSString *)getTagsAndMixes:(NSString *)tagList :(int)pageNumber;
 
 - (NSString *)reportTrack:(NSString *)trackID :(NSString *)mixID;

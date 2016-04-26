@@ -15,6 +15,8 @@
 @property (nonatomic, retain) CSTSearchSetup *searchSetup;
 @property (nonatomic, retain) NSMutableArray *tags;
 
+@property (nonatomic, retain) NSMutableArray *autocompleteTags;
+
 // could use another search setup for the mixes...
 
 @property (nonatomic, retain) CSTSearchSetup *mixesSearchSetup;
@@ -24,6 +26,8 @@
 
 - (void)getTopTags;
 - (void)topTagsNextPage;
+
+- (void)getAutocompleteTags:(NSString *)autocompleteTerm;
 
 - (void)addSelectedTag:(CSTTag *)tag;
 - (void)removeSelectedTag:(int)pos;

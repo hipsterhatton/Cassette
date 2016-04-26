@@ -28,10 +28,6 @@
     
     .then(^id (NSDictionary *rawJSON) {
         
-        if (!_tags) {
-            _tags = [[NSMutableArray alloc] init];
-        }
-        
         [self _extractTags:rawJSON :@"tag_cloud/tags" :[_searchSetup pageNumber]];
         
         return @"OK";
@@ -52,6 +48,27 @@
     
     [_searchSetup setPageNumber:2];
     [self getTopTags];
+}
+
+
+
+- (void)getAutocompleteTags:(NSString *)autocompleteTerm
+{
+    [self.shuttle launch:GET :JSON :[self.api autocompleteTags:autocompleteTerm] :nil]
+    
+    .then(^id (NSDictionary *rawJSON) {
+        
+        NSLog(@"Raw JSON: %@", rawJSON);
+        
+        [self _extractAutocompleteTags:rawJSON :@"tag_cloud/tags" :1];
+        
+        return @"OK";
+    }, nil)
+    
+    .then(nil, ^id(NSError* error) {
+        NSLog(@"Error: %@", [error localizedDescription]);
+        return nil;
+    });
 }
 
 
@@ -100,6 +117,24 @@
         CSTTag *tag = [[CSTTag alloc] init];
         [tag setName:[obj valueForKey:@"name"]];
         [_tags addObject:tag];
+    }
+}
+
+- (void)_extractAutocompleteTags:(NSDictionary *)rawJSON :(NSString *)pathToTags :(int)pageNumber
+{
+    if (!_autocompleteTags) {
+        _autocompleteTags = [[NSMutableArray alloc] init];
+    }
+    
+    if (pageNumber == 1)
+        [_autocompleteTags removeAllObjects];
+    
+    NSArray *tags = [CSTTag createArrayViaJSON:rawJSON :pathToTags];
+    
+    for (NSObject *obj in tags) {
+        CSTTag *tag = [[CSTTag alloc] init];
+        [tag setName:[obj valueForKey:@"name"]];
+        [_autocompleteTags addObject:tag];
     }
 }
 

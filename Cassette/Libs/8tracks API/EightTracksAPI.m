@@ -117,9 +117,12 @@
     return [self _replace:url :placeholders :values];
 }
 
-- (NSString *)autocompleteTags
+- (NSString *)autocompleteTags:(NSString *)string
 {
-    return @"http://8tracks.com/tags.json?q=#{Tag}";
+    NSString *url =         @"http://8tracks.com/tags.json?q=#{Tag}";
+    NSArray *placeholders = @[ @"#{Tag}" ];
+    NSArray *values =       @[ string ];
+    return [self _replace:url :placeholders :values];
 }
 
 - (NSString *)getTagsAndMixes:(NSString *)tagList :(int)pageNumber
