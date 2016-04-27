@@ -32,7 +32,9 @@
 
 - (NSString *)getUserDetails:(NSString *)userID;
 - (NSString *)getUserMixes:(NSString *)userID :(int)pageNumber;
-- (NSString *)getFavouriteTracks:(NSString *)userID :(int)pageNumber;
+
+- (NSString *)getLikedMixes:(NSString *)userID :(int)pageNumber;
+- (NSString *)getLikedTracks:(NSString *)userID :(int)pageNumber;
 - (NSString *)getFollowing:(NSString *)userID :(int)pageNumber;
 - (NSString *)getFollowers:(NSString *)userID :(int)pageNumber;
 
