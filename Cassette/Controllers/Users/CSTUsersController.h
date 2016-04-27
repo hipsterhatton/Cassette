@@ -10,6 +10,7 @@
 
 #import "CSTBaseMix.h"
 #import "CSTCollection.h"
+#import "CSTTrack.h"
 #import "CSTUser.h"
 
 @interface CSTUsersController : CSTParentController
@@ -23,5 +24,8 @@
 
 - (void)getLikedMixes:(CSTUser *)user;
 - (void)getLikedTracks:(CSTUser *)user;
+
+- (void)getUserFollowers:(CSTUser *)user;
+- (void)getUserFollowing:(CSTUser *)user;
 
 @end

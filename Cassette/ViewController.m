@@ -52,7 +52,7 @@
 {
     _users = [[CSTUsersController alloc] init];
     
-    [_users getLikedTracks:nil];
+    [_users getUserFollowing:nil];
 }
 
 - (IBAction)button_playMix:(id)sender

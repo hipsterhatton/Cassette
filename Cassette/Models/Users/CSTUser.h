@@ -16,18 +16,17 @@
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic, retain) NSString *avatar;
 
-@property (nonatomic, retain) NSMutableArray *collections;
-
-@property (nonatomic, retain) NSMutableDictionary *presets;
-
-@property (nonatomic, retain) NSMutableDictionary *madeMixes;
-
 @property (nonatomic, retain) NSMutableArray *followers;
 @property (nonatomic, retain) NSMutableArray *following;
 
-@property (nonatomic, retain) NSMutableDictionary *faveTracks;
+@property (nonatomic, retain) NSMutableArray *collections;
+@property (nonatomic, retain) NSMutableArray *madeMixes;
+@property (nonatomic, retain) NSMutableArray *likedMixes;
+@property (nonatomic, retain) NSMutableArray *likedTracks;
 
 
+
+- (NSString *)getID;
 
 + (NSDictionary *)getUserJSONStructure;
 + (NSDictionary *)getFollowingOrFollowersUserJSONStructure;

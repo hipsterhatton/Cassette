@@ -38,4 +38,9 @@
     return dictionary;
 }
 
+- (NSString *)getID
+{
+    return [NSString stringWithFormat:@"%d", __id];
+}
+
 @end
