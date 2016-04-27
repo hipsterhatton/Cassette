@@ -12,8 +12,12 @@
 
 @property (nonatomic, retain) NSString *_id;
 @property (nonatomic, retain) NSString *name;
+@property (nonatomic, retain) NSString *_description;
 @property (nonatomic, retain) NSString *smart_id;
 @property (nonatomic, retain) NSMutableArray *mixes;
 @property (nonatomic) BOOL editable;
+
+
++ (NSDictionary *)getJSONStructure;
 
 @end

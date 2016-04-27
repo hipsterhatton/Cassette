@@ -8,6 +8,16 @@
 
 #import "CSTParentController.h"
 
+#import "CSTBaseMix.h"
+#import "CSTCollection.h"
+#import "CSTUser.h"
+
 @interface CSTCollectionsController : CSTParentController
+
+@property (nonatomic, retain) NSMutableArray *collections;
+
+
+
+- (void)getCollections:(CSTUser *)user;
 
 @end

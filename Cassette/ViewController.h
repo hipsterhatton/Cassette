@@ -11,6 +11,7 @@
 #import "EightTracksAPI.h"
 #import "Shuttle.h"
 
+#import "CSTCollectionsController.h"
 #import "CSTMixExplorerController.h"
 #import "CSTTagsExplorerController.h"
 #import "CSTUsersController.h"
@@ -22,6 +23,7 @@
 @property (nonatomic, retain) EightTracksAPI *api;
 @property (nonatomic, retain) Shuttle *shuttle;
 
+@property (nonatomic, retain) CSTCollectionsController *collections;
 @property (nonatomic, retain) CSTMixExplorerController *explorer;
 @property (nonatomic, retain) CSTTagsExplorerController *tagexplorer;
 @property (nonatomic, retain) CSTUsersController *users;

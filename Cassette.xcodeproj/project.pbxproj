@@ -13,6 +13,7 @@
 		DC0564A01CD01ECC00C19BFF /* CSTCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DC05649F1CD01ECC00C19BFF /* CSTCollection.m */; };
 		DC0615271CC97FA300FF9D0B /* NSObject+DavidJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0615261CC97FA300FF9D0B /* NSObject+DavidJSON.m */; };
 		DC06152B1CC9801400FF9D0B /* Shuttle.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06152A1CC9801400FF9D0B /* Shuttle.m */; };
+		DC142E041CD139310026FDE2 /* CSTCollectionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC142E031CD139310026FDE2 /* CSTCollectionsController.m */; };
 		DC147E9E1CC97E3900AE1CFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147E9D1CC97E3900AE1CFE /* AppDelegate.m */; };
 		DC147EA11CC97E3900AE1CFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA01CC97E3900AE1CFE /* main.m */; };
 		DC147EA41CC97E3900AE1CFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA31CC97E3900AE1CFE /* ViewController.m */; };
@@ -44,6 +45,8 @@
 		DC0615261CC97FA300FF9D0B /* NSObject+DavidJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+DavidJSON.m"; path = "Libs/DavidJSON/NSObject+DavidJSON.m"; sourceTree = "<group>"; };
 		DC0615291CC9801400FF9D0B /* Shuttle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shuttle.h; path = Libs/Shuttle/Shuttle.h; sourceTree = "<group>"; };
 		DC06152A1CC9801400FF9D0B /* Shuttle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shuttle.m; path = Libs/Shuttle/Shuttle.m; sourceTree = "<group>"; };
+		DC142E021CD139310026FDE2 /* CSTCollectionsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTCollectionsController.h; path = Controllers/Collections/CSTCollectionsController.h; sourceTree = "<group>"; };
+		DC142E031CD139310026FDE2 /* CSTCollectionsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTCollectionsController.m; path = Controllers/Collections/CSTCollectionsController.m; sourceTree = "<group>"; };
 		DC147E991CC97E3900AE1CFE /* Cassette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cassette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC147E9C1CC97E3900AE1CFE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DC147E9D1CC97E3900AE1CFE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +157,15 @@
 			name = Shuttle;
 			sourceTree = "<group>";
 		};
+		DC142E011CD139150026FDE2 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				DC142E021CD139310026FDE2 /* CSTCollectionsController.h */,
+				DC142E031CD139310026FDE2 /* CSTCollectionsController.m */,
+			);
+			name = Collections;
+			sourceTree = "<group>";
+		};
 		DC147E901CC97E3900AE1CFE = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +253,7 @@
 		DCBAA4941CCCE90A008B1550 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC142E011CD139150026FDE2 /* Collections */,
 				DCBAA49F1CCCF475008B1550 /* Parent Controller */,
 				DC0564921CD000B000C19BFF /* Users */,
 				DCBAA4B21CCD07C9008B1550 /* Mix Player */,
@@ -452,6 +465,7 @@
 				DC0615271CC97FA300FF9D0B /* NSObject+DavidJSON.m in Sources */,
 				DC147EA41CC97E3900AE1CFE /* ViewController.m in Sources */,
 				DC57A23F1CCD325C0012718A /* CSTSearchSetup.m in Sources */,
+				DC142E041CD139310026FDE2 /* CSTCollectionsController.m in Sources */,
 				DC147EA11CC97E3900AE1CFE /* main.m in Sources */,
 				DCBAA4A81CCCF607008B1550 /* CSTMixExplorerController.m in Sources */,
 				DCBAA4BE1CCD1527008B1550 /* CSTTrack.m in Sources */,

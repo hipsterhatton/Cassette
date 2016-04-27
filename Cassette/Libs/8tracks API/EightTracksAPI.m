@@ -185,6 +185,23 @@
 
 
 
+- (NSString *)getCollections:(NSString *)userID
+{
+    NSString *url =         @"http://8tracks.com/users/#{UserID}.json?include=collections[mixes]";
+    NSArray *placeholders = @[ @"#{UserID}" ];
+    NSArray *values =       @[ userID ];
+    return [self _replace:url :placeholders :values];
+}
+
+- (NSString *)getEditableCollections:(NSString *)userName
+{
+    NSString *url =         @"http://8tracks.com/users/#{UserName}/editable_collections.jsonh";
+    NSArray *placeholders = @[ @"#{UserName}" ];
+    NSArray *values =       @[ userName ];
+    return [self _replace:url :placeholders :values];
+}
+
+
 
 - (NSString *)_replace:(NSString *)string :(NSArray *)placeholders :(NSArray *)values
 {
