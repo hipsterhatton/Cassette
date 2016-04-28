@@ -28,15 +28,15 @@
 
 - (NSString *)getTopTags:(int)pageNumber;
 - (NSString *)autocompleteTags:(NSString *)string;
-- (NSString *)getTagsAndMixes:(NSString *)tagList :(int)pageNumber;
+- (NSString *)getTagsAndMixes:(NSString *)tagList :(int)pageNumber :(int)perPage;
 
 - (NSString *)getUserDetails:(NSString *)userID;
-- (NSString *)getUserMixes:(NSString *)userID :(int)pageNumber;
+- (NSString *)getUserMixes:(NSString *)userID :(int)pageNumber :(int)perPage;
 
-- (NSString *)getLikedMixes:(NSString *)userID :(int)pageNumber;
-- (NSString *)getLikedTracks:(NSString *)userID :(int)pageNumber;
-- (NSString *)getFollowing:(NSString *)userID :(int)pageNumber;
-- (NSString *)getFollowers:(NSString *)userID :(int)pageNumber;
+- (NSString *)getLikedMixes:(NSString *)userID :(int)pageNumber :(int)perPage;
+- (NSString *)getLikedTracks:(NSString *)userID :(int)pageNumber :(int)perPage;
+- (NSString *)getFollowing:(NSString *)userID :(int)pageNumber :(int)perPage;
+- (NSString *)getFollowers:(NSString *)userID :(int)pageNumber :(int)perPage;
 
 - (NSString *)getCollections:(NSString *)userID;
 - (NSString *)getEditableCollections:(NSString *)userName; // this one called only for Signed In Users? Or do we combine the 2 values into one...

@@ -166,7 +166,8 @@
  
     [self.shuttle launch:GET :JSON :[self.api getTagsAndMixes
                                      :[tagStrings componentsJoinedByString:@"+"]
-                                     :[_mixesSearchSetup pageNumber]] :nil]
+                                     :[_mixesSearchSetup pageNumber]
+                                     :[_mixesSearchSetup resultsPerPage]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         

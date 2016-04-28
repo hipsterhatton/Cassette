@@ -107,7 +107,11 @@
         [user setMadeMixesSearchSetup:[[CSTSearchSetup alloc] init]];
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getUserMixes:[user getID] :[[user madeMixesSearchSetup] pageNumber]] :nil]
+    [self.shuttle launch:GET :JSON :[self.api getUserMixes
+                                     :[user getID]
+                                     :[[user madeMixesSearchSetup] pageNumber]
+                                     :[[user madeMixesSearchSetup] resultsPerPage]
+                                     ] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
@@ -136,7 +140,11 @@
         [user setLikedMixesSearchSetup:[[CSTSearchSetup alloc] init]];
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getLikedMixes:[user getID] :[[user likedMixesSearchSetup] pageNumber]] :nil]
+    [self.shuttle launch:GET :JSON :[self.api getLikedMixes
+                                     :[user getID]
+                                     :[[user likedMixesSearchSetup] pageNumber]
+                                     :[[user likedMixesSearchSetup] resultsPerPage]
+                                     ] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
@@ -165,7 +173,11 @@
         [user setLikedTracksSearchSetup:[[CSTSearchSetup alloc] init]];
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getLikedTracks:[user getID] :[[user likedTracksSearchSetup] pageNumber]] :nil]
+    [self.shuttle launch:GET :JSON :[self.api getLikedTracks
+                                     :[user getID]
+                                     :[[user likedTracksSearchSetup] pageNumber]
+                                     :[[user likedTracksSearchSetup] resultsPerPage]
+                                     ] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         NSLog(@"Raw JSON: %@", rawJSON);
@@ -196,7 +208,11 @@
         [user setFollowersSearchSetup:[[CSTSearchSetup alloc] init]];
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getFollowers:[user getID] :[[user followersSearchSetup] pageNumber]] :nil]
+    [self.shuttle launch:GET :JSON :[self.api getFollowers
+                                     :[user getID]
+                                     :[[user followersSearchSetup] pageNumber]
+                                     :[[user followersSearchSetup] resultsPerPage]
+                                     ] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
@@ -225,7 +241,11 @@
         [user setFollowingSearchSetup:[[CSTSearchSetup alloc] init]];
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getFollowing:[user getID] :[[user followingSearchSetup] pageNumber]] :nil]
+    [self.shuttle launch:GET :JSON :[self.api getFollowing
+                                     :[user getID]
+                                     :[[user followingSearchSetup] pageNumber]
+                                     :[[user followingSearchSetup] resultsPerPage]
+                                     ] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
