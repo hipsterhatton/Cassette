@@ -145,7 +145,7 @@
 
 - (NSString *)getUserMixes:(NSString *)userID :(int)pageNumber
 {
-    NSString *url =         @"http://8tracks.com/users/#{UserID}/mixes.json?include=pagination&page=#{PageNumber}";
+    NSString *url =         @"http://8tracks.com/users/#{UserID}/mixes.json?include=pagination&page=#{PageNumber}&per_page=3";
     NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}" ];
     NSArray *values =       @[ userID, i_to_s(pageNumber) ];
     return [self _replace:url :placeholders :values];
@@ -153,7 +153,7 @@
 
 - (NSString *)getLikedMixes:(NSString *)userID :(int)pageNumber
 {
-    NSString *url =         @"http://8tracks.com/mix_sets/liked:#{UserID}.json?include=mixes+details+pagination&page=#{PageNumber}";
+    NSString *url =         @"http://8tracks.com/mix_sets/liked:#{UserID}.json?include=mixes+details+pagination&page=#{PageNumber}&per_page=3";
     NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}" ];
     NSArray *values =       @[ userID, i_to_s(pageNumber) ];
     return [self _replace:url :placeholders :values];
@@ -161,7 +161,7 @@
 
 - (NSString *)getLikedTracks:(NSString *)userID :(int)pageNumber
 {
-    NSString *url =         @"http://8tracks.com/users/#{UserID}/favorite_tracks.json?include=mixes+details+pagination&page=#{PageNumber}";
+    NSString *url =         @"http://8tracks.com/users/#{UserID}/favorite_tracks.json?include=mixes+details+pagination&page=#{PageNumber}&per_page=3";
     NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}" ];
     NSArray *values =       @[ userID, i_to_s(pageNumber) ];
     return [self _replace:url :placeholders :values];

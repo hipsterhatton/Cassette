@@ -56,4 +56,17 @@
     return dictionary;
 }
 
++ (NSDictionary *)getAltJSONStructure
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary
+                                       :@{
+                                          
+                                          @"pageNumber"         : @"pagination/current_page",
+                                          @"numberOfResults"    : @"pagination/total_entries",
+                                          
+                                          }];
+    
+    return dictionary;
+}
+
 @end

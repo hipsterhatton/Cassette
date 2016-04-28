@@ -14,15 +14,15 @@
 - (instancetype)init
 {
     self = [super init];
-    _searchSetup = [[CSTSearchSetup alloc] init];
+    _mixesSearchSetup = [[CSTSearchSetup alloc] init];
     return self;
 }
 
 - (void)getHomepageMixes
 {
-    [self.shuttle launch:GET :JSON :[self.api getHomepageMixes:[_searchSetup sort]
-                                                              :[_searchSetup pageNumber]
-                                                              :[_searchSetup resultsPerPage]
+    [self.shuttle launch:GET :JSON :[self.api getHomepageMixes:[_mixesSearchSetup sort]
+                                                              :[_mixesSearchSetup pageNumber]
+                                                              :[_mixesSearchSetup resultsPerPage]
                                      ] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
@@ -35,7 +35,7 @@
          [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"mix_set/mixes" :[CSTBaseMix getJSONStructure] :[CSTBaseMix class]]
          ];
         
-        [_searchSetup updateViaJSON:rawJSON :[CSTSearchSetup getJSONStructure]];
+        [_mixesSearchSetup updateViaJSON:rawJSON :[CSTSearchSetup getJSONStructure]];
         
         return @"OK";
     }, nil)
@@ -46,9 +46,9 @@
     });
 }
 
-- (void)homepageMixesNextPage
+- (void)getHomepageMixesNextPage
 {
-    if ([_searchSetup nextPage]) {
+    if ([_mixesSearchSetup nextPage]) {
         [self getHomepageMixes];
     }
 }

@@ -40,7 +40,7 @@
 
 - (NSString *)getID
 {
-    return [NSString stringWithFormat:@"%d", __id];
+    return [NSString stringWithFormat:@"%@", __id];
 }
 
 @end

@@ -12,20 +12,19 @@
 
 @interface CSTTagsExplorerController : CSTMixController
 
+@property (nonatomic, retain) NSMutableArray *tagsSearchSetup;
 @property (nonatomic, retain) CSTSearchSetup *searchSetup;
-@property (nonatomic, retain) NSMutableArray *tags;
 
 @property (nonatomic, retain) NSMutableArray *autocompleteTags;
 
-// could use another search setup for the mixes...
-
-@property (nonatomic, retain) CSTSearchSetup *mixesSearchSetup;
 @property (nonatomic, retain) NSMutableArray *selectedTags;
+@property (nonatomic, retain) CSTSearchSetup *mixesSearchSetup;
 @property (nonatomic, retain) NSMutableArray *selectedTagsMixes;
 
 
+
 - (void)getTopTags;
-- (void)topTagsNextPage;
+- (void)getTopTagsNextPage;
 
 - (void)getAutocompleteTags:(NSString *)autocompleteTerm;
 
@@ -33,6 +32,6 @@
 - (void)removeSelectedTag:(int)pos;
 
 - (void)getMixesFromTagSelection;
-- (void)tagMixesNextPage;
+- (void)getMixesFromTagSelectionNextPage;
 
 @end

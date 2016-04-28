@@ -253,8 +253,8 @@
 		DCBAA4941CCCE90A008B1550 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DC142E011CD139150026FDE2 /* Collections */,
 				DCBAA49F1CCCF475008B1550 /* Parent Controller */,
+				DC142E011CD139150026FDE2 /* Collections */,
 				DC0564921CD000B000C19BFF /* Users */,
 				DCBAA4B21CCD07C9008B1550 /* Mix Player */,
 				DCBAA4991CCCEA96008B1550 /* Mixes */,

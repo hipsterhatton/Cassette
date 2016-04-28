@@ -50,9 +50,12 @@
 
 - (void)loadMixExplorer
 {
-    _collections = [[CSTCollectionsController alloc] init];
+    _users = [[CSTUsersController alloc] init];
     
-    [_collections getCollections:nil];
+    CSTUser *user = [[CSTUser alloc] init];
+    [user set_id:@"1"];
+    
+    [_users getUserFollowing:user];
 }
 
 - (IBAction)button_playMix:(id)sender

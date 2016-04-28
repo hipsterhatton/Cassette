@@ -11,12 +11,12 @@
 
 @interface CSTMixExplorerController : CSTMixController
 
-@property (nonatomic, retain) CSTSearchSetup *searchSetup;
 @property (nonatomic, retain) NSMutableArray *homepageMixes;
+@property (nonatomic, retain) CSTSearchSetup *mixesSearchSetup;
 
 
 
 - (void)getHomepageMixes;
-- (void)homepageMixesNextPage;
+- (void)getHomepageMixesNextPage;
 
 @end

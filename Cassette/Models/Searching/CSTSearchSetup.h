@@ -21,5 +21,6 @@
 - (BOOL)previousPage;
 
 + (NSDictionary *)getJSONStructure;
++ (NSDictionary *)getAltJSONStructure;
 
 @end

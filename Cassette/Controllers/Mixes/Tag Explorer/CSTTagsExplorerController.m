@@ -40,7 +40,7 @@
     });
 }
 
-- (void)topTagsNextPage
+- (void)getTopTagsNextPage
 {
     if ([_searchSetup nextPage]) {
         
@@ -104,19 +104,19 @@
 
 - (void)_extractTags:(NSDictionary *)rawJSON :(NSString *)pathToTags :(int)pageNumber
 {
-    if (!_tags) {
-        _tags = [[NSMutableArray alloc] init];
+    if (!_tagsSearchSetup) {
+        _tagsSearchSetup = [[NSMutableArray alloc] init];
     }
     
     if (pageNumber == 1)
-        [_tags removeAllObjects];
+        [_tagsSearchSetup removeAllObjects];
     
     NSArray *tags = [CSTTag createArrayViaJSON:rawJSON :pathToTags];
     
     for (NSObject *obj in tags) {
         CSTTag *tag = [[CSTTag alloc] init];
         [tag setName:[obj valueForKey:@"name"]];
-        [_tags addObject:tag];
+        [_tagsSearchSetup addObject:tag];
     }
 }
 
@@ -184,7 +184,7 @@
     });
 }
 
-- (void)tagMixesNextPage
+- (void)getMixesFromTagSelectionNextPage
 {
     if ([_mixesSearchSetup nextPage]) {
         [self getMixesFromTagSelection];

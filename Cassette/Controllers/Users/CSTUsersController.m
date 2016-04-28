@@ -103,7 +103,11 @@
 
 - (void)getUserMixes:(CSTUser *)user
 {
-    [self.shuttle launch:GET :JSON :[self.api getUserMixes:[user getID] :1] :nil]
+    if (![user madeMixesSearchSetup]) {
+        [user setMadeMixesSearchSetup:[[CSTSearchSetup alloc] init]];
+    }
+    
+    [self.shuttle launch:GET :JSON :[self.api getUserMixes:[user getID] :[[user madeMixesSearchSetup] pageNumber]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
@@ -111,8 +115,12 @@
             [user setMadeMixes:[[NSMutableArray alloc] init]];
         }
         
-        [[user madeMixes] addObjectsFromArray: [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"mix_set/mixes" :[CSTBaseMix getJSONStructure] :[CSTBaseMix class]] ];
+        [[user madeMixes] addObjectsFromArray:
+         [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"mix_set/mixes" :[CSTBaseMix getJSONStructure] :[CSTBaseMix class]]
+        ];
         
+        [[user madeMixesSearchSetup] updateViaJSON:rawJSON :[CSTSearchSetup getJSONStructure]];
+    
         return @"OK";
     }, nil)
     
@@ -123,8 +131,12 @@
 }
 
 - (void)getLikedMixes:(CSTUser *)user
-{    
-    [self.shuttle launch:GET :JSON :[self.api getLikedMixes:[user getID] :1] :nil]
+{
+    if (![user likedMixesSearchSetup]) {
+        [user setLikedMixesSearchSetup:[[CSTSearchSetup alloc] init]];
+    }
+    
+    [self.shuttle launch:GET :JSON :[self.api getLikedMixes:[user getID] :[[user likedMixesSearchSetup] pageNumber]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
@@ -132,8 +144,12 @@
             [user setLikedMixes:[[NSMutableArray alloc] init]];
         }
         
-        [[user likedMixes] addObjectsFromArray: [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"mix_set/mixes" :[CSTBaseMix getJSONStructure] :[CSTBaseMix class]] ];
+        [[user likedMixes] addObjectsFromArray:
+         [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"mix_set/mixes" :[CSTBaseMix getJSONStructure] :[CSTBaseMix class]]
+        ];
         
+        [[user likedMixesSearchSetup] updateViaJSON:rawJSON :[CSTSearchSetup getJSONStructure]];
+
         return @"OK";
     }, nil)
     
@@ -145,7 +161,11 @@
 
 - (void)getLikedTracks:(CSTUser *)user
 {
-    [self.shuttle launch:GET :JSON :[self.api getLikedTracks:[user getID] :1] :nil]
+    if (![user likedTracksSearchSetup]) {
+        [user setLikedTracksSearchSetup:[[CSTSearchSetup alloc] init]];
+    }
+    
+    [self.shuttle launch:GET :JSON :[self.api getLikedTracks:[user getID] :[[user likedTracksSearchSetup] pageNumber]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         NSLog(@"Raw JSON: %@", rawJSON);
@@ -153,7 +173,11 @@
             [user setLikedTracks:[[NSMutableArray alloc] init]];
         }
         
-        [[user likedTracks] addObjectsFromArray: [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"tracks" :[CSTTrack getAltJSONStructure] :[CSTTrack class]] ];
+        [[user likedTracks] addObjectsFromArray:
+         [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"tracks" :[CSTTrack getAltJSONStructure] :[CSTTrack class]]
+        ];
+        
+        [[user likedTracksSearchSetup] updateViaJSON:rawJSON :[CSTSearchSetup getAltJSONStructure]];
         
         return @"OK";
     }, nil)
@@ -168,7 +192,11 @@
 
 - (void)getUserFollowers:(CSTUser *)user
 {
-    [self.shuttle launch:GET :JSON :[self.api getFollowers:@"1" :1] :nil]
+    if (![user followersSearchSetup]) {
+        [user setFollowersSearchSetup:[[CSTSearchSetup alloc] init]];
+    }
+    
+    [self.shuttle launch:GET :JSON :[self.api getFollowers:[user getID] :[[user followersSearchSetup] pageNumber]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
@@ -176,7 +204,11 @@
             [user setFollowers:[[NSMutableArray alloc] init]];
         }
         
-        [[user followers] addObjectsFromArray: [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"users" :[CSTUser getFollowingOrFollowersUserJSONStructure] :[CSTUser class]] ];
+        [[user followers] addObjectsFromArray:
+         [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"users" :[CSTUser getFollowingOrFollowersUserJSONStructure] :[CSTUser class]]
+        ];
+        
+        [[user followersSearchSetup] updateViaJSON:rawJSON :[CSTSearchSetup getAltJSONStructure]];
         
         return @"OK";
     }, nil)
@@ -189,7 +221,11 @@
 
 - (void)getUserFollowing:(CSTUser *)user
 {
-    [self.shuttle launch:GET :JSON :[self.api getFollowing:@"1" :1] :nil]
+    if (![user following]) {
+        [user setFollowingSearchSetup:[[CSTSearchSetup alloc] init]];
+    }
+    
+    [self.shuttle launch:GET :JSON :[self.api getFollowing:[user getID] :[[user followingSearchSetup] pageNumber]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
@@ -197,7 +233,11 @@
             [user setFollowing:[[NSMutableArray alloc] init]];
         }
         
-        [[user following] addObjectsFromArray: [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"users" :[CSTUser getFollowingOrFollowersUserJSONStructure] :[CSTUser class]] ];
+        [[user following] addObjectsFromArray:
+         [CSTBaseMix createArrayObjectsViaJSON:rawJSON :@"users" :[CSTUser getFollowingOrFollowersUserJSONStructure] :[CSTUser class]]
+        ];
+        
+        [[user followingSearchSetup] updateViaJSON:rawJSON :[CSTSearchSetup getAltJSONStructure]];
         
         return @"OK";
     }, nil)

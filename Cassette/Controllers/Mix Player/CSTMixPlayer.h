@@ -24,8 +24,6 @@
 @property (nonatomic, retain) NSTimer *reportingTimer;
 @property (nonatomic) int reportingTimerCounter;
 
-// need to pass thru the mix...
-
-- (void)playMix:(NSString *)mixID;
+- (void)playMix:(CSTBaseMix *)mix;
 
 @end
