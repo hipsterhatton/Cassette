@@ -50,17 +50,20 @@
 
 - (void)loadMixExplorer
 {
-    _users = [[CSTUsersController alloc] init];
-    
     CSTUser *user = [[CSTUser alloc] init];
     [user set_id:@"1"];
     
-    [_users getUserFollowing:user];
+    _tagexplorer = [[CSTTagsExplorerController alloc] init];
+    
+    CSTTag *tag = [[CSTTag alloc] init];
+    [tag setName:@"chill"];
+    
+    [_tagexplorer getTopTags];
 }
 
 - (IBAction)button_playMix:(id)sender
 {
-    
+    [_tagexplorer getTopTagsNextPage];
 }
 
 - (IBAction)button_loadNextPage:(id)sender

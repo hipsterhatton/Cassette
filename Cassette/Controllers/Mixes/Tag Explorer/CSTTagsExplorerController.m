@@ -23,12 +23,15 @@
 
 - (void)getTopTags
 {
-    [self.shuttle launch:GET :JSON :[self.api getTopTags:[_searchSetup pageNumber]] :nil]
+    [self.shuttle launch:GET :JSON :[self.api getTopTags:[_searchSetup pageNumber] :[_searchSetup resultsPerPage]] :nil]
     
     
     .then(^id (NSDictionary *rawJSON) {
-        
         [self _extractTags:rawJSON :@"tag_cloud/tags" :[_searchSetup pageNumber]];
+        
+        if (![[[rawJSON objectForKey:@"tag_cloud"] objectForKey:@"next_page"] isEqual:[NSNull null]]) {
+            [_searchSetup setNumberOfResults:(([_searchSetup pageNumber] + 1) * [_searchSetup resultsPerPage])];
+        }
         
         return @"OK";
     }, nil)
@@ -43,11 +46,8 @@
 - (void)getTopTagsNextPage
 {
     if ([_searchSetup nextPage]) {
-        
+        [self getTopTags];
     }
-    
-    [_searchSetup setPageNumber:2];
-    [self getTopTags];
 }
 
 
@@ -57,11 +57,7 @@
     [self.shuttle launch:GET :JSON :[self.api autocompleteTags:autocompleteTerm] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
-        
-        NSLog(@"Raw JSON: %@", rawJSON);
-        
         [self _extractAutocompleteTags:rawJSON :@"tag_cloud/tags" :1];
-        
         return @"OK";
     }, nil)
     
@@ -112,7 +108,7 @@
         [_tagsSearchSetup removeAllObjects];
     
     NSArray *tags = [CSTTag createArrayViaJSON:rawJSON :pathToTags];
-    
+
     for (NSObject *obj in tags) {
         CSTTag *tag = [[CSTTag alloc] init];
         [tag setName:[obj valueForKey:@"name"]];
@@ -175,7 +171,7 @@
         [self _extractMixes:rawJSON :[_mixesSearchSetup pageNumber]];
         
         [_mixesSearchSetup updateViaJSON:rawJSON :[CSTSearchSetup getJSONStructure]];
-        
+
         return @"OK";
     }, nil)
     

@@ -26,7 +26,7 @@
 - (NSString *)playMix:(NSString *)mixID;
 - (NSString *)nextTrackInMix:(NSString *)mixID;
 
-- (NSString *)getTopTags:(int)pageNumber;
+- (NSString *)getTopTags:(int)pageNumber :(int)perPage;
 - (NSString *)autocompleteTags:(NSString *)string;
 - (NSString *)getTagsAndMixes:(NSString *)tagList :(int)pageNumber :(int)perPage;
 

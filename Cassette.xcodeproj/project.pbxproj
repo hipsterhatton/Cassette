@@ -228,6 +228,13 @@
 			name = "Tags Explorer";
 			sourceTree = "<group>";
 		};
+		DCA2DAAD1CD2AD740091045B /* Searching */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Searching;
+			sourceTree = "<group>";
+		};
 		DCBAA48B1CCCE7B5008B1550 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				DCBAA49F1CCCF475008B1550 /* Parent Controller */,
+				DCA2DAAD1CD2AD740091045B /* Searching */,
 				DC142E011CD139150026FDE2 /* Collections */,
 				DC0564921CD000B000C19BFF /* Users */,
 				DCBAA4B21CCD07C9008B1550 /* Mix Player */,

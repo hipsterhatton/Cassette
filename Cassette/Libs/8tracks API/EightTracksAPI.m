@@ -109,11 +109,11 @@
 
 
 
-- (NSString *)getTopTags:(int)pageNumber
+- (NSString *)getTopTags:(int)pageNumber :(int)perPage
 {
-    NSString *url =         @"http://8tracks.com/tags.json?include=pagination&page=#{PageNumber}";
-    NSArray *placeholders = @[ @"#{PageNumber}" ];
-    NSArray *values =       @[ i_to_s(pageNumber) ];
+    NSString *url =         @"http://8tracks.com/tags.json?include=pagination&page=#{PageNumber}&per_page=#{PerPage}";
+    NSArray *placeholders = @[ @"#{PageNumber}", @"#{PerPage}" ];
+    NSArray *values =       @[ i_to_s(pageNumber), i_to_s(perPage) ];
     return [self _replace:url :placeholders :values];
 }
 
@@ -128,8 +128,8 @@
 - (NSString *)getTagsAndMixes:(NSString *)tagList :(int)pageNumber :(int)perPage
 {
     NSString *url =         @"http://8tracks.com/explore/#{TagList}.json?include=details,mixes,pagination,explore_filters&page=#{PageNumber}&per_page=#{PerPage}&format=jsonh";
-    NSArray *placeholders = @[ @"#{TagList}", @"#{PageNumber}" ];
-    NSArray *values =       @[ tagList, i_to_s(pageNumber) ];
+    NSArray *placeholders = @[ @"#{TagList}", @"#{PageNumber}", @"#{PerPage}" ];
+    NSArray *values =       @[ tagList, i_to_s(pageNumber), i_to_s(perPage) ];
     return [self _replace:url :placeholders :values];
 }
 
