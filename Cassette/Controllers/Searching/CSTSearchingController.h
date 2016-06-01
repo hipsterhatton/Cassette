@@ -7,7 +7,17 @@
 //
 
 #import "CSTParentController.h"
+#import "CSTBaseMix.h"
+#import "CSTSearchSetup.h"
+#import "CSTUser.h"
 
 @interface CSTSearchingController : CSTParentController
+
+@property (nonatomic, retain) CSTSearchSetup *searchSetup;
+@property (nonatomic, retain) NSMutableArray *mixes;
+@property (nonatomic, retain) NSMutableArray *users;
+
+
+- (void)autocompleteSearch:(NSString *)searchTerm;
 
 @end

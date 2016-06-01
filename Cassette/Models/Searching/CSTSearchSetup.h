@@ -10,10 +10,21 @@
 
 @interface CSTSearchSetup : NSObject
 
+typedef enum {
+  SearchSetupSmartIDArtist,
+  SearchSetupSmartIDKeyword,
+    
+  SearchSetupSmartIDFeed,
+  SearchSetupSmartIDSocialFeed,
+  SearchSetupSmartIDSocialListened,
+  SearchSetupSmartIDSocialRecommended
+} SearchSetupSmartID;
+
 @property (nonatomic) int pageNumber;
 @property (nonatomic) int numberOfResults;
 @property (nonatomic) int resultsPerPage;
 @property (nonatomic, retain) NSString *sort;
+@property (nonatomic) SearchSetupSmartID searchSmartID;
 
 
 

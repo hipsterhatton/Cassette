@@ -38,6 +38,21 @@
     return dictionary;
 }
 
++ (NSDictionary *)getAutocompleteUserJSONStructure
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary
+                                       :@{
+                                          
+                                          @"_id"                : @"id",
+                                          @"name"               : @"name",
+                                          @"avatar"             : @"data/image_url"
+                                          
+                                          }];
+    
+    return dictionary;
+}
+
+
 - (NSString *)getID
 {
     return [NSString stringWithFormat:@"%@", __id];

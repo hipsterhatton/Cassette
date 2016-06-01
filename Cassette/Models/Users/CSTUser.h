@@ -43,5 +43,6 @@
 
 + (NSDictionary *)getUserJSONStructure;
 + (NSDictionary *)getFollowingOrFollowersUserJSONStructure;
++ (NSDictionary *)getAutocompleteUserJSONStructure;
 
 @end

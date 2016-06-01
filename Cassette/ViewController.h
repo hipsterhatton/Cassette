@@ -13,6 +13,7 @@
 
 #import "CSTCollectionsController.h"
 #import "CSTMixExplorerController.h"
+#import "CSTSearchingController.h"
 #import "CSTTagsExplorerController.h"
 #import "CSTUsersController.h"
 
@@ -25,6 +26,7 @@
 
 @property (nonatomic, retain) CSTCollectionsController *collections;
 @property (nonatomic, retain) CSTMixExplorerController *explorer;
+@property (nonatomic, retain) CSTSearchingController *searcher;
 @property (nonatomic, retain) CSTTagsExplorerController *tagexplorer;
 @property (nonatomic, retain) CSTUsersController *users;
 

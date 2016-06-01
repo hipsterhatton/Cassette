@@ -203,6 +203,16 @@
 
 
 
+- (NSString *)autoCompleteSearch:(NSString *)searchTerm
+{
+    NSString *url =         @"http://8tracks.com/search/combined_autocomplete.jsonh?q=#{SearchTerm}&tags_per_page=0&mixes_per_page=10&users_per_page=10&format=json";
+    NSArray *placeholders = @[ @"#{SearchTerm}" ];
+    NSArray *values =       @[ searchTerm ];
+    return [self _replace:url :placeholders :values];
+}
+
+
+
 - (NSString *)_replace:(NSString *)string :(NSArray *)placeholders :(NSArray *)values
 {
     if ([placeholders count] != [values count]) {

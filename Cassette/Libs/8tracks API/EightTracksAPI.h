@@ -41,6 +41,8 @@
 - (NSString *)getCollections:(NSString *)userID;
 - (NSString *)getEditableCollections:(NSString *)userName; // this one called only for Signed In Users? Or do we combine the 2 values into one...
 
+- (NSString *)autoCompleteSearch:(NSString *)searchTerm;
+
 - (NSString *)reportTrack:(NSString *)trackID :(NSString *)mixID;
 
 @end

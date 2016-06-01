@@ -50,20 +50,13 @@
 
 - (void)loadMixExplorer
 {
-    CSTUser *user = [[CSTUser alloc] init];
-    [user set_id:@"1"];
-    
-    _tagexplorer = [[CSTTagsExplorerController alloc] init];
-    
-    CSTTag *tag = [[CSTTag alloc] init];
-    [tag setName:@"chill"];
-    
-    [_tagexplorer getTopTags];
+    _searcher = [[CSTSearchingController alloc] init];
+    [_searcher autocompleteSearch:@"coff"];
 }
 
 - (IBAction)button_playMix:(id)sender
 {
-    [_tagexplorer getTopTagsNextPage];
+    [_searcher autocompleteSearch:@"coff"];
 }
 
 - (IBAction)button_loadNextPage:(id)sender
