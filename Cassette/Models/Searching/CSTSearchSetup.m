@@ -22,8 +22,6 @@
 
 - (BOOL)nextPage
 {
-    
-    
     if ( (_pageNumber * _resultsPerPage) < _numberOfResults ) {
         _pageNumber++;
         return true;
@@ -41,6 +39,7 @@
         return false;
     }
 }
+
 
 
 + (NSDictionary *)getJSONStructure
