@@ -661,7 +661,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0720;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -805,6 +805,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -830,6 +831,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C329DF30F930251727051082ADD65853 /* Reachability.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/Reachability/Reachability-prefix.pch";
@@ -848,6 +850,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5EFCCC46B7C34CAAB8C520636C7B76E0 /* Pods-Cassette.debug.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
@@ -866,6 +869,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 75AE6D6A4D12219E7F395AC8E1E75169 /* Pods-Cassette.release.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -885,6 +889,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9FE354D49249AEB55F9B6AC35C9B9F4 /* FreeStreamer.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -904,6 +909,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB3479786B7704F866C9FD2B0BF477F0 /* RXPromise.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/RXPromise/RXPromise-prefix.pch";
@@ -956,6 +962,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD9367D63378E4649D8306F6B34BC6AB /* AFNetworking.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -975,6 +982,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A9FE354D49249AEB55F9B6AC35C9B9F4 /* FreeStreamer.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/FreeStreamer/FreeStreamer-prefix.pch";
@@ -993,6 +1001,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD9367D63378E4649D8306F6B34BC6AB /* AFNetworking.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
 				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
@@ -1011,6 +1020,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C329DF30F930251727051082ADD65853 /* Reachability.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
@@ -1030,6 +1040,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EB3479786B7704F866C9FD2B0BF477F0 /* RXPromise.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXECUTABLE_PREFIX = lib;
