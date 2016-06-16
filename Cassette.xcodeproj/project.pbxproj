@@ -21,6 +21,62 @@
 		DC147EA91CC97E3900AE1CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC147EA71CC97E3900AE1CFE /* Main.storyboard */; };
 		DC2958FA1CFF77570014C839 /* CSTSearchingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2958F91CFF77570014C839 /* CSTSearchingController.m */; };
 		DC57A23F1CCD325C0012718A /* CSTSearchSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57A23E1CCD325C0012718A /* CSTSearchSetup.m */; };
+		DC8730B51D135742001A0A10 /* libPods-Cassette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */; };
+		DC8730B71D13574A001A0A10 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8730B61D135749001A0A10 /* AVFoundation.framework */; };
+		DC8730B91D13577E001A0A10 /* libAFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8730B81D13577E001A0A10 /* libAFNetworking.a */; };
+		DC8730BA1D1358A1001A0A10 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = DC147E9C1CC97E3900AE1CFE /* AppDelegate.h */; };
+		DC8730BB1D1358A2001A0A10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147E9D1CC97E3900AE1CFE /* AppDelegate.m */; };
+		DC8730BC1D1358A2001A0A10 /* ViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA21CC97E3900AE1CFE /* ViewController.h */; };
+		DC8730BD1D1358A2001A0A10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA31CC97E3900AE1CFE /* ViewController.m */; };
+		DC8730BE1D1358A2001A0A10 /* CSTParentController.h in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A01CCCF4A0008B1550 /* CSTParentController.h */; };
+		DC8730BF1D1358A2001A0A10 /* CSTParentController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A11CCCF4A0008B1550 /* CSTParentController.m */; };
+		DC8730C01D1358A2001A0A10 /* CSTSearchingController.h in Sources */ = {isa = PBXBuildFile; fileRef = DC2958F81CFF77570014C839 /* CSTSearchingController.h */; };
+		DC8730C11D1358A2001A0A10 /* CSTSearchingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2958F91CFF77570014C839 /* CSTSearchingController.m */; };
+		DC8730C21D1358A2001A0A10 /* CSTCollectionsController.h in Sources */ = {isa = PBXBuildFile; fileRef = DC142E021CD139310026FDE2 /* CSTCollectionsController.h */; };
+		DC8730C31D1358A2001A0A10 /* CSTCollectionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC142E031CD139310026FDE2 /* CSTCollectionsController.m */; };
+		DC8730C41D1358A2001A0A10 /* CSTUsersController.h in Sources */ = {isa = PBXBuildFile; fileRef = DC0564961CD0156700C19BFF /* CSTUsersController.h */; };
+		DC8730C51D1358A2001A0A10 /* CSTUsersController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0564971CD0156700C19BFF /* CSTUsersController.m */; };
+		DC8730C61D1358A2001A0A10 /* CSTMixPlayer.h in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4B61CCD081B008B1550 /* CSTMixPlayer.h */; };
+		DC8730C71D1358A2001A0A10 /* CSTMixPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4B71CCD081B008B1550 /* CSTMixPlayer.m */; };
+		DC8730C81D1358A2001A0A10 /* CSTMixController.h in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4AB1CCD0316008B1550 /* CSTMixController.h */; };
+		DC8730C91D1358A2001A0A10 /* CSTMixController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4AC1CCD0316008B1550 /* CSTMixController.m */; };
+		DC8730CA1D1358A2001A0A10 /* CSTTagsExplorerController.h in Sources */ = {isa = PBXBuildFile; fileRef = DCD8AB1D1CCEBCFB000B0A40 /* CSTTagsExplorerController.h */; };
+		DC8730CB1D1358A2001A0A10 /* CSTTagsExplorerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8AB1E1CCEBCFB000B0A40 /* CSTTagsExplorerController.m */; };
+		DC8730CC1D1358A2001A0A10 /* CSTMixExplorerController.h in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A61CCCF607008B1550 /* CSTMixExplorerController.h */; };
+		DC8730CD1D1358A2001A0A10 /* CSTMixExplorerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A71CCCF607008B1550 /* CSTMixExplorerController.m */; };
+		DC8730CE1D1358A2001A0A10 /* CSTParentModel.h in Sources */ = {isa = PBXBuildFile; fileRef = DCE539031D13162B0099281E /* CSTParentModel.h */; };
+		DC8730CF1D1358A2001A0A10 /* CSTParentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE539041D13162B0099281E /* CSTParentModel.m */; };
+		DC8730D01D1358A2001A0A10 /* CSTCollection.h in Sources */ = {isa = PBXBuildFile; fileRef = DC05649E1CD01ECC00C19BFF /* CSTCollection.h */; };
+		DC8730D11D1358A2001A0A10 /* CSTCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = DC05649F1CD01ECC00C19BFF /* CSTCollection.m */; };
+		DC8730D21D1358A2001A0A10 /* CSTUser.h in Sources */ = {isa = PBXBuildFile; fileRef = DC05649A1CD018B000C19BFF /* CSTUser.h */; };
+		DC8730D31D1358A2001A0A10 /* CSTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC05649B1CD018B000C19BFF /* CSTUser.m */; };
+		DC8730D41D1358A2001A0A10 /* CSTTag.h in Sources */ = {isa = PBXBuildFile; fileRef = DCD8AB211CCEBEC3000B0A40 /* CSTTag.h */; };
+		DC8730D51D1358A2001A0A10 /* CSTTag.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8AB221CCEBEC3000B0A40 /* CSTTag.m */; };
+		DC8730D61D1358A2001A0A10 /* CSTSearchSetup.h in Sources */ = {isa = PBXBuildFile; fileRef = DC57A23D1CCD325C0012718A /* CSTSearchSetup.h */; };
+		DC8730D71D1358A2001A0A10 /* CSTSearchSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57A23E1CCD325C0012718A /* CSTSearchSetup.m */; };
+		DC8730D81D1358A2001A0A10 /* CSTTrack.h in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4BC1CCD1527008B1550 /* CSTTrack.h */; };
+		DC8730D91D1358A2001A0A10 /* CSTTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4BD1CCD1527008B1550 /* CSTTrack.m */; };
+		DC8730DA1D1358A2001A0A10 /* CSTBaseMix.h in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4911CCCE8B0008B1550 /* CSTBaseMix.h */; };
+		DC8730DB1D1358A2001A0A10 /* CSTBaseMix.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4921CCCE8B0008B1550 /* CSTBaseMix.m */; };
+		DC8730DC1D1358A2001A0A10 /* EightTracksAPI.h in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4961CCCE9D4008B1550 /* EightTracksAPI.h */; };
+		DC8730DD1D1358A2001A0A10 /* EightTracksAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4971CCCE9D4008B1550 /* EightTracksAPI.m */; };
+		DC8730DE1D1358A2001A0A10 /* Shuttle.h in Sources */ = {isa = PBXBuildFile; fileRef = DC0615291CC9801400FF9D0B /* Shuttle.h */; };
+		DC8730DF1D1358A2001A0A10 /* Shuttle.m in Sources */ = {isa = PBXBuildFile; fileRef = DC06152A1CC9801400FF9D0B /* Shuttle.m */; };
+		DC8730E01D1358A2001A0A10 /* NSObject+DavidJSON.h in Sources */ = {isa = PBXBuildFile; fileRef = DC0615251CC97FA300FF9D0B /* NSObject+DavidJSON.h */; };
+		DC8730E11D1358A2001A0A10 /* NSObject+DavidJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0615261CC97FA300FF9D0B /* NSObject+DavidJSON.m */; };
+		DC8730E21D1358A2001A0A10 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA51CC97E3900AE1CFE /* Assets.xcassets */; };
+		DC8730E31D1358A2001A0A10 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = DC147EAA1CC97E3900AE1CFE /* Info.plist */; };
+		DC8730E41D1358A2001A0A10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA01CC97E3900AE1CFE /* main.m */; };
+		DC8730E51D1358A2001A0A10 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = DC8730AF1D13552E001A0A10 /* Info.plist */; };
+		DC8730E61D1358A2001A0A10 /* Cassette.app in Sources */ = {isa = PBXBuildFile; fileRef = DC147E991CC97E3900AE1CFE /* Cassette.app */; };
+		DC8730E71D1358A2001A0A10 /* CassetteTest.xctest in Sources */ = {isa = PBXBuildFile; fileRef = DC8730AB1D13552D001A0A10 /* CassetteTest.xctest */; };
+		DC8730E81D1358A2001A0A10 /* Pods-Cassette.debug.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9916039D46A7BDCA303BF /* Pods-Cassette.debug.xcconfig */; };
+		DC8730E91D1358A2001A0A10 /* Pods-Cassette.release.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = B9388F6F32EEDC0C8199B1B3 /* Pods-Cassette.release.xcconfig */; };
+		DC8730EA1D1358A2001A0A10 /* libAFNetworking.a in Sources */ = {isa = PBXBuildFile; fileRef = DC8730B81D13577E001A0A10 /* libAFNetworking.a */; };
+		DC8730EB1D1358A2001A0A10 /* AVFoundation.framework in Sources */ = {isa = PBXBuildFile; fileRef = DC8730B61D135749001A0A10 /* AVFoundation.framework */; };
+		DC8730EC1D1358A2001A0A10 /* AVFoundation.framework in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */; };
+		DC8730ED1D1358A2001A0A10 /* libPods-Cassette.a in Sources */ = {isa = PBXBuildFile; fileRef = FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */; };
+		DC8730F11D13594C001A0A10 /* testy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8730F01D13594C001A0A10 /* testy.m */; };
 		DCBAA4931CCCE8B0008B1550 /* CSTBaseMix.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4921CCCE8B0008B1550 /* CSTBaseMix.m */; };
 		DCBAA4981CCCE9D4008B1550 /* EightTracksAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4971CCCE9D4008B1550 /* EightTracksAPI.m */; };
 		DCBAA4A21CCCF4A0008B1550 /* CSTParentController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A11CCCF4A0008B1550 /* CSTParentController.m */; };
@@ -33,6 +89,16 @@
 		DCD8AB231CCEBEC3000B0A40 /* CSTTag.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8AB221CCEBEC3000B0A40 /* CSTTag.m */; };
 		DCE539051D13162B0099281E /* CSTParentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE539041D13162B0099281E /* CSTParentModel.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DC8730B31D135533001A0A10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DC147E911CC97E3900AE1CFE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DC147E981CC97E3900AE1CFE;
+			remoteInfo = Cassette;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7CC9916039D46A7BDCA303BF /* Pods-Cassette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cassette.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cassette/Pods-Cassette.debug.xcconfig"; sourceTree = "<group>"; };
@@ -62,6 +128,11 @@
 		DC2958F91CFF77570014C839 /* CSTSearchingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTSearchingController.m; path = Controllers/Searching/CSTSearchingController.m; sourceTree = "<group>"; };
 		DC57A23D1CCD325C0012718A /* CSTSearchSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTSearchSetup.h; path = Models/Searching/CSTSearchSetup.h; sourceTree = "<group>"; };
 		DC57A23E1CCD325C0012718A /* CSTSearchSetup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTSearchSetup.m; path = Models/Searching/CSTSearchSetup.m; sourceTree = "<group>"; };
+		DC8730AB1D13552D001A0A10 /* CassetteTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CassetteTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8730AF1D13552E001A0A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC8730B61D135749001A0A10 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		DC8730B81D13577E001A0A10 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "../../Library/Developer/Xcode/DerivedData/Cassette-akyknjzsmxjklzcqqduufrlcecff/Build/Products/Debug/libAFNetworking.a"; sourceTree = "<group>"; };
+		DC8730F01D13594C001A0A10 /* testy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testy.m; sourceTree = "<group>"; };
 		DCBAA4911CCCE8B0008B1550 /* CSTBaseMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBaseMix.h; path = "Models/Mixes/Base Mix/CSTBaseMix.h"; sourceTree = "<group>"; };
 		DCBAA4921CCCE8B0008B1550 /* CSTBaseMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBaseMix.m; path = "Models/Mixes/Base Mix/CSTBaseMix.m"; sourceTree = "<group>"; };
 		DCBAA4961CCCE9D4008B1550 /* EightTracksAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EightTracksAPI.h; path = "Libs/8tracks API/EightTracksAPI.h"; sourceTree = "<group>"; };
@@ -93,6 +164,16 @@
 			files = (
 				DCBAA4BA1CCD0CFB008B1550 /* AVFoundation.framework in Frameworks */,
 				BA7B93D19B373E8679D66742 /* libPods-Cassette.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8730A81D13552D001A0A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8730B91D13577E001A0A10 /* libAFNetworking.a in Frameworks */,
+				DC8730B71D13574A001A0A10 /* AVFoundation.framework in Frameworks */,
+				DC8730B51D135742001A0A10 /* libPods-Cassette.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				DC147E9B1CC97E3900AE1CFE /* Cassette */,
+				DC8730AC1D13552E001A0A10 /* CassetteTest */,
 				DC147E9A1CC97E3900AE1CFE /* Products */,
 				5E47156530D2D225C2C758AC /* Pods */,
 				E20E66496E40BAA04CF01588 /* Frameworks */,
@@ -186,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				DC147E991CC97E3900AE1CFE /* Cassette.app */,
+				DC8730AB1D13552D001A0A10 /* CassetteTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -232,6 +315,15 @@
 				DCD8AB1E1CCEBCFB000B0A40 /* CSTTagsExplorerController.m */,
 			);
 			name = "Tags Explorer";
+			sourceTree = "<group>";
+		};
+		DC8730AC1D13552E001A0A10 /* CassetteTest */ = {
+			isa = PBXGroup;
+			children = (
+				DC8730AF1D13552E001A0A10 /* Info.plist */,
+				DC8730F01D13594C001A0A10 /* testy.m */,
+			);
+			path = CassetteTest;
 			sourceTree = "<group>";
 		};
 		DCA2DAAD1CD2AD740091045B /* Searching */ = {
@@ -356,6 +448,8 @@
 		E20E66496E40BAA04CF01588 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC8730B81D13577E001A0A10 /* libAFNetworking.a */,
+				DC8730B61D135749001A0A10 /* AVFoundation.framework */,
 				DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */,
 				FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */,
 			);
@@ -385,6 +479,24 @@
 			productReference = DC147E991CC97E3900AE1CFE /* Cassette.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DC8730AA1D13552D001A0A10 /* CassetteTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DC8730B01D13552E001A0A10 /* Build configuration list for PBXNativeTarget "CassetteTest" */;
+			buildPhases = (
+				DC8730A71D13552D001A0A10 /* Sources */,
+				DC8730A81D13552D001A0A10 /* Frameworks */,
+				DC8730A91D13552D001A0A10 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC8730B41D135533001A0A10 /* PBXTargetDependency */,
+			);
+			name = CassetteTest;
+			productName = CassetteTest;
+			productReference = DC8730AB1D13552D001A0A10 /* CassetteTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -396,6 +508,11 @@
 				TargetAttributes = {
 					DC147E981CC97E3900AE1CFE = {
 						CreatedOnToolsVersion = 7.2.1;
+					};
+					DC8730AA1D13552D001A0A10 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = Q7UTZ9L6EV;
+						TestTargetID = DC147E981CC97E3900AE1CFE;
 					};
 				};
 			};
@@ -413,6 +530,7 @@
 			projectRoot = "";
 			targets = (
 				DC147E981CC97E3900AE1CFE /* Cassette */,
+				DC8730AA1D13552D001A0A10 /* CassetteTest */,
 			);
 		};
 /* End PBXProject section */
@@ -424,6 +542,13 @@
 			files = (
 				DC147EA61CC97E3900AE1CFE /* Assets.xcassets in Resources */,
 				DC147EA91CC97E3900AE1CFE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC8730A91D13552D001A0A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +631,75 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DC8730A71D13552D001A0A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8730BA1D1358A1001A0A10 /* AppDelegate.h in Sources */,
+				DC8730BB1D1358A2001A0A10 /* AppDelegate.m in Sources */,
+				DC8730BC1D1358A2001A0A10 /* ViewController.h in Sources */,
+				DC8730BD1D1358A2001A0A10 /* ViewController.m in Sources */,
+				DC8730BE1D1358A2001A0A10 /* CSTParentController.h in Sources */,
+				DC8730BF1D1358A2001A0A10 /* CSTParentController.m in Sources */,
+				DC8730C01D1358A2001A0A10 /* CSTSearchingController.h in Sources */,
+				DC8730C11D1358A2001A0A10 /* CSTSearchingController.m in Sources */,
+				DC8730C21D1358A2001A0A10 /* CSTCollectionsController.h in Sources */,
+				DC8730F11D13594C001A0A10 /* testy.m in Sources */,
+				DC8730C31D1358A2001A0A10 /* CSTCollectionsController.m in Sources */,
+				DC8730C41D1358A2001A0A10 /* CSTUsersController.h in Sources */,
+				DC8730C51D1358A2001A0A10 /* CSTUsersController.m in Sources */,
+				DC8730C61D1358A2001A0A10 /* CSTMixPlayer.h in Sources */,
+				DC8730C71D1358A2001A0A10 /* CSTMixPlayer.m in Sources */,
+				DC8730C81D1358A2001A0A10 /* CSTMixController.h in Sources */,
+				DC8730C91D1358A2001A0A10 /* CSTMixController.m in Sources */,
+				DC8730CA1D1358A2001A0A10 /* CSTTagsExplorerController.h in Sources */,
+				DC8730CB1D1358A2001A0A10 /* CSTTagsExplorerController.m in Sources */,
+				DC8730CC1D1358A2001A0A10 /* CSTMixExplorerController.h in Sources */,
+				DC8730CD1D1358A2001A0A10 /* CSTMixExplorerController.m in Sources */,
+				DC8730CE1D1358A2001A0A10 /* CSTParentModel.h in Sources */,
+				DC8730CF1D1358A2001A0A10 /* CSTParentModel.m in Sources */,
+				DC8730D01D1358A2001A0A10 /* CSTCollection.h in Sources */,
+				DC8730D11D1358A2001A0A10 /* CSTCollection.m in Sources */,
+				DC8730D21D1358A2001A0A10 /* CSTUser.h in Sources */,
+				DC8730D31D1358A2001A0A10 /* CSTUser.m in Sources */,
+				DC8730D41D1358A2001A0A10 /* CSTTag.h in Sources */,
+				DC8730D51D1358A2001A0A10 /* CSTTag.m in Sources */,
+				DC8730D61D1358A2001A0A10 /* CSTSearchSetup.h in Sources */,
+				DC8730D71D1358A2001A0A10 /* CSTSearchSetup.m in Sources */,
+				DC8730D81D1358A2001A0A10 /* CSTTrack.h in Sources */,
+				DC8730D91D1358A2001A0A10 /* CSTTrack.m in Sources */,
+				DC8730DA1D1358A2001A0A10 /* CSTBaseMix.h in Sources */,
+				DC8730DB1D1358A2001A0A10 /* CSTBaseMix.m in Sources */,
+				DC8730DC1D1358A2001A0A10 /* EightTracksAPI.h in Sources */,
+				DC8730DD1D1358A2001A0A10 /* EightTracksAPI.m in Sources */,
+				DC8730DE1D1358A2001A0A10 /* Shuttle.h in Sources */,
+				DC8730DF1D1358A2001A0A10 /* Shuttle.m in Sources */,
+				DC8730E01D1358A2001A0A10 /* NSObject+DavidJSON.h in Sources */,
+				DC8730E11D1358A2001A0A10 /* NSObject+DavidJSON.m in Sources */,
+				DC8730E21D1358A2001A0A10 /* Assets.xcassets in Sources */,
+				DC8730E31D1358A2001A0A10 /* Info.plist in Sources */,
+				DC8730E41D1358A2001A0A10 /* main.m in Sources */,
+				DC8730E51D1358A2001A0A10 /* Info.plist in Sources */,
+				DC8730E61D1358A2001A0A10 /* Cassette.app in Sources */,
+				DC8730E71D1358A2001A0A10 /* CassetteTest.xctest in Sources */,
+				DC8730E81D1358A2001A0A10 /* Pods-Cassette.debug.xcconfig in Sources */,
+				DC8730E91D1358A2001A0A10 /* Pods-Cassette.release.xcconfig in Sources */,
+				DC8730EA1D1358A2001A0A10 /* libAFNetworking.a in Sources */,
+				DC8730EB1D1358A2001A0A10 /* AVFoundation.framework in Sources */,
+				DC8730EC1D1358A2001A0A10 /* AVFoundation.framework in Sources */,
+				DC8730ED1D1358A2001A0A10 /* libPods-Cassette.a in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DC8730B41D135533001A0A10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DC147E981CC97E3900AE1CFE /* Cassette */;
+			targetProxy = DC8730B31D135533001A0A10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DC147EA71CC97E3900AE1CFE /* Main.storyboard */ = {
@@ -625,6 +818,37 @@
 			};
 			name = Release;
 		};
+		DC8730B11D13552E001A0A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC9916039D46A7BDCA303BF /* Pods-Cassette.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = CassetteTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = StephenHatton.CassetteTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cassette.app/Contents/MacOS/Cassette";
+			};
+			name = Debug;
+		};
+		DC8730B21D13552E001A0A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9388F6F32EEDC0C8199B1B3 /* Pods-Cassette.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = CassetteTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = StephenHatton.CassetteTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.11;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cassette.app/Contents/MacOS/Cassette";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -645,6 +869,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DC8730B01D13552E001A0A10 /* Build configuration list for PBXNativeTarget "CassetteTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC8730B11D13552E001A0A10 /* Debug */,
+				DC8730B21D13552E001A0A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
