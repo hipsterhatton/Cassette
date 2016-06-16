@@ -14,7 +14,9 @@
 
 typedef enum {
     GET,
-    POST
+    POST,
+    DELETE,
+    PUT
 } ShuttleModes;
 
 typedef enum {

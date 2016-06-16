@@ -31,6 +31,7 @@
 		DCBAA4BE1CCD1527008B1550 /* CSTTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4BD1CCD1527008B1550 /* CSTTrack.m */; };
 		DCD8AB1F1CCEBCFB000B0A40 /* CSTTagsExplorerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8AB1E1CCEBCFB000B0A40 /* CSTTagsExplorerController.m */; };
 		DCD8AB231CCEBEC3000B0A40 /* CSTTag.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8AB221CCEBEC3000B0A40 /* CSTTag.m */; };
+		DCE539051D13162B0099281E /* CSTParentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE539041D13162B0099281E /* CSTParentModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,8 @@
 		DCD8AB1E1CCEBCFB000B0A40 /* CSTTagsExplorerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTTagsExplorerController.m; path = "Controllers/Mixes/Tag Explorer/CSTTagsExplorerController.m"; sourceTree = "<group>"; };
 		DCD8AB211CCEBEC3000B0A40 /* CSTTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTTag.h; path = Models/Tags/CSTTag.h; sourceTree = "<group>"; };
 		DCD8AB221CCEBEC3000B0A40 /* CSTTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTTag.m; path = Models/Tags/CSTTag.m; sourceTree = "<group>"; };
+		DCE539031D13162B0099281E /* CSTParentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTParentModel.h; path = "Models/Parent Model/CSTParentModel.h"; sourceTree = "<group>"; };
+		DCE539041D13162B0099281E /* CSTParentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTParentModel.m; path = "Models/Parent Model/CSTParentModel.m"; sourceTree = "<group>"; };
 		FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cassette.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -243,6 +246,7 @@
 		DCBAA48B1CCCE7B5008B1550 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DCE539021D1315FE0099281E /* Parent Model */,
 				DC05649D1CD01EB300C19BFF /* Collections */,
 				DC0564991CD0189E00C19BFF /* Users */,
 				DCD8AB201CCEBEAA000B0A40 /* Tags */,
@@ -338,6 +342,15 @@
 				DCD8AB221CCEBEC3000B0A40 /* CSTTag.m */,
 			);
 			name = Tags;
+			sourceTree = "<group>";
+		};
+		DCE539021D1315FE0099281E /* Parent Model */ = {
+			isa = PBXGroup;
+			children = (
+				DCE539031D13162B0099281E /* CSTParentModel.h */,
+				DCE539041D13162B0099281E /* CSTParentModel.m */,
+			);
+			name = "Parent Model";
 			sourceTree = "<group>";
 		};
 		E20E66496E40BAA04CF01588 /* Frameworks */ = {
@@ -478,6 +491,7 @@
 				DCBAA4981CCCE9D4008B1550 /* EightTracksAPI.m in Sources */,
 				DC0615271CC97FA300FF9D0B /* NSObject+DavidJSON.m in Sources */,
 				DC147EA41CC97E3900AE1CFE /* ViewController.m in Sources */,
+				DCE539051D13162B0099281E /* CSTParentModel.m in Sources */,
 				DC57A23F1CCD325C0012718A /* CSTSearchSetup.m in Sources */,
 				DC142E041CD139310026FDE2 /* CSTCollectionsController.m in Sources */,
 				DC147EA11CC97E3900AE1CFE /* main.m in Sources */,

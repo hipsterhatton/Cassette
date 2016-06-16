@@ -43,6 +43,11 @@
 
 - (NSString *)autoCompleteSearch:(NSString *)searchTerm;
 
+- (NSString *)createCollection;
+- (NSString *)addToCollection;
+- (NSString *)updateCollection:(NSString *)collectionID;
+- (NSString *)deleteCollection:(NSString *)collectionID;
+
 - (NSString *)reportTrack:(NSString *)trackID :(NSString *)mixID;
 
 @end
