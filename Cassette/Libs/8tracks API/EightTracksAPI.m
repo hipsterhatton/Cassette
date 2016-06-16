@@ -201,6 +201,32 @@
     return [self _replace:url :placeholders :values];
 }
 
+- (NSString *)createCollection
+{
+    return @"https://8tracks.com/collections.json";
+}
+
+- (NSString *)addToCollection
+{
+    return @"http://8tracks.com/collections_mixes.jsonh";
+}
+
+- (NSString *)updateCollection:(NSString *)collectionID
+{
+    NSString *url =         @"http://8tracks.com/collections/#{CollectionID}";
+    NSArray *placeholders = @[ @"#{CollectionID}" ];
+    NSArray *values =       @[ collectionID ];
+    return [self _replace:url :placeholders :values];
+}
+
+- (NSString *)deleteCollection:(NSString *)collectionID
+{
+    NSString *url =         @"http://8tracks.com/collections/#{CollectionID}";
+    NSArray *placeholders = @[ @"#{CollectionID}" ];
+    NSArray *values =       @[ collectionID ];
+    return [self _replace:url :placeholders :values];
+}
+
 
 
 - (NSString *)_replace:(NSString *)string :(NSArray *)placeholders :(NSArray *)values

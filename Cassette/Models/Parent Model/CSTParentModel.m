@@ -10,4 +10,9 @@
 
 @implementation CSTParentModel
 
+- (NSString *)getID
+{
+    return [NSString stringWithFormat:@"%@", [self valueForKey:@"_id"]];
+}
+
 @end

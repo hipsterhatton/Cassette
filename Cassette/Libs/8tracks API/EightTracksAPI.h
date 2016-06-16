@@ -41,6 +41,11 @@
 - (NSString *)getCollections:(NSString *)userID;
 - (NSString *)getEditableCollections:(NSString *)userName; // this one called only for Signed In Users? Or do we combine the 2 values into one...
 
+- (NSString *)createCollection;
+- (NSString *)addToCollection;
+- (NSString *)updateCollection:(NSString *)collectionID;
+- (NSString *)deleteCollection:(NSString *)collectionID;
+
 - (NSString *)reportTrack:(NSString *)trackID :(NSString *)mixID;
 
 @end

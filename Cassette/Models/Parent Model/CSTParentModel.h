@@ -10,4 +10,6 @@
 
 @interface CSTParentModel : NSObject
 
+- (NSString *)getID;
+
 @end

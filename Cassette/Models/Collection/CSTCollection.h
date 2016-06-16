@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CSTParentModel.h"
 
-@interface CSTCollection : NSObject
+@interface CSTCollection : CSTParentModel
 
 @property (nonatomic, retain) NSString *_id;
 @property (nonatomic, retain) NSString *name;
@@ -18,6 +19,10 @@
 @property (nonatomic) BOOL editable;
 
 
+
+- (BOOL)isListenLater;
+
 + (NSDictionary *)getJSONStructure;
++ (NSDictionary *)getJSONStructureWithPaths;
 
 @end

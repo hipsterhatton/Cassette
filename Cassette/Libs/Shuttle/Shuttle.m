@@ -82,6 +82,22 @@
             [self url_failure:promise :error :url];
         }];
         
+    } else if (mode == PUT) {
+        
+        [_manager PUT:url parameters:params success:^(NSURLSessionTask *task, id responseObject) {
+            [self url_success:promise :responseObject :url];
+        } failure:^(NSURLSessionTask *operation, NSError *error) {
+            [self url_failure:promise :error :url];
+        }];
+        
+    } else {
+        
+        [_manager DELETE:url parameters:params success:^(NSURLSessionTask *task, id responseObject) {
+            [self url_success:promise :responseObject :url];
+        } failure:^(NSURLSessionTask *operation, NSError *error) {
+            [self url_failure:promise :error :url];
+        }];
+        
     }
     
     
