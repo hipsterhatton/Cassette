@@ -50,8 +50,8 @@
 
 - (void)loadMixExplorer
 {
-    _searcher = [[CSTSearchingController alloc] init];
-    [_searcher autocompleteSearch:@"coff"];
+    CSTMixController *xyz = [[CSTMixController alloc] init];
+    [xyz getMixDetails:@"1"];
 }
 
 - (IBAction)button_playMix:(id)sender

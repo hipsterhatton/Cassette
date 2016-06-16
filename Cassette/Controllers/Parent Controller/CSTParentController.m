@@ -17,4 +17,21 @@
     return self;
 }
 
+- (void)raiseError:(NSError *)error :(NSString *)klass :(NSString *)method
+{
+    NSLog(@"");
+    NSLog(@"");
+    NSLog(@"#    +------------+------------+");
+    NSLog(@"#    |");
+    NSLog(@"#    |   ERROR RAISED   ");
+    NSLog(@"#    |   - Desc:   %@", [error localizedDescription]);
+    NSLog(@"#    |   - Reason: %@", [error localizedFailureReason]);
+    NSLog(@"#    |   - Class:  %@", klass);
+    NSLog(@"#    |   - Method: %@", method);
+    NSLog(@"#    |");
+    NSLog(@"#    +------------+------------+");
+    NSLog(@"");
+    NSLog(@"");
+}
+
 @end

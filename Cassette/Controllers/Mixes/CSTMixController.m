@@ -25,8 +25,8 @@
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
-        NSLog(@"Error: %@", [error localizedDescription]);
+    .then(nil, ^id(NSError *error) {
+        [self raiseError:error :x(self) :y];
         return nil;
     });
 }
@@ -52,8 +52,8 @@
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
-        NSLog(@"Error: %@", [error localizedDescription]);
+    .then(nil, ^id(NSError *error) {
+        [self raiseError:error :x(self) :y];
         return nil;
     });
 }
@@ -85,7 +85,7 @@
     }, nil)
     
     .then(nil, ^id(NSError* error) {
-        NSLog(@"Error: %@", [error localizedDescription]);
+        [self raiseError:error :x(self) :y];
         return nil;
     });
 }
