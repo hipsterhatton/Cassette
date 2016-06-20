@@ -25,11 +25,9 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)getMixDetails
 {
-    int a = 9;
-    int b = 9;
-    XCTAssertEqual(a, b);
+    XCTAssertNoThrow([_controller getMixDetails:@"14"]);
 }
 
 @end
