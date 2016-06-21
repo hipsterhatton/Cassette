@@ -86,6 +86,7 @@
 		DCBAA4B81CCD081B008B1550 /* CSTMixPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4B71CCD081B008B1550 /* CSTMixPlayer.m */; };
 		DCBAA4BA1CCD0CFB008B1550 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */; };
 		DCBAA4BE1CCD1527008B1550 /* CSTTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4BD1CCD1527008B1550 /* CSTTrack.m */; };
+		DCD70DD81D19EDE200D0F069 /* MixesControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD70DD71D19EDE200D0F069 /* MixesControllerTest.m */; };
 		DCD8AB1F1CCEBCFB000B0A40 /* CSTTagsExplorerController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8AB1E1CCEBCFB000B0A40 /* CSTTagsExplorerController.m */; };
 		DCD8AB231CCEBEC3000B0A40 /* CSTTag.m in Sources */ = {isa = PBXBuildFile; fileRef = DCD8AB221CCEBEC3000B0A40 /* CSTTag.m */; };
 		DCE539051D13162B0099281E /* CSTParentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE539041D13162B0099281E /* CSTParentModel.m */; };
@@ -150,6 +151,7 @@
 		DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		DCBAA4BC1CCD1527008B1550 /* CSTTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTTrack.h; path = Models/Tracks/CSTTrack.h; sourceTree = "<group>"; };
 		DCBAA4BD1CCD1527008B1550 /* CSTTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTTrack.m; path = Models/Tracks/CSTTrack.m; sourceTree = "<group>"; };
+		DCD70DD71D19EDE200D0F069 /* MixesControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixesControllerTest.m; sourceTree = "<group>"; };
 		DCD8AB1D1CCEBCFB000B0A40 /* CSTTagsExplorerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTTagsExplorerController.h; path = "Controllers/Mixes/Tag Explorer/CSTTagsExplorerController.h"; sourceTree = "<group>"; };
 		DCD8AB1E1CCEBCFB000B0A40 /* CSTTagsExplorerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTTagsExplorerController.m; path = "Controllers/Mixes/Tag Explorer/CSTTagsExplorerController.m"; sourceTree = "<group>"; };
 		DCD8AB211CCEBEC3000B0A40 /* CSTTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTTag.h; path = Models/Tags/CSTTag.h; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 			children = (
 				DC8730AF1D13552E001A0A10 /* Info.plist */,
 				DC8730F01D13594C001A0A10 /* ViewControllerTest.m */,
+				DCD70DD71D19EDE200D0F069 /* MixesControllerTest.m */,
 			);
 			path = CassetteTest;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				DC8730BB1D1358A2001A0A10 /* AppDelegate.m in Sources */,
 				DC8730BC1D1358A2001A0A10 /* ViewController.h in Sources */,
 				DC8730BD1D1358A2001A0A10 /* ViewController.m in Sources */,
+				DCD70DD81D19EDE200D0F069 /* MixesControllerTest.m in Sources */,
 				DC8730BE1D1358A2001A0A10 /* CSTParentController.h in Sources */,
 				DC8730BF1D1358A2001A0A10 /* CSTParentController.m in Sources */,
 				DC8730C01D1358A2001A0A10 /* CSTSearchingController.h in Sources */,

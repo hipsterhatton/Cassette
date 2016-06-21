@@ -39,10 +39,15 @@
 {
     RXPromise *p = [_vc setupApplication];
     
-    XCTestExpectation *expectation = [self expectationWithDescription:@"View Controller should play token"];
+    XCTestExpectation *expectation = [self expectationWithDescription:@"View Controller Set Play Token"];
     
     p.then(^id (id o) {
         [expectation fulfill];
+        return @"OK";
+    }, nil)
+    
+    .then(^id (id o) {
+        XCTAssertNotNil(_vc.api.playToken);
         return @"OK";
     }, nil);
     

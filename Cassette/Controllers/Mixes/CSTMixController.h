@@ -13,8 +13,8 @@
 
 @interface CSTMixController : CSTParentController
 
-- (void)getMixDetails:(NSString *)mixID;
-- (void)getSimilarMixes:(CSTBaseMix *)mix;
-- (void)getTracksAlreadyPlayed:(CSTBaseMix *)mix;
+- (RXPromise *)getMixDetails:(NSString *)mixID;
+- (RXPromise *)getSimilarMixes:(CSTBaseMix *)mix;
+- (RXPromise *)getTracksAlreadyPlayed:(CSTBaseMix *)mix;
 
 @end

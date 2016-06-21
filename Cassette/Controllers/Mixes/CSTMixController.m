@@ -16,9 +16,9 @@
     return self;
 }
 
-- (void)getMixDetails:(NSString *)mixID
+- (RXPromise *)getMixDetails:(NSString *)mixID
 {
-    [self.shuttle launch:GET :JSON :[self.api getMixDetails:mixID] :nil]
+    return [self.shuttle launch:GET :JSON :[self.api getMixDetails:mixID] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         NSLog(@"Raw JSON: %@", rawJSON);
@@ -27,19 +27,19 @@
     
     .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 
-- (void)getSimilarMixes:(CSTBaseMix *)mix
+- (RXPromise *)getSimilarMixes:(CSTBaseMix *)mix
 {
     if ([mix similarMixes]) {
         if ([[mix similarMixes] count] > 0) {
-            return;
+            return nil;
         }
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getSimilarMix:[mix _id]] :nil]
+    return [self.shuttle launch:GET :JSON :[self.api getSimilarMix:[mix _id]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
@@ -54,19 +54,19 @@
     
     .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 
-- (void)getTracksAlreadyPlayed:(CSTBaseMix *)mix
+- (RXPromise *)getTracksAlreadyPlayed:(CSTBaseMix *)mix
 {
     if ([mix tracksPlayed]) {
         if ([[mix tracksPlayed] count] > 0) {
-            return;
+            return nil;
         }
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getListOfTracksPlayed:[mix _id]] :nil]
+    return [self.shuttle launch:GET :JSON :[self.api getListOfTracksPlayed:[mix _id]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
@@ -86,7 +86,7 @@
     
     .then(nil, ^id(NSError* error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 
