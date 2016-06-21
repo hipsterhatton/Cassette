@@ -11,6 +11,20 @@
 
 @implementation ViewController
 
+- (id)init
+{
+    self = [super init];
+    
+    _api = [EightTracksAPI sharedManager];
+    
+    _shuttle = [Shuttle sharedManagerWithDefaults:@{
+                                                    @"X-Api-Key"      : [_api getAPIkey],
+                                                    @"X-Api-Version"  : [_api getAPIversion]
+                                                    }];
+    
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -26,14 +40,7 @@
 
 - (RXPromise *)setupApplication
 {
-    _api = [EightTracksAPI sharedManager];
-    
-    _shuttle = [Shuttle sharedManagerWithDefaults:@{
-                                                    @"X-Api-Key"      : [_api getAPIkey],
-                                                    @"X-Api-Version"  : [_api getAPIversion]
-                                                    }];
-    
-    return [self.shuttle launch:GET :JSON :@"testing" :nil]
+    return [self.shuttle launch:GET :JSON :[_api playToken] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         [_api setPlayToken:rawJSON[@"play_token"]];
