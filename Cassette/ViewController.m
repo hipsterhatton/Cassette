@@ -14,7 +14,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self setup];
+    [self setupApplication];
 }
 
 - (void)setRepresentedObject:(id)representedObject
@@ -24,7 +24,7 @@
     // Update the view, if already loaded.
 }
 
-- (void)setup
+- (RXPromise *)setupApplication
 {
     _api = [EightTracksAPI sharedManager];
     
@@ -33,19 +33,17 @@
                                                     @"X-Api-Version"  : [_api getAPIversion]
                                                     }];
     
-    [self.shuttle launch:GET :JSON :[_api playToken] :nil]
+    return [self.shuttle launch:GET :JSON :@"testing" :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         [_api setPlayToken:rawJSON[@"play_token"]];
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         NSLog(@"Error: %@", [error localizedDescription]);
-        return nil;
+        return error;
     });
-    
-    [self loadMixExplorer];
 }
 
 - (void)loadMixExplorer

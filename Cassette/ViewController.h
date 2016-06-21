@@ -30,5 +30,9 @@
 @property (nonatomic, retain) CSTTagsExplorerController *tagexplorer;
 @property (nonatomic, retain) CSTUsersController *users;
 
+
+
+- (RXPromise *)setupApplication;
+
 @end
 

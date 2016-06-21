@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27674881BFBDCD5D08FCF3E1 /* libPods-CassetteTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26AD5DB2061D324CFB7493AD /* libPods-CassetteTest.a */; };
 		BA7B93D19B373E8679D66742 /* libPods-Cassette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */; };
 		DC0564981CD0156700C19BFF /* CSTUsersController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC0564971CD0156700C19BFF /* CSTUsersController.m */; };
 		DC05649C1CD018B000C19BFF /* CSTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC05649B1CD018B000C19BFF /* CSTUser.m */; };
@@ -76,7 +77,7 @@
 		DC8730EB1D1358A2001A0A10 /* AVFoundation.framework in Sources */ = {isa = PBXBuildFile; fileRef = DC8730B61D135749001A0A10 /* AVFoundation.framework */; };
 		DC8730EC1D1358A2001A0A10 /* AVFoundation.framework in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */; };
 		DC8730ED1D1358A2001A0A10 /* libPods-Cassette.a in Sources */ = {isa = PBXBuildFile; fileRef = FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */; };
-		DC8730F11D13594C001A0A10 /* testy.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8730F01D13594C001A0A10 /* testy.m */; };
+		DC8730F11D13594C001A0A10 /* ViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8730F01D13594C001A0A10 /* ViewControllerTest.m */; };
 		DCBAA4931CCCE8B0008B1550 /* CSTBaseMix.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4921CCCE8B0008B1550 /* CSTBaseMix.m */; };
 		DCBAA4981CCCE9D4008B1550 /* EightTracksAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4971CCCE9D4008B1550 /* EightTracksAPI.m */; };
 		DCBAA4A21CCCF4A0008B1550 /* CSTParentController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4A11CCCF4A0008B1550 /* CSTParentController.m */; };
@@ -101,6 +102,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		26AD5DB2061D324CFB7493AD /* libPods-CassetteTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CassetteTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CC9916039D46A7BDCA303BF /* Pods-Cassette.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cassette.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cassette/Pods-Cassette.debug.xcconfig"; sourceTree = "<group>"; };
 		B9388F6F32EEDC0C8199B1B3 /* Pods-Cassette.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cassette.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cassette/Pods-Cassette.release.xcconfig"; sourceTree = "<group>"; };
 		DC0564961CD0156700C19BFF /* CSTUsersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTUsersController.h; path = Controllers/Users/CSTUsersController.h; sourceTree = "<group>"; };
@@ -132,7 +134,7 @@
 		DC8730AF1D13552E001A0A10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC8730B61D135749001A0A10 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		DC8730B81D13577E001A0A10 /* libAFNetworking.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAFNetworking.a; path = "../../Library/Developer/Xcode/DerivedData/Cassette-akyknjzsmxjklzcqqduufrlcecff/Build/Products/Debug/libAFNetworking.a"; sourceTree = "<group>"; };
-		DC8730F01D13594C001A0A10 /* testy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testy.m; sourceTree = "<group>"; };
+		DC8730F01D13594C001A0A10 /* ViewControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewControllerTest.m; sourceTree = "<group>"; };
 		DCBAA4911CCCE8B0008B1550 /* CSTBaseMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTBaseMix.h; path = "Models/Mixes/Base Mix/CSTBaseMix.h"; sourceTree = "<group>"; };
 		DCBAA4921CCCE8B0008B1550 /* CSTBaseMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTBaseMix.m; path = "Models/Mixes/Base Mix/CSTBaseMix.m"; sourceTree = "<group>"; };
 		DCBAA4961CCCE9D4008B1550 /* EightTracksAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EightTracksAPI.h; path = "Libs/8tracks API/EightTracksAPI.h"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				DC8730B91D13577E001A0A10 /* libAFNetworking.a in Frameworks */,
 				DC8730B71D13574A001A0A10 /* AVFoundation.framework in Frameworks */,
 				DC8730B51D135742001A0A10 /* libPods-Cassette.a in Frameworks */,
+				27674881BFBDCD5D08FCF3E1 /* libPods-CassetteTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				DC8730AF1D13552E001A0A10 /* Info.plist */,
-				DC8730F01D13594C001A0A10 /* testy.m */,
+				DC8730F01D13594C001A0A10 /* ViewControllerTest.m */,
 			);
 			path = CassetteTest;
 			sourceTree = "<group>";
@@ -452,6 +455,7 @@
 				DC8730B61D135749001A0A10 /* AVFoundation.framework */,
 				DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */,
 				FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */,
+				26AD5DB2061D324CFB7493AD /* libPods-CassetteTest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -483,9 +487,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC8730B01D13552E001A0A10 /* Build configuration list for PBXNativeTarget "CassetteTest" */;
 			buildPhases = (
+				3FDBF463E02B1B75C1F48E94 /* Check Pods Manifest.lock */,
 				DC8730A71D13552D001A0A10 /* Sources */,
 				DC8730A81D13552D001A0A10 /* Frameworks */,
 				DC8730A91D13552D001A0A10 /* Resources */,
+				01EFF8FD9C4BE1C00812EC51 /* Embed Pods Frameworks */,
+				DF4641D22898545D868739CA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -512,7 +519,6 @@
 					DC8730AA1D13552D001A0A10 = {
 						CreatedOnToolsVersion = 7.2.1;
 						DevelopmentTeam = Q7UTZ9L6EV;
-						TestTargetID = DC147E981CC97E3900AE1CFE;
 					};
 				};
 			};
@@ -555,6 +561,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01EFF8FD9C4BE1C00812EC51 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CassetteTest/Pods-CassetteTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3FDBF463E02B1B75C1F48E94 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		5AB76E752F0C5C9782CA56EA /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -598,6 +634,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DF4641D22898545D868739CA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CassetteTest/Pods-CassetteTest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -644,7 +695,7 @@
 				DC8730C01D1358A2001A0A10 /* CSTSearchingController.h in Sources */,
 				DC8730C11D1358A2001A0A10 /* CSTSearchingController.m in Sources */,
 				DC8730C21D1358A2001A0A10 /* CSTCollectionsController.h in Sources */,
-				DC8730F11D13594C001A0A10 /* testy.m in Sources */,
+				DC8730F11D13594C001A0A10 /* ViewControllerTest.m in Sources */,
 				DC8730C31D1358A2001A0A10 /* CSTCollectionsController.m in Sources */,
 				DC8730C41D1358A2001A0A10 /* CSTUsersController.h in Sources */,
 				DC8730C51D1358A2001A0A10 /* CSTUsersController.m in Sources */,
@@ -829,7 +880,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = StephenHatton.CassetteTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx10.11;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cassette.app/Contents/MacOS/Cassette";
 			};
 			name = Debug;
 		};
@@ -844,7 +894,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = StephenHatton.CassetteTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx10.11;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cassette.app/Contents/MacOS/Cassette";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -877,6 +926,7 @@
 				DC8730B21D13552E001A0A10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
