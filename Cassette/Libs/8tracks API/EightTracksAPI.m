@@ -146,40 +146,40 @@
 - (NSString *)getUserMixes:(NSString *)userID :(int)pageNumber :(int)perPage
 {
     NSString *url =         @"http://8tracks.com/users/#{UserID}/mixes.json?include=pagination&page=#{PageNumber}&per_page=#{PerPage}";
-    NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}" ];
-    NSArray *values =       @[ userID, i_to_s(pageNumber) ];
+    NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}", @"#{PerPage}" ];
+    NSArray *values =       @[ userID, i_to_s(pageNumber), i_to_s(perPage) ];
     return [self _replace:url :placeholders :values];
 }
 
 - (NSString *)getLikedMixes:(NSString *)userID :(int)pageNumber :(int)perPage
 {
     NSString *url =         @"http://8tracks.com/mix_sets/liked:#{UserID}.json?include=mixes+details+pagination&page=#{PageNumber}&per_page=#{PerPage}";
-    NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}" ];
-    NSArray *values =       @[ userID, i_to_s(pageNumber) ];
+    NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}", @"#{PerPage}" ];
+    NSArray *values =       @[ userID, i_to_s(pageNumber), i_to_s(perPage) ];
     return [self _replace:url :placeholders :values];
 }
 
 - (NSString *)getLikedTracks:(NSString *)userID :(int)pageNumber :(int)perPage
 {
     NSString *url =         @"http://8tracks.com/users/#{UserID}/favorite_tracks.json?include=mixes+details+pagination&page=#{PageNumber}&per_page=#{PerPage}";
-    NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}" ];
-    NSArray *values =       @[ userID, i_to_s(pageNumber) ];
+    NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}", @"#{PerPage}" ];
+    NSArray *values =       @[ userID, i_to_s(pageNumber), i_to_s(perPage) ];
     return [self _replace:url :placeholders :values];
 }
 
 - (NSString *)getFollowing:(NSString *)userID :(int)pageNumber :(int)perPage
 {
     NSString *url =         @"http://8tracks.com/users/#{UserID}/follows_users.json?include=mixes+details+pagination&page=#{PageNumber}&per_page=#{PerPage}";
-    NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}" ];
-    NSArray *values =       @[ userID, i_to_s(pageNumber) ];
+    NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}", @"#{PerPage}" ];
+    NSArray *values =       @[ userID, i_to_s(pageNumber), i_to_s(perPage) ];
     return [self _replace:url :placeholders :values];
 }
 
 - (NSString *)getFollowers:(NSString *)userID :(int)pageNumber :(int)perPage
 {
     NSString *url =         @"http://8tracks.com/users/#{UserID}/followed_by_users.json?include=mixes+details+pagination&page=#{PageNumber}&per_page=#{PerPage}";
-    NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}" ];
-    NSArray *values =       @[ userID, i_to_s(pageNumber) ];
+    NSArray *placeholders = @[ @"#{UserID}", @"#{PageNumber}", @"#{PerPage}" ];
+    NSArray *values =       @[ userID, i_to_s(pageNumber), i_to_s(perPage) ];
     return [self _replace:url :placeholders :values];
 }
 

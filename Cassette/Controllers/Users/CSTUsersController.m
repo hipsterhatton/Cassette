@@ -18,9 +18,9 @@
 
 
 
-- (void)getUserDetails:(NSString *)userID
+- (RXPromise *)getUserDetails:(NSString *)userID
 {
-    [self.shuttle launch:GET :JSON :[self.api getUserDetails:userID] :nil]
+    return [self.shuttle launch:GET :JSON :[self.api getUserDetails:userID] :nil]
     
     
     .then(^id (NSDictionary *rawJSON) {
@@ -36,9 +36,9 @@
     }, nil)
     
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 
@@ -94,20 +94,20 @@
                           ];
 
         [[collection mixes] addObjectsFromArray: mixes ];
+        
+        [[_user collections] addObject:collection];
     }
-    
-    
 }
 
 
 
-- (void)getUserMixes:(CSTUser *)user
+- (RXPromise *)getUserMixes:(CSTUser *)user
 {
     if (![user madeMixesSearchSetup]) {
         [user setMadeMixesSearchSetup:[[CSTSearchSetup alloc] init]];
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getUserMixes
+    return [self.shuttle launch:GET :JSON :[self.api getUserMixes
                                      :[user getID]
                                      :[[user madeMixesSearchSetup] pageNumber]
                                      :[[user madeMixesSearchSetup] resultsPerPage]
@@ -134,13 +134,13 @@
     });
 }
 
-- (void)getLikedMixes:(CSTUser *)user
+- (RXPromise *)getLikedMixes:(CSTUser *)user
 {
     if (![user likedMixesSearchSetup]) {
         [user setLikedMixesSearchSetup:[[CSTSearchSetup alloc] init]];
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getLikedMixes
+    return [self.shuttle launch:GET :JSON :[self.api getLikedMixes
                                      :[user getID]
                                      :[[user likedMixesSearchSetup] pageNumber]
                                      :[[user likedMixesSearchSetup] resultsPerPage]
@@ -167,20 +167,19 @@
     });
 }
 
-- (void)getLikedTracks:(CSTUser *)user
+- (RXPromise *)getLikedTracks:(CSTUser *)user
 {
     if (![user likedTracksSearchSetup]) {
         [user setLikedTracksSearchSetup:[[CSTSearchSetup alloc] init]];
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getLikedTracks
+    return [self.shuttle launch:GET :JSON :[self.api getLikedTracks
                                      :[user getID]
                                      :[[user likedTracksSearchSetup] pageNumber]
                                      :[[user likedTracksSearchSetup] resultsPerPage]
                                      ] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
-        NSLog(@"Raw JSON: %@", rawJSON);
         if (![user likedTracks]) {
             [user setLikedTracks:[[NSMutableArray alloc] init]];
         }
@@ -202,13 +201,13 @@
 
 
 
-- (void)getUserFollowers:(CSTUser *)user
+- (RXPromise *)getUserFollowers:(CSTUser *)user
 {
     if (![user followersSearchSetup]) {
         [user setFollowersSearchSetup:[[CSTSearchSetup alloc] init]];
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getFollowers
+    return [self.shuttle launch:GET :JSON :[self.api getFollowers
                                      :[user getID]
                                      :[[user followersSearchSetup] pageNumber]
                                      :[[user followersSearchSetup] resultsPerPage]
@@ -235,13 +234,13 @@
     });
 }
 
-- (void)getUserFollowing:(CSTUser *)user
+- (RXPromise *)getUserFollowing:(CSTUser *)user
 {
     if (![user following]) {
         [user setFollowingSearchSetup:[[CSTSearchSetup alloc] init]];
     }
     
-    [self.shuttle launch:GET :JSON :[self.api getFollowing
+    return [self.shuttle launch:GET :JSON :[self.api getFollowing
                                      :[user getID]
                                      :[[user followingSearchSetup] pageNumber]
                                      :[[user followingSearchSetup] resultsPerPage]

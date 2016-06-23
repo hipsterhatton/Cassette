@@ -40,10 +40,18 @@
 
 - (RXPromise *)setupApplication
 {
+    if ([_api gotPlayToken]) {
+        RXPromise *temp = [RXPromise new];
+        [temp fulfillWithValue:@"OK"];
+        return temp;
+    }
+    
     return [self.shuttle launch:GET :JSON :[_api playToken] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
+        NSLog(@"Raw JSON: %@", rawJSON);
         [_api setPlayToken:rawJSON[@"play_token"]];
+        [_api setGotPlayToken:YES];
         return @"OK";
     }, nil)
     

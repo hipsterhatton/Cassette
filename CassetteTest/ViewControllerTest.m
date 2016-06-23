@@ -15,13 +15,16 @@
 
 @implementation ViewControllerTest
 
-- (void)setUp {
+- (void)setUp
+{
     [super setUp];
     _vc = [ViewController new];
 }
 
-- (void)tearDown {
+- (void)tearDown
+{
     // Put teardown code here. This method is called after the invocation of each test method in the class.
+    _vc = nil;
     [super tearDown];
 }
 
@@ -37,9 +40,9 @@
 
 - (void)testSetupPlayToken
 {
-    RXPromise *p = [_vc setupApplication];
-    
     XCTestExpectation *expectation = [self expectationWithDescription:@"View Controller Set Play Token"];
+    
+    RXPromise *p = [_vc setupApplication];
     
     p.then(^id (id o) {
         [expectation fulfill];

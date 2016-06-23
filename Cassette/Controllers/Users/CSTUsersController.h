@@ -19,13 +19,13 @@
 
 
 
-- (void)getUserDetails:(NSString *)userID;
-- (void)getUserMixes:(CSTUser *)user;
+- (RXPromise *)getUserDetails:(NSString *)userID;
+- (RXPromise *)getUserMixes:(CSTUser *)user;
 
-- (void)getLikedMixes:(CSTUser *)user;
-- (void)getLikedTracks:(CSTUser *)user;
+- (RXPromise *)getLikedMixes:(CSTUser *)user;
+- (RXPromise *)getLikedTracks:(CSTUser *)user;
 
-- (void)getUserFollowers:(CSTUser *)user;
-- (void)getUserFollowing:(CSTUser *)user;
+- (RXPromise *)getUserFollowers:(CSTUser *)user;
+- (RXPromise *)getUserFollowing:(CSTUser *)user;
 
 @end

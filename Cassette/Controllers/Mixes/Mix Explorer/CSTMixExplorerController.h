@@ -16,7 +16,7 @@
 
 
 
-- (void)getHomepageMixes;
+- (RXPromise *)getHomepageMixes;
 - (void)getHomepageMixesNextPage;
 
 @end

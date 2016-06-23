@@ -23,15 +23,15 @@
 
 
 
-- (void)getTopTags;
+- (RXPromise *)getTopTags;
 - (void)getTopTagsNextPage;
 
-- (void)getAutocompleteTags:(NSString *)autocompleteTerm;
+- (RXPromise *)getAutocompleteTags:(NSString *)autocompleteTerm;
 
 - (void)addSelectedTag:(CSTTag *)tag;
 - (void)removeSelectedTag:(int)pos;
 
-- (void)getMixesFromTagSelection;
+- (RXPromise *)getMixesFromTagSelection;
 - (void)getMixesFromTagSelectionNextPage;
 
 @end

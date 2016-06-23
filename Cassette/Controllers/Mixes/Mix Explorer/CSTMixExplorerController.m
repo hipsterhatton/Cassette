@@ -18,9 +18,9 @@
     return self;
 }
 
-- (void)getHomepageMixes
+- (RXPromise *)getHomepageMixes
 {
-    [self.shuttle launch:GET :JSON :[self.api getHomepageMixes:[_mixesSearchSetup sort]
+    return [self.shuttle launch:GET :JSON :[self.api getHomepageMixes:[_mixesSearchSetup sort]
                                                               :[_mixesSearchSetup pageNumber]
                                                               :[_mixesSearchSetup resultsPerPage]
                                      ] :nil]
@@ -40,9 +40,9 @@
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 

@@ -17,11 +17,10 @@
 }
 
 - (RXPromise *)getMixDetails:(NSString *)mixID
-{
+{ 
     return [self.shuttle launch:GET :JSON :[self.api getMixDetails:mixID] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
-        NSLog(@"Raw JSON: %@", rawJSON);
         return @"OK";
     }, nil)
     

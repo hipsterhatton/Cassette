@@ -57,7 +57,7 @@
 {
     RXPromise *promise = [RXPromise new];
     
-    NSLog(@"URL: %@", url);
+    NSLog(@"\n\n\nURL: %@\n\n\n", url);
     
     if (response == JSON) {
         [_manager setResponseSerializer:_JSONResponse];

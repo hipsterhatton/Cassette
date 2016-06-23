@@ -11,6 +11,7 @@
 @interface EightTracksAPI : NSObject
 
 @property (nonatomic, retain) NSString *playToken;
+@property (nonatomic) BOOL gotPlayToken;
 
 + (id)sharedManager;
 

@@ -21,9 +21,9 @@
 
 
 
-- (void)getTopTags
+- (RXPromise *)getTopTags
 {
-    [self.shuttle launch:GET :JSON :[self.api getTopTags:[_searchSetup pageNumber] :[_searchSetup resultsPerPage]] :nil]
+    return [self.shuttle launch:GET :JSON :[self.api getTopTags:[_searchSetup pageNumber] :[_searchSetup resultsPerPage]] :nil]
     
     
     .then(^id (NSDictionary *rawJSON) {
@@ -37,9 +37,9 @@
     }, nil)
     
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 
@@ -52,18 +52,18 @@
 
 
 
-- (void)getAutocompleteTags:(NSString *)autocompleteTerm
+- (RXPromise *)getAutocompleteTags:(NSString *)autocompleteTerm
 {
-    [self.shuttle launch:GET :JSON :[self.api autocompleteTags:autocompleteTerm] :nil]
+    return [self.shuttle launch:GET :JSON :[self.api autocompleteTags:autocompleteTerm] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         [self _extractAutocompleteTags:rawJSON :@"tag_cloud/tags" :1];
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 
@@ -153,14 +153,14 @@
 
 
 
-- (void)getMixesFromTagSelection
+- (RXPromise *)getMixesFromTagSelection
 {
     NSMutableArray *tagStrings = [[NSMutableArray alloc] init];
     for (CSTTag *t in _selectedTags) {
         [tagStrings addObject:[t name]];
     }
  
-    [self.shuttle launch:GET :JSON :[self.api getTagsAndMixes
+    return [self.shuttle launch:GET :JSON :[self.api getTagsAndMixes
                                      :[tagStrings componentsJoinedByString:@"+"]
                                      :[_mixesSearchSetup pageNumber]
                                      :[_mixesSearchSetup resultsPerPage]] :nil]
@@ -175,9 +175,9 @@
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 
