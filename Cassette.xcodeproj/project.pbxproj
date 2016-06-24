@@ -20,6 +20,8 @@
 		DC147EA41CC97E3900AE1CFE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA31CC97E3900AE1CFE /* ViewController.m */; };
 		DC147EA61CC97E3900AE1CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC147EA51CC97E3900AE1CFE /* Assets.xcassets */; };
 		DC147EA91CC97E3900AE1CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC147EA71CC97E3900AE1CFE /* Main.storyboard */; };
+		DC237C131D1DC6A30035826D /* CSTUserAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC237C121D1DC6A30035826D /* CSTUserAccountController.m */; };
+		DC237C171D1DC76F0035826D /* CSTAppUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC237C161D1DC76F0035826D /* CSTAppUser.m */; };
 		DC2958FA1CFF77570014C839 /* CSTSearchingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2958F91CFF77570014C839 /* CSTSearchingController.m */; };
 		DC57A23F1CCD325C0012718A /* CSTSearchSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57A23E1CCD325C0012718A /* CSTSearchSetup.m */; };
 		DC8730B51D135742001A0A10 /* libPods-Cassette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */; };
@@ -129,6 +131,10 @@
 		DC147EA51CC97E3900AE1CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC147EA81CC97E3900AE1CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC147EAA1CC97E3900AE1CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC237C111D1DC6A30035826D /* CSTUserAccountController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTUserAccountController.h; path = "Controllers/User Accounts/CSTUserAccountController.h"; sourceTree = "<group>"; };
+		DC237C121D1DC6A30035826D /* CSTUserAccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTUserAccountController.m; path = "Controllers/User Accounts/CSTUserAccountController.m"; sourceTree = "<group>"; };
+		DC237C151D1DC76F0035826D /* CSTAppUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTAppUser.h; path = "Models/Users/App User/CSTAppUser.h"; sourceTree = "<group>"; };
+		DC237C161D1DC76F0035826D /* CSTAppUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTAppUser.m; path = "Models/Users/App User/CSTAppUser.m"; sourceTree = "<group>"; };
 		DC2958F81CFF77570014C839 /* CSTSearchingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTSearchingController.h; path = Controllers/Searching/CSTSearchingController.h; sourceTree = "<group>"; };
 		DC2958F91CFF77570014C839 /* CSTSearchingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTSearchingController.m; path = Controllers/Searching/CSTSearchingController.m; sourceTree = "<group>"; };
 		DC57A23D1CCD325C0012718A /* CSTSearchSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTSearchSetup.h; path = Models/Searching/CSTSearchSetup.h; sourceTree = "<group>"; };
@@ -213,6 +219,7 @@
 		DC0564991CD0189E00C19BFF /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				DC237C141D1DC7490035826D /* App User */,
 				DC05649A1CD018B000C19BFF /* CSTUser.h */,
 				DC05649B1CD018B000C19BFF /* CSTUser.m */,
 			);
@@ -311,6 +318,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		DC237C101D1DC6820035826D /* User Account Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC237C111D1DC6A30035826D /* CSTUserAccountController.h */,
+				DC237C121D1DC6A30035826D /* CSTUserAccountController.m */,
+			);
+			name = "User Account Controller";
+			sourceTree = "<group>";
+		};
+		DC237C141D1DC7490035826D /* App User */ = {
+			isa = PBXGroup;
+			children = (
+				DC237C151D1DC76F0035826D /* CSTAppUser.h */,
+				DC237C161D1DC76F0035826D /* CSTAppUser.m */,
+			);
+			name = "App User";
+			sourceTree = "<group>";
+		};
 		DC57A23C1CCD32410012718A /* Searching */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,6 +404,7 @@
 		DCBAA4941CCCE90A008B1550 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC237C101D1DC6820035826D /* User Account Controller */,
 				DCBAA49F1CCCF475008B1550 /* Parent Controller */,
 				DCA2DAAD1CD2AD740091045B /* Searching */,
 				DC142E011CD139150026FDE2 /* Collections */,
@@ -685,9 +711,11 @@
 				DCE539051D13162B0099281E /* CSTParentModel.m in Sources */,
 				DC57A23F1CCD325C0012718A /* CSTSearchSetup.m in Sources */,
 				DC142E041CD139310026FDE2 /* CSTCollectionsController.m in Sources */,
+				DC237C171D1DC76F0035826D /* CSTAppUser.m in Sources */,
 				DC147EA11CC97E3900AE1CFE /* main.m in Sources */,
 				DCBAA4A81CCCF607008B1550 /* CSTMixExplorerController.m in Sources */,
 				DCBAA4BE1CCD1527008B1550 /* CSTTrack.m in Sources */,
+				DC237C131D1DC6A30035826D /* CSTUserAccountController.m in Sources */,
 				DCBAA4B81CCD081B008B1550 /* CSTMixPlayer.m in Sources */,
 				DC147E9E1CC97E3900AE1CFE /* AppDelegate.m in Sources */,
 				DCBAA4931CCCE8B0008B1550 /* CSTBaseMix.m in Sources */,

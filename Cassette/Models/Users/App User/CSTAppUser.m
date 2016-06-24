@@ -10,4 +10,9 @@
 
 @implementation CSTAppUser
 
+- (BOOL)isUserLoggedIn
+{
+    return _loggedIn;
+}
+
 @end

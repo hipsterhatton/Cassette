@@ -24,6 +24,22 @@
     return dictionary;
 }
 
++ (NSDictionary *)getLoggedInUserJSONStructure
+{
+    NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary
+                                       :@{
+                                          
+                                          @"_id"                : @"user/id",
+                                          @"name"               : @"user/login",
+                                          @"avatar"             : @"user/avatar_urls/max200",
+                                          @"loggedIn"           : @"logged_in"
+                                          
+                                          }];
+    
+    return dictionary;
+}
+
+
 + (NSDictionary *)getFollowingOrFollowersUserJSONStructure
 {
     NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] initWithDictionary

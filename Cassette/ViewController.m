@@ -14,20 +14,14 @@
 - (id)init
 {
     self = [super init];
-    
-    _api = [EightTracksAPI sharedManager];
-    
-    _shuttle = [Shuttle sharedManagerWithDefaults:@{
-                                                    @"X-Api-Key"      : [_api getAPIkey],
-                                                    @"X-Api-Version"  : [_api getAPIversion]
-                                                    }];
-    
+    [self createLibs];
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self createLibs];
     [self setupApplication];
 }
 
@@ -38,13 +32,29 @@
     // Update the view, if already loaded.
 }
 
+
+
+- (void)createLibs
+{
+    _api = [EightTracksAPI sharedManager];
+    
+    _shuttle = [Shuttle sharedManagerWithDefaults:@{
+                                                    @"X-Api-Key"      : [_api getAPIkey],
+                                                    @"X-Api-Version"  : [_api getAPIversion]
+                                                    }];
+}
+
 - (RXPromise *)setupApplication
 {
+    
+    
     if ([_api gotPlayToken]) {
         RXPromise *temp = [RXPromise new];
         [temp fulfillWithValue:@"OK"];
         return temp;
     }
+    
+    
     
     return [self.shuttle launch:GET :JSON :[_api playToken] :nil]
     
@@ -60,19 +70,18 @@
     });
 }
 
-- (void)loadMixExplorer
-{
-    
-}
+
 
 - (IBAction)button_playMix:(id)sender
 {
-    [_searcher autocompleteSearch:@"coff"];
+    _userAccount = [[CSTUserAccountController alloc] init];
+    [_userAccount logUserIn:@"HipsterHatton" :@"newspaper1"];
 }
 
 - (IBAction)button_loadNextPage:(id)sender
 {
-    
+    _userAccount = [[CSTUserAccountController alloc] init];
+    [_userAccount logUserOut];
 }
 
 @end

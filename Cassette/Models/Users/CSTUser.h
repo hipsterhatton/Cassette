@@ -42,6 +42,7 @@
 - (NSString *)getID;
 
 + (NSDictionary *)getUserJSONStructure;
++ (NSDictionary *)getLoggedInUserJSONStructure;
 + (NSDictionary *)getFollowingOrFollowersUserJSONStructure;
 + (NSDictionary *)getAutocompleteUserJSONStructure;
 

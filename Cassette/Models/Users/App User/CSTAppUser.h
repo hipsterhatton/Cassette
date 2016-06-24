@@ -10,4 +10,10 @@
 
 @interface CSTAppUser : CSTUser
 
+@property (nonatomic) BOOL loggedIn;
+
+
+
+- (BOOL)isUserLoggedIn;
+
 @end

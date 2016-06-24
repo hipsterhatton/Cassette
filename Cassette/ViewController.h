@@ -16,8 +16,7 @@
 #import "CSTSearchingController.h"
 #import "CSTTagsExplorerController.h"
 #import "CSTUsersController.h"
-
-#import "CSTTag.h"
+#import "CSTUserAccountController.h"
 
 @interface ViewController : NSViewController
 
@@ -29,6 +28,7 @@
 @property (nonatomic, retain) CSTSearchingController *searcher;
 @property (nonatomic, retain) CSTTagsExplorerController *tagexplorer;
 @property (nonatomic, retain) CSTUsersController *users;
+@property (nonatomic, retain) CSTUserAccountController *userAccount;
 
 
 
