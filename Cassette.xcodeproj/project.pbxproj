@@ -22,6 +22,12 @@
 		DC147EA91CC97E3900AE1CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC147EA71CC97E3900AE1CFE /* Main.storyboard */; };
 		DC237C131D1DC6A30035826D /* CSTUserAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC237C121D1DC6A30035826D /* CSTUserAccountController.m */; };
 		DC237C171D1DC76F0035826D /* CSTAppUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC237C161D1DC76F0035826D /* CSTAppUser.m */; };
+		DC237C181D1DD53A0035826D /* CSTUserAccountController.h in Sources */ = {isa = PBXBuildFile; fileRef = DC237C111D1DC6A30035826D /* CSTUserAccountController.h */; };
+		DC237C191D1DD53A0035826D /* CSTAppUser.h in Sources */ = {isa = PBXBuildFile; fileRef = DC237C151D1DC76F0035826D /* CSTAppUser.h */; };
+		DC237C1A1D1DD5430035826D /* CSTUserAccountController.h in Sources */ = {isa = PBXBuildFile; fileRef = DC237C111D1DC6A30035826D /* CSTUserAccountController.h */; };
+		DC237C1B1D1DD5430035826D /* CSTUserAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC237C121D1DC6A30035826D /* CSTUserAccountController.m */; };
+		DC237C1C1D1DD5430035826D /* CSTAppUser.h in Sources */ = {isa = PBXBuildFile; fileRef = DC237C151D1DC76F0035826D /* CSTAppUser.h */; };
+		DC237C1D1D1DD5430035826D /* CSTAppUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC237C161D1DC76F0035826D /* CSTAppUser.m */; };
 		DC2958FA1CFF77570014C839 /* CSTSearchingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2958F91CFF77570014C839 /* CSTSearchingController.m */; };
 		DC57A23F1CCD325C0012718A /* CSTSearchSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57A23E1CCD325C0012718A /* CSTSearchSetup.m */; };
 		DC8730B51D135742001A0A10 /* libPods-Cassette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */; };
@@ -699,6 +705,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC237C181D1DD53A0035826D /* CSTUserAccountController.h in Sources */,
+				DC237C191D1DD53A0035826D /* CSTAppUser.h in Sources */,
 				DC05649C1CD018B000C19BFF /* CSTUser.m in Sources */,
 				DCD8AB1F1CCEBCFB000B0A40 /* CSTTagsExplorerController.m in Sources */,
 				DCBAA4A21CCCF4A0008B1550 /* CSTParentController.m in Sources */,
@@ -729,6 +737,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC237C1A1D1DD5430035826D /* CSTUserAccountController.h in Sources */,
+				DC237C1B1D1DD5430035826D /* CSTUserAccountController.m in Sources */,
+				DC237C1C1D1DD5430035826D /* CSTAppUser.h in Sources */,
+				DC237C1D1D1DD5430035826D /* CSTAppUser.m in Sources */,
 				DC8730BA1D1358A1001A0A10 /* AppDelegate.h in Sources */,
 				DC8730BB1D1358A2001A0A10 /* AppDelegate.m in Sources */,
 				DC8730BC1D1358A2001A0A10 /* ViewController.h in Sources */,
