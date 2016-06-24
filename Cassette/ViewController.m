@@ -49,7 +49,6 @@
     return [self.shuttle launch:GET :JSON :[_api playToken] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
-        NSLog(@"Raw JSON: %@", rawJSON);
         [_api setPlayToken:rawJSON[@"play_token"]];
         [_api setGotPlayToken:YES];
         return @"OK";
@@ -63,8 +62,7 @@
 
 - (void)loadMixExplorer
 {
-    CSTMixController *xyz = [[CSTMixController alloc] init];
-    [xyz getMixDetails:@"1"];
+    
 }
 
 - (IBAction)button_playMix:(id)sender
