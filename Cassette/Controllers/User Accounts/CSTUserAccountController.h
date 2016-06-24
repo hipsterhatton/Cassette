@@ -10,4 +10,7 @@
 
 @interface CSTUserAccountController : CSTParentController
 
+- (RXPromise *)logUserIn:(NSString *)username :(NSString *)password;
+- (RXPromise *)logUserOut;
+
 @end
