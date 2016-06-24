@@ -128,9 +128,9 @@
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 
@@ -161,9 +161,9 @@
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 
@@ -193,9 +193,9 @@
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 
@@ -228,9 +228,9 @@
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 
@@ -261,9 +261,9 @@
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
 

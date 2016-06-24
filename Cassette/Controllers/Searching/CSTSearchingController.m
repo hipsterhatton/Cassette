@@ -25,9 +25,9 @@
     
 }
 
-- (void)autocompleteSearch:(NSString *)searchTerm
+- (RXPromise *)autocompleteSearch:(NSString *)searchTerm
 {
-    [self.shuttle launch:GET :JSON :[self.api autoCompleteSearch:searchTerm] :nil]
+    return [self.shuttle launch:GET :JSON :[self.api autoCompleteSearch:searchTerm] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         
@@ -57,12 +57,10 @@
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
+    .then(nil, ^id(NSError *error) {
         [self raiseError:error :x(self) :y];
-        return nil;
+        return error;
     });
 }
-
-// Smart ID Searching
 
 @end

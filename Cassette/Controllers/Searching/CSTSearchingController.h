@@ -18,6 +18,6 @@
 @property (nonatomic, retain) NSMutableArray *users;
 
 
-- (void)autocompleteSearch:(NSString *)searchTerm;
+- (RXPromise *)autocompleteSearch:(NSString *)searchTerm;
 
 @end

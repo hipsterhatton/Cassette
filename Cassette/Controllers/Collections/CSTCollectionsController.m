@@ -20,19 +20,15 @@
 
 - (RXPromise *)getCollections:(CSTUser *)user
 {
-    return [self.shuttle launch:GET :JSON :[self.api getCollections:@"1"] :nil]
+    return [self.shuttle launch:GET :JSON :[self.api getCollections:[user getID]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
-        
-        NSLog(@"1. Getting Collections");
         
         if (!_collections) {
             _collections = [[NSMutableArray alloc] init];
         }
              
         NSArray *array = [CSTUser createArrayViaJSON:rawJSON :@"user/collections"];
-        
-        NSLog(@"2. Creating Collections");
          
         for (NSDictionary *object in array) {
             
@@ -59,18 +55,17 @@
         return @"OK";
     }, nil)
     
-    .then(nil, ^id(NSError* error) {
-        NSLog(@"3> Error: %@", [error localizedDescription]);
-        return nil;
+    .then(nil, ^id(NSError *error) {
+        [self raiseError:error :x(self) :y];
+        return error;
     });
 }
 
-- (void)getEditableCollections:(CSTUser *)user
+- (RXPromise *)getEditableCollections:(CSTUser *)user
 {
     RXPromise *editCollections = [RXPromise new];
     
     if (!_collections) {
-        NSLog(@"A). First Things First");
         editCollections = [self getCollections:user]
         
         .then(^id (NSDictionary *rawJSON) {
@@ -78,25 +73,23 @@
             return @"OK";
         }, nil)
         
-        .then(nil, ^id(NSError* error) {
-            NSLog(@"3> Error: %@", [error localizedDescription]);
-            return nil;
+        .then(nil, ^id(NSError *error) {
+            [self raiseError:error :x(self) :y];
+            return error;
         });
         
     } else {
         [editCollections fulfillWithValue:@"OK"];
     }
+    
+    return editCollections;
 }
 
 - (RXPromise *)_editableCollections:(CSTUser *)user
 {
-    RXPromise *promise = [RXPromise new];
-    
-    NSLog(@"B). Getting Editable");
-    [self.shuttle launch:GET :JSON :[self.api getEditableCollections:@"1"] :nil]
+    return [self.shuttle launch:GET :JSON :[self.api getEditableCollections:[user getID]] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
-        NSLog(@"C). Handling Rest");
         
         NSArray *array = [CSTUser createArrayViaJSON:rawJSON :@"collections"];
         
@@ -120,8 +113,6 @@
         NSLog(@"3> Error: %@", [error localizedDescription]);
         return nil;
     });
-    
-    return promise;
 }
 
 

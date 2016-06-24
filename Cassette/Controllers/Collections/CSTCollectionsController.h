@@ -20,7 +20,7 @@
 
 
 - (RXPromise *)getCollections:(CSTUser *)user;
-- (void)getEditableCollections:(CSTUser *)user;
+- (RXPromise *)getEditableCollections:(CSTUser *)user;
 
 - (void)createCollection:(NSString *)nameOfCollection :(NSArray *)mixes :(CSTUser *)userID :(NSString *)username :(NSString *)password;
 - (void)editCollection:(NSString *)collectionID :(NSString *)name :(NSString *)desc :(NSString *)username :(NSString *)password;
