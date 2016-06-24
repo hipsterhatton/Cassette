@@ -68,11 +68,8 @@
 		DC8730E21D1358A2001A0A10 /* Assets.xcassets in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA51CC97E3900AE1CFE /* Assets.xcassets */; };
 		DC8730E31D1358A2001A0A10 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = DC147EAA1CC97E3900AE1CFE /* Info.plist */; };
 		DC8730E41D1358A2001A0A10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC147EA01CC97E3900AE1CFE /* main.m */; };
-		DC8730E51D1358A2001A0A10 /* Info.plist in Sources */ = {isa = PBXBuildFile; fileRef = DC8730AF1D13552E001A0A10 /* Info.plist */; };
 		DC8730E61D1358A2001A0A10 /* Cassette.app in Sources */ = {isa = PBXBuildFile; fileRef = DC147E991CC97E3900AE1CFE /* Cassette.app */; };
 		DC8730E71D1358A2001A0A10 /* CassetteTest.xctest in Sources */ = {isa = PBXBuildFile; fileRef = DC8730AB1D13552D001A0A10 /* CassetteTest.xctest */; };
-		DC8730E81D1358A2001A0A10 /* Pods-Cassette.debug.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = 7CC9916039D46A7BDCA303BF /* Pods-Cassette.debug.xcconfig */; };
-		DC8730E91D1358A2001A0A10 /* Pods-Cassette.release.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = B9388F6F32EEDC0C8199B1B3 /* Pods-Cassette.release.xcconfig */; };
 		DC8730EA1D1358A2001A0A10 /* libAFNetworking.a in Sources */ = {isa = PBXBuildFile; fileRef = DC8730B81D13577E001A0A10 /* libAFNetworking.a */; };
 		DC8730EB1D1358A2001A0A10 /* AVFoundation.framework in Sources */ = {isa = PBXBuildFile; fileRef = DC8730B61D135749001A0A10 /* AVFoundation.framework */; };
 		DC8730EC1D1358A2001A0A10 /* AVFoundation.framework in Sources */ = {isa = PBXBuildFile; fileRef = DCBAA4B91CCD0CFB008B1550 /* AVFoundation.framework */; };
@@ -754,11 +751,8 @@
 				DC8730E31D1358A2001A0A10 /* Info.plist in Sources */,
 				DC8730E41D1358A2001A0A10 /* main.m in Sources */,
 				DCF4B4801D1C88FF006E2B58 /* UserInteractionControllerTest.m in Sources */,
-				DC8730E51D1358A2001A0A10 /* Info.plist in Sources */,
 				DC8730E61D1358A2001A0A10 /* Cassette.app in Sources */,
 				DC8730E71D1358A2001A0A10 /* CassetteTest.xctest in Sources */,
-				DC8730E81D1358A2001A0A10 /* Pods-Cassette.debug.xcconfig in Sources */,
-				DC8730E91D1358A2001A0A10 /* Pods-Cassette.release.xcconfig in Sources */,
 				DC8730EA1D1358A2001A0A10 /* libAFNetworking.a in Sources */,
 				DC8730EB1D1358A2001A0A10 /* AVFoundation.framework in Sources */,
 				DC8730EC1D1358A2001A0A10 /* AVFoundation.framework in Sources */,
@@ -898,12 +892,13 @@
 			baseConfigurationReference = 7CC9916039D46A7BDCA303BF /* Pods-Cassette.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CassetteTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = StephenHatton.CassetteTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.11;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -912,12 +907,13 @@
 			baseConfigurationReference = B9388F6F32EEDC0C8199B1B3 /* Pods-Cassette.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = CassetteTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = StephenHatton.CassetteTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.11;
+				SDKROOT = macosx;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
