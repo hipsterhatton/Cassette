@@ -35,6 +35,8 @@ typedef enum {
 + (id)sharedManagerWithDefaults:(NSDictionary *)defaults;
 + (id)sharedManager;
 
+- (void)updateDefaults:(NSDictionary *)defaults;
+
 - (RXPromise *)launch:(ShuttleModes)mode :(ShuttleResponses)response :(NSString *)url :(NSDictionary *)params;
 
 @end

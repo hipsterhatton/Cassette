@@ -42,6 +42,21 @@
 }
 
 
+- (NSString *)logUserIn
+{
+    return @"https://8tracks.com/sessions.json";
+}
+
+- (NSString *)logUserOut
+{
+    return @"https://8tracks.com/logout";
+}
+
+- (NSString *)signUpUser
+{
+    return @"https://8tracks.com/users.json";
+}
+
 
 
 - (NSString *)getHomepageMixes:(NSString *)sort :(int)pageNumber :(int)numberPerPage

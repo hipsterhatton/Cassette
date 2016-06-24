@@ -18,6 +18,10 @@
 - (NSString *)getAPIversion;
 - (NSString *)getAPIkey;
 
+- (NSString *)logUserIn;
+- (NSString *)logUserOut;
+- (NSString *)signUpUser;
+
 - (NSString *)getHomepageMixes:(NSString *)sort :(int)pageNumber :(int)numberPerPage;
 
 - (NSString *)getMixDetails:(NSString *)mixID;

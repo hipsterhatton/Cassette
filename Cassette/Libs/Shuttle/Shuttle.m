@@ -47,7 +47,7 @@
 - (void)updateDefaults:(NSDictionary *)defaults
 {
     for (NSString *key in defaults) {
-        [[_manager requestSerializer] setValue:defaults[key] forKey:key];
+        [[_manager requestSerializer] setValue:defaults[key] forHTTPHeaderField:key];
     }
 }
 
