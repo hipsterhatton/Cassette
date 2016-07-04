@@ -20,6 +20,7 @@
 
 - (RXPromise *)logUserIn:(NSString *)username :(NSString *)password
 {
+    
     return [self _logUserOut:username]
     
     
@@ -45,15 +46,9 @@
     
     .then(^id (NSDictionary *rawJSON) {
         
-        // getLoggedInUserJSONStructure
+        NSLog(@"Raw JSON: %@", rawJSON);
         
-//        NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithDictionary:[CSTEightTracksUser getUserJSONStructure]];
-//        [dict addEntriesFromDictionary:[CSTEightTracksAppUser getUserJSONStructure]];
-//        self.appUser = [CSTEightTracksAppUser createViaJSON:rawJSON :dict];
-//        
-//        NSArray *d1 = [[rawJSON objectForKey:@"user"] objectForKey:@"presets"];
-//        NSArray *d2 = [[rawJSON objectForKey:@"user"] objectForKey:@"preset_smart_ids"];
-//        [self.appUser setupPresets:d1 :d2];
+        _appUser = [CSTAppUser createViaJSON:rawJSON :[CSTAppUser getLoggedInUserJSONStructure]];
 
         return [[rawJSON objectForKey:@"user"] objectForKey:@"user_token"];
     }, nil)
@@ -73,6 +68,7 @@
 
 - (RXPromise *)logUserOut
 {
+    
     return [self _logUserOut:@"HipsterHatton"]
     
     .thenOnMain(^id (id blank) {
@@ -92,7 +88,7 @@
     
     
     .then(^id (NSDictionary *rawJSON) {
-//        [self.appUser clearData];
+        _appUser = nil;
         return @"OK";
     }, nil)
     
@@ -105,7 +101,72 @@
 
 
 
-#pragma mark - Sign User Up
+
+- (RXPromise *)toggleLikeMix:(NSString *)mixID
+{
+    return [self.shuttle launch:GET :JSON :[self.api toggleLikeMix:mixID] :nil]
+    
+    .then(^id (NSDictionary *rawJSON) {
+
+        if ([[[rawJSON objectForKey:@"mix"] objectForKey:@"liked_by_current_user"] boolValue] == true) {
+            [_appUser addLikedMix:rawJSON];
+        } else {
+            [_appUser removeLikedMix:rawJSON];
+        }
+        
+        return @"OK";
+    }, nil)
+
+    .then(nil, ^id(NSError *error) {
+        [self raiseError:error :x(self) :y];
+        return error;
+    });
+}
+
+- (RXPromise *)toggleFavouriteTrack:(NSString *)trackID
+{
+    return [self.shuttle launch:GET :JSON :[self.api toggleFavouriteTrack:trackID] :nil]
+    
+    .then(^id (NSDictionary *rawJSON) {
+        
+        if ([[[rawJSON objectForKey:@"track"] objectForKey:@"faved_by_current_user"] boolValue] == true) {
+            [_appUser addLikedMix:rawJSON];
+        } else {
+            [_appUser removeLikedMix:rawJSON];
+        }
+        
+        return @"OK";
+    }, nil)
+    
+    .then(nil, ^id(NSError *error) {
+        [self raiseError:error :x(self) :y];
+        return error;
+    });
+}
+
+- (RXPromise *)toggleFollowUser:(NSString *)userID
+{
+    return [self.shuttle launch:GET :JSON :[self.api toggleFollowUser:userID] :nil]
+    
+    .then(^id (NSDictionary *rawJSON) {
+        
+        if ([[[rawJSON objectForKey:@"user"] objectForKey:@"followed_by_current_user"] boolValue] == true) {
+            [_appUser addLikedMix:rawJSON];
+        } else {
+            [_appUser removeLikedMix:rawJSON];
+        }
+        
+        return @"OK";
+    }, nil)
+    
+    .then(nil, ^id(NSError *error) {
+        [self raiseError:error :x(self) :y];
+        return error;
+    });
+}
+
+
+
 
 - (RXPromise *)signUserUp :(NSString *)username :(NSString *)password
 {

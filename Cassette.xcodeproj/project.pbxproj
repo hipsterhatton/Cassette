@@ -28,6 +28,7 @@
 		DC237C1B1D1DD5430035826D /* CSTUserAccountController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC237C121D1DC6A30035826D /* CSTUserAccountController.m */; };
 		DC237C1C1D1DD5430035826D /* CSTAppUser.h in Sources */ = {isa = PBXBuildFile; fileRef = DC237C151D1DC76F0035826D /* CSTAppUser.h */; };
 		DC237C1D1D1DD5430035826D /* CSTAppUser.m in Sources */ = {isa = PBXBuildFile; fileRef = DC237C161D1DC76F0035826D /* CSTAppUser.m */; };
+		DC237C221D1DD6430035826D /* UserAccountControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = DC237C211D1DD6430035826D /* UserAccountControllerTest.m */; };
 		DC2958FA1CFF77570014C839 /* CSTSearchingController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC2958F91CFF77570014C839 /* CSTSearchingController.m */; };
 		DC57A23F1CCD325C0012718A /* CSTSearchSetup.m in Sources */ = {isa = PBXBuildFile; fileRef = DC57A23E1CCD325C0012718A /* CSTSearchSetup.m */; };
 		DC8730B51D135742001A0A10 /* libPods-Cassette.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFF93B1418196C1B74088C3 /* libPods-Cassette.a */; };
@@ -141,6 +142,7 @@
 		DC237C121D1DC6A30035826D /* CSTUserAccountController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTUserAccountController.m; path = "Controllers/User Accounts/CSTUserAccountController.m"; sourceTree = "<group>"; };
 		DC237C151D1DC76F0035826D /* CSTAppUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTAppUser.h; path = "Models/Users/App User/CSTAppUser.h"; sourceTree = "<group>"; };
 		DC237C161D1DC76F0035826D /* CSTAppUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTAppUser.m; path = "Models/Users/App User/CSTAppUser.m"; sourceTree = "<group>"; };
+		DC237C211D1DD6430035826D /* UserAccountControllerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAccountControllerTest.m; sourceTree = "<group>"; };
 		DC2958F81CFF77570014C839 /* CSTSearchingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTSearchingController.h; path = Controllers/Searching/CSTSearchingController.h; sourceTree = "<group>"; };
 		DC2958F91CFF77570014C839 /* CSTSearchingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSTSearchingController.m; path = Controllers/Searching/CSTSearchingController.m; sourceTree = "<group>"; };
 		DC57A23D1CCD325C0012718A /* CSTSearchSetup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSTSearchSetup.h; path = Models/Searching/CSTSearchSetup.h; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 				DCF4B47F1D1C88FF006E2B58 /* UserInteractionControllerTest.m */,
 				DCF4B4811D1C93BE006E2B58 /* SearchingControllerTest.m */,
 				DCF4B4831D1C9565006E2B58 /* CollectionsControllerTest.m */,
+				DC237C211D1DD6430035826D /* UserAccountControllerTest.m */,
 			);
 			path = CassetteTest;
 			sourceTree = "<group>";
@@ -789,6 +792,7 @@
 				DC8730E11D1358A2001A0A10 /* NSObject+DavidJSON.m in Sources */,
 				DC8730E21D1358A2001A0A10 /* Assets.xcassets in Sources */,
 				DC8730E31D1358A2001A0A10 /* Info.plist in Sources */,
+				DC237C221D1DD6430035826D /* UserAccountControllerTest.m in Sources */,
 				DC8730E41D1358A2001A0A10 /* main.m in Sources */,
 				DCF4B4801D1C88FF006E2B58 /* UserInteractionControllerTest.m in Sources */,
 				DC8730E61D1358A2001A0A10 /* Cassette.app in Sources */,

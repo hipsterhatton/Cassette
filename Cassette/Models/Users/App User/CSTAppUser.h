@@ -7,6 +7,8 @@
 //
 
 #import "CSTUser.h"
+#import "CSTBaseMix.h"
+#import "CSTTrack.h"
 
 @interface CSTAppUser : CSTUser
 
@@ -15,5 +17,14 @@
 
 
 - (BOOL)isUserLoggedIn;
+
+- (void)addLikedMix:(NSDictionary *)rawJSON;
+- (void)removeLikedMix:(NSDictionary *)rawJSON;
+
+- (void)addLikedTrack:(NSDictionary *)rawJSON;
+- (void)removeLikedTrack:(NSDictionary *)rawJSON;
+
+- (void)addFollowedUser:(NSDictionary *)rawJSON;
+- (void)removeFollowedUser:(NSDictionary *)rawJSON;
 
 @end

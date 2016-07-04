@@ -43,6 +43,10 @@
 - (NSString *)getFollowing:(NSString *)userID :(int)pageNumber :(int)perPage;
 - (NSString *)getFollowers:(NSString *)userID :(int)pageNumber :(int)perPage;
 
+- (NSString *)toggleLikeMix:(NSString *)mixID;
+- (NSString *)toggleFavouriteTrack:(NSString *)trackID;
+- (NSString *)toggleFollowUser:(NSString *)userID;
+
 - (NSString *)getCollections:(NSString *)userID;
 - (NSString *)getEditableCollections:(NSString *)userName; // this one called only for Signed In Users? Or do we combine the 2 values into one...
 

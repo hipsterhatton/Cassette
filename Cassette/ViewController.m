@@ -80,8 +80,11 @@
 
 - (IBAction)button_loadNextPage:(id)sender
 {
-    _userAccount = [[CSTUserAccountController alloc] init];
-    [_userAccount logUserOut];
+    // 419566
+    // 26149553
+    // 780080
+    
+    [_userAccount toggleFollowUser:@"780080"];
 }
 
 @end

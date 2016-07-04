@@ -8,9 +8,20 @@
 
 #import "CSTParentController.h"
 
+#import "CSTAppUser.h"
+#import "CSTBaseMix.h"
+
 @interface CSTUserAccountController : CSTParentController
 
 - (RXPromise *)logUserIn:(NSString *)username :(NSString *)password;
 - (RXPromise *)logUserOut;
+
+- (RXPromise *)toggleLikeMix:(NSString *)mixID;
+- (RXPromise *)toggleFavouriteTrack:(NSString *)trackID;
+- (RXPromise *)toggleFollowUser:(NSString *)userID;
+
+
+
+@property (nonatomic, retain) CSTAppUser *appUser;
 
 @end

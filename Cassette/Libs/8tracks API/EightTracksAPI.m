@@ -200,6 +200,32 @@
 
 
 
+- (NSString *)toggleLikeMix:(NSString *)mixID
+{
+    NSString *url =         @"http://8tracks.com/mixes/#{MixID}/toggle_like.json";
+    NSArray *placeholders = @[ @"#{MixID}" ];
+    NSArray *values =       @[ mixID ];
+    return [self _replace:url :placeholders :values];
+}
+
+- (NSString *)toggleFavouriteTrack:(NSString *)trackID
+{
+    NSString *url =         @"http://8tracks.com/tracks/#{TrackID}/toggle_fav.json";
+    NSArray *placeholders = @[ @"#{TrackID}" ];
+    NSArray *values =       @[ trackID ];
+    return [self _replace:url :placeholders :values];
+}
+
+- (NSString *)toggleFollowUser:(NSString *)userID
+{
+    NSString *url =         @"http://8tracks.com/users/#{UserID}/toggle_follow.json";
+    NSArray *placeholders = @[ @"#{UserID}" ];
+    NSArray *values =       @[ userID ];
+    return [self _replace:url :placeholders :values];
+}
+
+
+
 - (NSString *)getCollections:(NSString *)userID
 {
     NSString *url =         @"http://8tracks.com/users/#{UserID}.json?include=collections[mixes]";
