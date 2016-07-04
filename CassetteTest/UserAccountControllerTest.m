@@ -22,7 +22,6 @@
     [super setUp];
     _vc = [ViewController new];
     _contr = [CSTUserAccountController new];
-    [_vc setupApplication];
 }
 
 - (void)tearDown
@@ -43,23 +42,65 @@
 {
     XCTAssertNil([_contr appUser]);
     
+    
     XCTestExpectation *expectation = [self expectationWithDescription:@"Should log user in"];
+    
     
     RXPromise *p = [_vc setupApplication];
     
+    
     p.then(^id (id o) {
-        return [_contr logUserIn:@"HipsterHatton" :@"newspaper1"];
+        return [_contr logUserin_v2:@"HipsterHatton" :@"newspaper1"];
     }, nil)
     
+
     .then(^id (id o) {
-        [expectation fulfill];
         
         XCTAssertNotNil([[_contr appUser] _id]);
         XCTAssertNotNil([[_contr appUser] name]);
         XCTAssertTrue([[_contr appUser] loggedIn]);
         
+        [expectation fulfill];        
         return @"OK";
     }, nil);
+    
+    
+    [self waitForExpectationsWithTimeout:10 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Test Error: %@", [error localizedDescription]);
+        }
+    }];
+}
+
+- (void)testLogUserOut
+{
+    XCTAssertNil([_contr appUser]);
+    
+    
+    XCTestExpectation *expectation = [self expectationWithDescription:@"Should log user in"];
+    
+    
+    RXPromise *p = [_vc setupApplication];
+    
+    
+    p.then(^id (id o) {
+        return [_contr logUserin_v2:@"HipsterHatton" :@"newspaper1"];
+    }, nil)
+    
+    .then(^id (id o) {
+        XCTAssertNotNil([[_contr appUser] _id]);
+        XCTAssertNotNil([[_contr appUser] name]);
+        XCTAssertTrue([[_contr appUser] loggedIn]);
+        return [_contr logUserout_v2:[[_contr appUser] name]];
+    }, nil)
+    
+    
+    .then(^id (id o) {
+        XCTAssertNil([_contr appUser]);
+        [expectation fulfill];
+        return @"OK";
+    }, nil);
+    
     
     [self waitForExpectationsWithTimeout:10 handler:^(NSError *error) {
         if (error) {

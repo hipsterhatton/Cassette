@@ -46,21 +46,18 @@
 
 - (RXPromise *)setupApplication
 {
-    
-    
     if ([_api gotPlayToken]) {
         RXPromise *temp = [RXPromise new];
         [temp fulfillWithValue:@"OK"];
         return temp;
     }
     
-    
-    
     return [self.shuttle launch:GET :JSON :[_api playToken] :nil]
     
     .then(^id (NSDictionary *rawJSON) {
         [_api setPlayToken:rawJSON[@"play_token"]];
         [_api setGotPlayToken:YES];
+        NSLog(@"1. Finished Setting Up Play Token");
         return @"OK";
     }, nil)
     
@@ -75,7 +72,7 @@
 - (IBAction)button_playMix:(id)sender
 {
     _userAccount = [[CSTUserAccountController alloc] init];
-    [_userAccount logUserIn:@"HipsterHatton" :@"newspaper1"];
+    [_userAccount logUserin_v2:@"HipsterHatton" :@"newspaper1"];
 }
 
 - (IBAction)button_loadNextPage:(id)sender

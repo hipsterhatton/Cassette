@@ -18,45 +18,36 @@
 
 
 
-- (RXPromise *)logUserIn:(NSString *)username :(NSString *)password
+- (RXPromise *)logUserin_v2:(NSString *)username :(NSString *)password
 {
+    NSLog(@"A. Log User In");
     
-    return [self _logUserOut:username]
+    return [self.shuttle launch:POST :HTTP :[self.api logUserOut] :@{ @"login" : username, @"api_version" : @"3" }]
     
-    
-    .then(^id (id blank) {
-        return [self _logUserIn:username :password];
+    .then(^id (id ob) {
+        return @"OK";
     }, nil)
     
+    .then(^id (id blank) {
+        NSLog(@"B. Logged Out...About to Log In again");
+        _appUser = nil;
+        [self.shuttle updateDefaults:@{ @"X-User-Token" : @"" }];
+        return [self.shuttle launch:POST :JSON :[self.api logUserIn] :@{ @"login" : username, @"password" : password, @"api_version" : @"3" }];
+    }, nil)
     
-    .then(nil, ^id(NSError *error) {
-        [self raiseError:error :x(self) :y];
-        return error;
-    });
-}
 
-- (RXPromise *)_logUserIn:(NSString *)username :(NSString *)password
-{
-    NSDictionary *logInDetails = @{ @"login" : username,
-                                    @"password" : password,
-                                    @"api_version" : @"3" };
-    
-    return [self.shuttle launch:POST :JSON :[self.api logUserIn] :logInDetails]
-    
-    
     .then(^id (NSDictionary *rawJSON) {
-        
+        NSLog(@"C. Logging Back In");
         NSLog(@"Raw JSON: %@", rawJSON);
-        
         _appUser = [CSTAppUser createViaJSON:rawJSON :[CSTAppUser getLoggedInUserJSONStructure]];
-
         return [[rawJSON objectForKey:@"user"] objectForKey:@"user_token"];
     }, nil)
     
     
-    .thenOnMain(^id (NSString *userToken) {
+    .then(^id (NSString *userToken) {
         [self.shuttle updateDefaults:@{ @"X-User-Token" : userToken }];
-        return nil;
+        NSLog(@"D. Fully Logged In now :D");
+        return @"OK";
     }, nil)
     
     
@@ -66,29 +57,17 @@
     });
 }
 
-- (RXPromise *)logUserOut
+- (RXPromise *)logUserout_v2:(NSString *)username;
 {
+    NSLog(@"A. Log User Out");
     
-    return [self _logUserOut:@"HipsterHatton"]
-    
-    .thenOnMain(^id (id blank) {
-        [self.shuttle updateDefaults:@{ @"X-User-Token" : @"" }];
-        return nil;
-    }, nil)
-    
-    .then(nil, ^id(NSError *error) {
-        [self raiseError:error :x(self) :y];
-        return error;
-    });
-}
-
-- (RXPromise *)_logUserOut:(NSString *)username
-{
     return [self.shuttle launch:POST :HTTP :[self.api logUserOut] :@{ @"login" : username, @"api_version" : @"3" }]
     
     
-    .then(^id (NSDictionary *rawJSON) {
+    .then(^id (id blank) {
+        NSLog(@"B. Logged Out...About to Log In again");
         _appUser = nil;
+        [self.shuttle updateDefaults:@{ @"X-User-Token" : @"" }];
         return @"OK";
     }, nil)
     

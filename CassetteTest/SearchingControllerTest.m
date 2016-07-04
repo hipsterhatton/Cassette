@@ -22,7 +22,6 @@
     [super setUp];
     _vc = [ViewController new];
     _contr = [CSTSearchingController new];
-    [_vc setupApplication];
 }
 
 - (void)tearDown
@@ -62,17 +61,9 @@
         XCTAssertNotNil([[[_contr mixes] firstObject] valueForKey:@"name"]);
         XCTAssertNotNil([[[_contr mixes] firstObject] valueForKey:@"tagList"]);
         
-        XCTAssertNotNil([[[_contr mixes] lastObject] valueForKey:@"_id"]);
-        XCTAssertNotNil([[[_contr mixes] lastObject] valueForKey:@"name"]);
-        XCTAssertNotNil([[[_contr mixes] lastObject] valueForKey:@"tagList"]);
-        
         XCTAssertNotNil([[[_contr users] firstObject] valueForKey:@"_id"]);
         XCTAssertNotNil([[[_contr users] firstObject] valueForKey:@"name"]);
         XCTAssertNotNil([[[_contr users] firstObject] valueForKey:@"avatar"]);
-        
-        XCTAssertNotNil([[[_contr users] lastObject] valueForKey:@"_id"]);
-        XCTAssertNotNil([[[_contr users] lastObject] valueForKey:@"name"]);
-        XCTAssertNotNil([[[_contr users] lastObject] valueForKey:@"avatar"]);
         
         return @"OK";
     }, nil);

@@ -13,8 +13,8 @@
 
 @interface CSTUserAccountController : CSTParentController
 
-- (RXPromise *)logUserIn:(NSString *)username :(NSString *)password;
-- (RXPromise *)logUserOut;
+- (RXPromise *)logUserin_v2:(NSString *)username :(NSString *)password;
+- (RXPromise *)logUserout_v2:(NSString *)username;
 
 - (RXPromise *)toggleLikeMix:(NSString *)mixID;
 - (RXPromise *)toggleFavouriteTrack:(NSString *)trackID;
