@@ -11,3 +11,4 @@ Features:
 - Streaming of songs from a mix, play/pause/fast forward
 - User account support: log in, log out, edit account
 - CRUD of personal 'collections' (playlist of mixes)
+- TODO: UI
